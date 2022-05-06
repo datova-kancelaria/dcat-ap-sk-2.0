@@ -3,12 +3,12 @@ Title: DCAT-AP-SK 2.0
 Shortname: dcat-ap-sk-2.0
 Boilerplate: conformance no, copyright no
 Logo: 
-Repository: https://github.com/jakubklimek/dcat-ap-sk
+Repository: https://github.com/jakubklimek/dcat-ap-sk-2.0
 Markup Shorthands: markdown yes
 Level: 1
 Status: LS
 Group: MIRRI
-URL: https://jakubklimek.github.io/dcat-ap-sk/
+URL: https://jakubklimek.github.io/dcat-ap-sk-2.0/
 Editor: Jakub Klímek, Charles University https://www.mff.cuni.cz, jakub.klimek@matfyz.cuni.cz, https://jakub.klímek.com/
 Abstract: Cílem tohoto dokumentu je specifikovat datový model a rozhraní lokálních katalogů otevřených dat (LKOD) pro jejich harvestování Národním katalogem otevřených dat (NKOD). Stejná specifikace platí i pro datový model NKOD a data poskytovaná z NKOD v podobě souborů ke stažení či SPARQL endpointu. Nejprve je specifikován datový model katalogizačního záznamu. Poté jsou specifikovány 2 varianty rozhraní pro harvestaci, které jsou založeny na standardu DCAT-AP 2.0.1, jedna využívá SPARQL endpoint a jedna specifikuje variantu uložení záznamů v souborech, bez použití SPARQL endpointu.
 </pre>
