@@ -3,7 +3,7 @@ Title: DCAT-AP-SK 2.0
 Shortname: dcat-ap-sk-2.0
 Boilerplate: conformance no, copyright no
 Logo: 
-Repository: https://github.com/jakubklimek/dcat-ap-sk-2.0
+Repository: https://jakub.klímek.com/dcat-ap-sk-2.0
 Markup Shorthands: markdown yes
 Level: 1
 Status: LS
