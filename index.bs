@@ -10,7 +10,7 @@ Status: LS
 Group: MIRRI
 URL: https://jakubklimek.github.io/dcat-ap-sk-2.0/
 Editor: Jakub Klímek, Charles University https://www.mff.cuni.cz, jakub.klimek@matfyz.cuni.cz, https://jakub.klímek.com/
-Abstract: Cílem tohoto dokumentu je specifikovat datový model a rozhraní lokálních katalogů otevřených dat (LKOD) pro jejich harvestování Národním katalogem otevřených dat (NKOD). Stejná specifikace platí i pro datový model NKOD a data poskytovaná z NKOD v podobě souborů ke stažení či SPARQL endpointu. Nejprve je specifikován datový model katalogizačního záznamu. Poté jsou specifikovány 2 varianty rozhraní pro harvestaci, které jsou založeny na [standardu DCAT-AP 2.0.1](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0), jedna využívá SPARQL endpoint a jedna specifikuje variantu uložení záznamů v souborech, bez použití SPARQL endpointu.
+Abstract: Cílem tohoto dokumentu je specifikovat datový model a rozhraní lokálních katalogů otevřených dat (LKOD) pro jejich harvestování Národním katalogem otevřených dat (NKOD). Stejná specifikace platí i pro datový model NKOD a data poskytovaná z NKOD v podobě souborů ke stažení či SPARQL endpointu. Nejprve je specifikován datový model katalogizačního záznamu. Poté jsou specifikovány 2 varianty rozhraní pro harvestaci, které jsou založeny na [standardu DCAT-AP 2.1.0](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210), jedna využívá SPARQL endpoint a jedna specifikuje variantu uložení záznamů v souborech, bez použití SPARQL endpointu.
 </pre>
 
 Úvod {#úvod}
@@ -21,7 +21,7 @@ Položky metadatového záznamu {#položky-metadatového-záznamu}
 ============================================================
 
 V této sekci jsou popsány položky, které mohou být evidované v Národním katalogu otevřených dat (NKOD) pro každou datovou sadu a její distribuci.
-Položky se řídí standardem [DCAT Application Profile for data portals in Europe Version 2.0.1 (DCAT-AP 2.0.1)](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0).
+Položky se řídí standardem [DCAT Application Profile for data portals in Europe Version 2.1.0 (DCAT-AP 2.1.0)](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210).
 
 <figure>
     <img alt="Konceptuální model DCAT-AP-SK-2.0" src="dcat-ap-sk-2.0.svg">
@@ -29,7 +29,7 @@ Položky se řídí standardem [DCAT Application Profile for data portals in Eur
 </figure>
 
 
-DCAT-AP 2.0.1 rozlišuje tři základní typy entit.
+DCAT-AP 2.1.0 rozlišuje tři základní typy entit.
 Datovou sadu, její distribuci a datovou službu.
 Metadata datové sady ji popisují bez ohledu na konkrétní reprezentaci jejích dat.
 Ta je popsána jako distribuce datové sady, která reprezentuje buď soubor ke stažení, nebo odkazuje na datovou službu, přes kterou jsou data k dispozici.
@@ -195,7 +195,7 @@ sada: a dcat:Dataset .
 : Vlastnost
 :: `název`, `dct:title`
 : Typ
-:: Entita typu [datový sada](#třída-datová-sada)
+:: Entita typu [datová sada](#třída-datová-sada)
 : Povinnost
 :: Povinná
 : Příklad
@@ -242,7 +242,7 @@ sada: dct:publisher <https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejn
 :: Tato vlastnost odkazuje na kategorii či téma datové sady.
 Datová sada může být popsána více tématy.
 Odpovídá vlastnosti [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
-Dle DCAT-AP 2.0.1 musí být alespoň jedno téma z [evropského číselníku datových témat](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
+Dle DCAT-AP 2.1.0 musí být alespoň jedno téma z [evropského číselníku datových témat](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
 : Vlastnost
 :: `téma`, `dcat:theme`
 : Typ
@@ -260,7 +260,7 @@ sada: dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TR
 : Popis
 :: Tato vlastnost odkazuje na frekvenci, se kterou je datová sada aktualizována.
 Odpovídá vlastnosti [dct:accrualPeriodicity](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_frequency).
-Dle DCAT-AP 2.0.1 jsou hodnoty z [evropského číselníku frekvencí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency).
+Dle DCAT-AP 2.1.0 jsou hodnoty z [evropského číselníku frekvencí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency).
 : Vlastnost
 :: `periodicita_aktualizace`, `dct:accrualPeriodicity`
 : Typ
@@ -544,7 +544,7 @@ distribuce: dcat:accessURL <https://data.cssz.cz/dump/kontroly-plneni-povinnosti
 : Popis
 :: Tato vlastnost odkazuje na typ souboru s distribucí.
 Odpovídá vlastnosti [dct:format](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format).
-Dle DCAT-AP 2.0.1 jsou hodnoty z [evropského číselníku typů souboru](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type).
+Dle DCAT-AP 2.1.0 jsou hodnoty z [evropského číselníku typů souboru](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type).
 : Vlastnost
 :: `formát`, `dct:format`
 : Typ
@@ -740,7 +740,7 @@ služba: dcat:endpointDescription <https://data.cssz.cz/sparql> .
 Rozhraní DCAT-AP SPARQL Endpoint
 ================================
 Toto rozhraní předpokládá, že metadata datových sad dle této specifikace jsou uložena a přístupná ve SPARQL endpointu [[!sparql11-protocol]].
-Po registraci tohoto SPARQL endpointu se na něm NKOD zeptá nejprve na seznam instancí třídy `dcat:Dataset`, a poté se po skupinách bude ptát na povinné, nepovinné i další položky jednotlivých datových sad dle této specifikace a specifikace [DCAT-AP 2.0.1](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0).
+Po registraci tohoto SPARQL endpointu se na něm NKOD zeptá nejprve na seznam instancí třídy `dcat:Dataset`, a poté se po skupinách bude ptát na povinné, nepovinné i další položky jednotlivých datových sad dle této specifikace a specifikace [DCAT-AP 2.1.0](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210).
 Jedná se o nejjednodušší způsob registrace lokálního katalogu otevřených dat.
 
 Datové sady, distribuce a datové služby musí být identifikovány svými IRI, nesmí se jednat o [RDF blank nody](https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes) [[!rdf11-concepts]].
@@ -1043,5 +1043,283 @@ V této sekci uvádíme příklady katalogů užívajících rozhraní DCAT-AP D
 
 Rozhraní CKAN API
 =================
-CKAN API implementované v katalozích [CKAN](https://ckan.org/) již v této verzi OFN není podporováno kvůli stále většímu nesouladu se standardem DCAT-AP.
-Lze ho tedy využít pouze interně jako základ pro řádnou implementaci jednoho z rozhraní LKOD založených na standardu [DCAT-AP 2.0.1](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/201-0).
+CKAN API je rozhraní implementace datového katalogu [CKAN](https://ckan.org/).
+Je založené na formátu JSON [[!ECMA-404]], a obsahuje dvě hlavní funkce, `package_list` a `package_show`.
+Toto rozhraní je implemetováno samotným katalogem [CKAN](https://ckan.org/) a také katalogem [DKAN](https://getdkan.org/).
+
+<div class='advisement'>
+Rozhraní CKAN API je podporováno jen z důvodu zpětné kompatibility.
+Nebude se rozšiřovat o nové položky či funkcionality a neumožňuje kvalitně katalogizovat datasety dle standardu [DCAT Application Profile for data portals in Europe Version 2.1.0 (DCAT-AP 2.1.0)](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210).
+Pokud je to možné, použijte jedno z rozhraní kompatibilních s DCAT-AP.
+</div>
+
+Funkce `package_list`
+---------------------
+Tato funkce vrací seznam identifikátorů jednotlivých datových sad registrovaných v LKOD.
+Tyto identifikátory se pak předávají funkci `package_show` v parametru `id`.
+Identifikátory mohou obsahovat písmena, čísla, pomlčky a podtržítka.
+Nesmí však obsahovat mezeru.
+
+<div class='example'>
+Pro URL `https://organizacia.sk/api/3/action/package_list`
+```json
+{
+   "success": true, 
+   "result": [
+      "seznam-zastavky", 
+      "vld", 
+      "zeleznice"
+   ]
+}
+```
+</div>
+
+Funkce `package_show`
+---------------------
+Tato funkce vrací metadatový záznam pro datovou sadu, jejíž identifikátor je předán v parametru `id`.
+
+<div class='example'>
+Pro URL `https://organizacia.sk/api/3/action/package_show?id=zeleznice`
+```json
+{
+    "success": true,
+    "result": {
+        "title": "Číselník ČSÚ: Druh voleb (kód 1051)",
+        "notes": "Druh voleb",
+        "license_link": "https://creativecommons.org/licenses/by/4.0/",
+        "maintainer_email": "vdb@czso.cz",
+        "maintainer": "Český statistický úřad",
+        "tags": [{
+            "name": "VOLBY"
+        }, {
+            "name": "číselník"
+        }, {
+            "name": "ČSÚ"
+        }],
+        "resources": [{
+            "url": "https://apl.czso.cz/iSMS/cisexp.jsp?kodcis=1051&typdat=0&cisjaz=203&format=0",
+            "format": "text/xml",
+            "name": "Číselník v XML"
+        }]
+    }
+}
+```
+</div>
+
+Podmnožina hodnot pro CKAN API záznam datové sady
+-------------------------------------------------
+V této sekci jsou popsány položky týkající se datové sady ve funkci `package_show`.
+
+### Název datové sady
+
+: Vlastnost
+:: `title`
+: Typ
+:: Řetězec
+: Povinnost
+:: Povinná
+: Příklad
+:: 
+```json
+{
+    "success": true,
+    "result": {
+        "title": "Číselník ČSÚ: Druh voleb (kód 1051)"
+    }
+}
+```
+
+### Popis datové sady
+
+: Vlastnost
+:: `notes`
+: Typ
+:: Řetězec
+: Povinnost
+:: Povinná
+: Příklad
+:: 
+```json
+{
+    "success": true,
+    "result": {
+        "notes": "Druh voleb"
+    }
+}
+```
+
+### Odkaz na podmínky užití
+
+Ve standardu DCAT-AP, na kterém je Národní katalog otevřených dat založen, jsou podmínky užití vlastností distribuce datové sady.
+V rozhraní CKAN API je to však vlastností celé datové sady.
+Podmínky užití se tedy interpretují jako identické pro všechny distribuce datové sady.
+
+: Vlastnost
+:: `license_link`
+: Typ
+:: URL [[!URL]]
+: Povinnost
+:: Povinná
+: Příklad
+:: 
+```json
+{
+    "success": true,
+    "result": {
+        "license_link": "https://creativecommons.org/licenses/by/4.0/"
+    }
+}
+```
+
+### Email Kurátora dat
+
+: Vlastnost
+:: `maintainer_email`
+: Typ
+:: Řetězec
+: Povinnost
+:: Nepovinná
+: Příklad
+:: 
+```json
+{
+    "success": true,
+    "result": {
+        "maintainer_email": "vdb@czso.cz"
+    }
+}
+```
+
+### Jméno Kurátora dat
+
+: Vlastnost
+:: `maintainer`
+: Typ
+:: Řetězec
+: Povinnost
+:: Nepovinná
+: Příklad
+:: 
+```json
+{
+    "success": true,
+    "result": {
+        "maintainer": "Český statistický úřad"
+    }
+}
+```
+
+### Klíčová slova
+
+: Vlastnost
+:: `tags`
+: Typ
+:: Pole objektů s vlastností `name`
+: Povinnost
+:: Povinná
+: Příklad
+:: 
+```json
+{
+    "success": true,
+    "result": {
+        "tags": [{
+            "name": "VOLBY"
+        }, {
+            "name": "číselník"
+        }, {
+            "name": "ČSÚ"
+        }]
+    }
+}
+```
+
+### Distribuce datové sady
+
+: Vlastnost
+:: `resources`
+: Typ
+:: Pole objektů, viz [Distribuce v CKAN API](#CKAN-distribuce).
+: Povinnost
+:: Povinná
+: Příklad
+:: 
+```json
+{
+    "success": true,
+    "result": {
+        "resources": [{
+            "url": "https://apl.czso.cz/iSMS/cisexp.jsp?kodcis=1051&typdat=0&cisjaz=203&format=0",
+            "format": "text/xml",
+            "name": "Číselník v XML"
+        }]
+    }
+}
+```
+
+Podmnožina hodnot pro CKAN API distribuci datové sady {#CKAN-distribuce}
+------------------------------------------------------------------------
+V této sekci jsou popsány položky týkající se distribuce datové sady, tj. pole `resources` ve funkci `package_show`.
+
+### Odkaz na stažení souboru
+
+: Vlastnost
+:: `url`
+: Typ
+:: URL [[!URL]]
+: Povinnost
+:: Povinná
+: Příklad
+:: 
+```json
+{
+    "success": true,
+    "result": {
+        "resources": [{
+            "url": "https://apl.czso.cz/iSMS/cisexp.jsp?kodcis=1051&typdat=0&cisjaz=203&format=0"
+        }]
+    }
+}
+```
+
+### Media type souboru ke stažení
+
+: Vlastnost
+:: `format`
+: Typ
+:: Řetězec obsahující [Media type](https://www.iana.org/assignments/media-types/media-types.xhtml) dle IANA [[!IANA-MEDIA-TYPES]].
+: Povinnost
+:: Povinná
+: Příklad
+:: 
+```json
+{
+    "success": true,
+    "result": {
+        "resources": [{
+            "format": "text/xml"
+        }]
+    }
+}
+```
+
+### Název distribuce datové sady
+
+: Vlastnost
+:: `name`
+: Typ
+:: Řetězec
+: Povinnost
+:: Nepovinná
+: Příklad
+:: 
+```json
+{
+    "success": true,
+    "result": {
+        "resources": [{
+            "name": "Číselník v XML"
+        }]
+    }
+}
+```
