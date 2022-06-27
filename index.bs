@@ -3,12 +3,12 @@ Title: DCAT-AP-SK
 Shortname: dcat-ap-sk
 Boilerplate: conformance no, copyright no
 Logo: 
-Repository: https://jakub.klímek.com/dcat-ap-sk
+Repository: https://github.com/datova-kancelaria/dcat-ap-sk
 Markup Shorthands: markdown yes
 Level: 1
 Status: LS
 Group: MIRRI
-URL: https://jakubklimek.github.io/dcat-ap-sk/
+URL: https://datova-kancelaria.github.io/dcat-ap-sk/
 Editor: Jakub Klímek, Charles University https://www.mff.cuni.cz, jakub.klimek@matfyz.cuni.cz, https://jakub.klímek.com/
 Abstract: Cílem tohoto dokumentu je specifikovat datový model a rozhraní lokálních katalogů otevřených dat (LKOD) pro jejich harvestování Národním katalogem otevřených dat (NKOD). Stejná specifikace platí i pro datový model NKOD a data poskytovaná z NKOD v podobě souborů ke stažení či SPARQL endpointu. Nejprve je specifikován datový model katalogizačního záznamu. Poté jsou specifikovány 2 varianty rozhraní pro harvestaci, které jsou založeny na [standardu DCAT-AP 2.1.0](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210), jedna využívá SPARQL endpoint a jedna specifikuje variantu uložení záznamů v souborech, bez použití SPARQL endpointu.
 </pre>
@@ -63,6 +63,7 @@ Pro přehlednost zápisu budou použity ještě následující prefixy zkracují
 @prefix kontakt: <https://data.gov.sk/zdroj/datová-sada/1/kontaktní-bod> .
 @prefix podmínky: <https://data.gov.sk/zdroj/datová-sada/1/distribuce/1/podmínky-užití> .
 @prefix správce: <https://data.gov.sk/zdroj/katalog/kontaktní-bod> .
+@prefix pu: <https://data.gov.sk/slovník/podmienky-užitie/> .
 ```
 
 Třída: Katalog {#třída-katalog}
@@ -240,9 +241,9 @@ sada: dct:publisher <https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejn
 
 : Popis
 :: Tato vlastnost odkazuje na kategorii či téma datové sady.
-Datová sada může být popsána více tématy.
-Odpovídá vlastnosti [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
-Dle DCAT-AP 2.1.0 musí být alespoň jedno téma z [evropského číselníku datových témat](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
+    Datová sada může být popsána více tématy.
+    Odpovídá vlastnosti [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
+    Dle DCAT-AP 2.1.0 musí být alespoň jedno téma z [evropského číselníku datových témat](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
 : Vlastnost
 :: `téma`, `dcat:theme`
 : Typ
@@ -259,8 +260,8 @@ sada: dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TR
 
 : Popis
 :: Tato vlastnost odkazuje na frekvenci, se kterou je datová sada aktualizována.
-Odpovídá vlastnosti [dct:accrualPeriodicity](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_frequency).
-Dle DCAT-AP 2.1.0 jsou hodnoty z [evropského číselníku frekvencí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency).
+    Odpovídá vlastnosti [dct:accrualPeriodicity](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_frequency).
+    Dle DCAT-AP 2.1.0 jsou hodnoty z [evropského číselníku frekvencí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency).
 : Vlastnost
 :: `periodicita_aktualizace`, `dct:accrualPeriodicity`
 : Typ
@@ -293,8 +294,8 @@ sada: dcat:keyword "kontrola"@sk, "statistika"@sk, "inspection"@en, "statistics"
 
 : Popis
 :: Tato vlastnost odkazuje na geografickou oblast pokrytou datovou sadou.
-Datová sada může být popsána více geografickými oblastmi.
-Odpovídá vlastnosti [dct:spatial](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial).
+    Datová sada může být popsána více geografickými oblastmi.
+    Odpovídá vlastnosti [dct:spatial](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial).
 : Vlastnost
 :: `geografické_území`, `dct:spatial`
 : Typ
@@ -315,7 +316,7 @@ sada: dct:spatial <https://sws.geonames.org/6290257/> .
 
 : Popis
 :: Tato vlastnost odkazuje na časový úsek pokrytý datovou sadou.
-Odpovídá vlastnosti [dct:temporal](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal).
+    Odpovídá vlastnosti [dct:temporal](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal).
 : Vlastnost
 :: `časové_pokrytí`, `dct:temporal`
 : Typ
@@ -335,7 +336,7 @@ sada: dct:temporal čas: .
 
 : Popis
 :: Tato vlastnost obsahuje kontaktní informace, které mohou být využity pro zasílání připomínek k datové sadě.
-Odpovídá vlastnosti [dcat:contactPoint](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point).
+    Odpovídá vlastnosti [dcat:contactPoint](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point).
 : Vlastnost
 :: `kontaktní_bod`, `dcat:contactPoint`
 : Typ
@@ -356,7 +357,7 @@ kontakt: a vcard:Individual ;
 
 : Popis
 :: Tato vlastnost odkazuje na stránku nebo dokument o datové sadě.
-Odpovídá vlastnosti [foaf:page](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page).
+    Odpovídá vlastnosti [foaf:page](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page).
 : Vlastnost
 :: `dokumentace`, `foaf:page`
 : Typ
@@ -373,7 +374,7 @@ sada: foaf:page <https://data.cssz.cz/documentation/kontroly-plneni-povinnosti-z
 
 : Popis
 :: Tato vlastnost odkazuje na specifikaci, jíž se datová sada řídí.
-Odpovídá vlastnosti [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to).
+    Odpovídá vlastnosti [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to).
 : Vlastnost
 :: `specifikace`, `dct:conformsTo`
 : Typ
@@ -390,8 +391,8 @@ sada: dct:conformsTo <https://ofn.gov.cz/turistické-cíle/2020-07-01/> .
 
 : Popis
 :: Tato vlastnost odkazuje na kategorii či téma datové sady dle EuroVoc.
-Datová sada může být popsána více tématy.
-Odpovídá vlastnosti [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
+    Datová sada může být popsána více tématy.
+    Odpovídá vlastnosti [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
 : Vlastnost
 :: `koncept_euroVoc`, `dcat:theme`
 : Typ
@@ -408,8 +409,8 @@ sada: dcat:theme <http://eurovoc.europa.eu/1001>, <http://eurovoc.europa.eu/4050
 
 : Popis
 :: Tato vlastnost určuje prostorové rozlišení dat v datové sadě v metrech.
-Jedná se o nejmenší prostorový rozdíl v datové sadě.
-Odpovídá vlastnosti [dcat:spatialResolutionInMeters](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution).
+    Jedná se o nejmenší prostorový rozdíl v datové sadě.
+    Odpovídá vlastnosti [dcat:spatialResolutionInMeters](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution).
 : Vlastnost
 :: `prostorové_rozlišení_v_metrech`, `dcat:spatialResolutionInMeters`
 : Typ
@@ -426,8 +427,8 @@ sada: dcat:spatialResolutionInMeters 0.5 .
 
 : Popis
 :: Tato vlastnost určuje časové rozlišení dat v datové sadě.
-Jedná se o nejmenší časový rozdíl v datové sadě.
-Odpovídá vlastnosti [dcat:temporalResolution](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal_resolution).
+    Jedná se o nejmenší časový rozdíl v datové sadě.
+    Odpovídá vlastnosti [dcat:temporalResolution](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal_resolution).
 : Vlastnost
 :: `časové_rozlišení`, `dcat:temporalResolution`
 : Typ
@@ -444,7 +445,7 @@ sada: dcat:temporalResolution "P1D"^^xsd:duration .
 
 : Popis
 :: Tato vlastnost odkazuje na zastřešující datovou sadu datové série, jejíž je tato datová sada součástí.
-Odpovídá vlastnosti [dct:isPartOf](https://dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf).
+    Odpovídá vlastnosti [dct:isPartOf](https://dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf).
 : Vlastnost
 :: `je_součástí`, `dct:isPartOf`
 : Typ
@@ -461,7 +462,7 @@ sada: dct:isPartOf <https://datový.katalog.cz/zdroj/datové-sady/zastřešujíc
 
 : Popis
 :: Tato vlastnost odkazuje z datové sady na její distribuci.
-Odpovídá vlastnosti [dcat:distribution](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution).
+    Odpovídá vlastnosti [dcat:distribution](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution).
 : Vlastnost
 :: `distribuce`, `dcat:distribution`
 : Typ
@@ -479,36 +480,41 @@ Třída: Distribuce datové sady {#třída-distribuce}
 
 : Popis
 :: Fyzická podoba datové sady v konkrétním formátu nebo jako konkrétní služba, nikdy obojí.
-Odpovídá třídě [dcat:Distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution).
+    Odpovídá třídě [dcat:Distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution).
 : Příklad
 ::  
     ```turtle
 distribuce: a dcat:Distribution .
     ```
 
-### Podmínky užití
+### Specifikace podmínek užití ### {#specifikace-podmínek-užití}
 
 : Popis
-:: Podmínky užití
-Odpovídá vlastnosti [dct:license](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/license).
+:: Tato vlastnost odkazuje na strukturovaný popis podmínek užití této distribuce datové sady. Hodnoty se řídí TODO:dokument
 : Vlastnost
-:: `podmínky_užití`, `dct:license`
+:: `podmínky_užití`, `pu:špecifikácia`
 : Typ
-:: IRI
+:: Entita typu `pu:Špecifikácia` s vlastnostmi `pu:autorské-dielo`, `pu:databáza-ako-autorské-dielo`, `pu:databáza-chránená-zvláštnymi-právami` a `pu:osobné-údaje`.
+    Volitelně také `pu:autor` a `pu:autor-databáze`. Viz TODO:dokument.
 : Povinnost
 :: Povinná
 : Příklad
 :: 
     ```turtle
-distribuce: dct:license <https://creativecommons.org/publicdomain/zero/1.0/> .
+distribuce: pu:špecifikácia podmienky: .
+
+podmienky: a pu:Špecifikácia ;
+    pu:autorské-dielo <https://data.gov.cz/podmínky-užití/neobsahuje-autorská-díla/> ;
+    pu:databáza-ako-autorské-dielo <https://data.gov.cz/podmínky-užití/není-autorskoprávně-chráněnou-databází/> ;
+    pu:databáza-chránená-zvláštnymi-právami <https://data.gov.cz/podmínky-užití/není-chráněna-zvláštním-právem-pořizovatele-databáze/> ;
+    pu:osobné-údaje <https://data.gov.cz/podmínky-užití/neobsahuje-osobní-údaje/> .
     ```
 
-### Odkaz na stažení souboru {#distribuce-stažení-souboru}
+### Odkaz na stažení souboru ### {#distribuce-stažení-souboru}
 
 : Popis
-:: Podmínky užití
-Tato vlastnost obsahuje URL, které je přímým odkazem na stažitelný soubor v daném formátu.
-Odpovídá vlastnosti [dcat:downloadURL](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url).
+:: Tato vlastnost obsahuje URL, které je přímým odkazem na stažitelný soubor v daném formátu.
+    Odpovídá vlastnosti [dcat:downloadURL](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url).
 : Vlastnost
 :: `soubor_ke_stažení`, `dcat:downloadURL`
 : Typ
@@ -525,8 +531,8 @@ distribuce: dcat:downloadURL <https://data.cssz.cz/dump/kontroly-plneni-povinnos
 
 : Popis
 :: Tato vlastnost obsahuje URL, pomocí kterého se lze dostat k distribuci datové sady.
-Odpovídá vlastnosti [dcat:accessURL](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url).
-Pro účely katalogů otevřených dat je hodnota této vlastnosti buďto stejná jako [odkaz na stažení souboru](#distribuce-stažení-souboru) v případě distribuce reprezentující soubor ke stažení, nebo stejná jako [přístupový bod](#datová-služba-přístupový-bod) v případě distribuce reprezentující datovou službu.
+    Odpovídá vlastnosti [dcat:accessURL](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url).
+    Pro účely katalogů otevřených dat je hodnota této vlastnosti buďto stejná jako [odkaz na stažení souboru](#distribuce-stažení-souboru) v případě distribuce reprezentující soubor ke stažení, nebo stejná jako [přístupový bod](#datová-služba-přístupový-bod) v případě distribuce reprezentující datovou službu.
 : Vlastnost
 :: `přístupové_url`, `dcat:accessURL`
 : Typ
@@ -543,8 +549,8 @@ distribuce: dcat:accessURL <https://data.cssz.cz/dump/kontroly-plneni-povinnosti
 
 : Popis
 :: Tato vlastnost odkazuje na typ souboru s distribucí.
-Odpovídá vlastnosti [dct:format](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format).
-Dle DCAT-AP 2.1.0 jsou hodnoty z [evropského číselníku typů souboru](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type).
+    Odpovídá vlastnosti [dct:format](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format).
+    Dle DCAT-AP 2.1.0 jsou hodnoty z [evropského číselníku typů souboru](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type).
 : Vlastnost
 :: `formát`, `dct:format`
 : Typ
@@ -561,7 +567,7 @@ distribuce: dct:format <http://publications.europa.eu/resource/authority/file-ty
 
 : Popis
 :: Tato vlastnost odkazuje na typ média distribuce tak, jak je definováno v oficiálním rejstříku typů médií spravovaném IANA [[!IANA-MEDIA-TYPES]].
-Odpovídá vlastnosti [dcat:mediaType](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_media_type).
+    Odpovídá vlastnosti [dcat:mediaType](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_media_type).
 : Vlastnost
 :: `typ_média`, `dcat:mediaType`
 : Typ
@@ -578,7 +584,7 @@ distribuce: dcat:mediaType <http://www.iana.org/assignments/media-types/text/csv
 
 : Popis
 :: Tato vlastnost odkazuje na ustanovené schéma, jímž se popisovaná distribuce řídí.
-Odpovídá vlastnosti [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_conforms_to).
+    Odpovídá vlastnosti [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_conforms_to).
 : Vlastnost
 :: `schéma`, `dct:conformsTo`
 : Typ
@@ -595,8 +601,8 @@ distribuce: dct:conformsTo <https://data.cssz.cz/dump/kontroly-plneni-povinnosti
 
 : Popis
 :: Tato vlastnost odkazuje na media typ kompresního formátu souboru ke stažení tak, jak je definováno v oficiálním rejstříku typů médií spravovaném IANA [[!IANA-MEDIA-TYPES]].
-Kompresní formát určuje techniku použitou ke zmenšení velikosti jednoho souboru ke stažení.
-Odpovídá vlastnosti [dcat:compressFormat](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format).
+    Kompresní formát určuje techniku použitou ke zmenšení velikosti jednoho souboru ke stažení.
+    Odpovídá vlastnosti [dcat:compressFormat](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format).
 : Vlastnost
 :: `typ_média_komprese`, `dcat:compressFormat`
 : Typ
@@ -613,8 +619,8 @@ distribuce: dcat:compressFormat <http://www.iana.org/assignments/media-types/app
 
 : Popis
 :: Tato vlastnost odkazuje na media typ balíčkovacího formátu souboru ke stažení tak, jak je definováno v oficiálním rejstříku typů médií spravovaném IANA [[!IANA-MEDIA-TYPES]].
-Balíčkovací formát určuje techniku použitou k zabalení více souborů do jednoho.
-Odpovídá vlastnosti [dcat:packageFormat](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format).
+    Balíčkovací formát určuje techniku použitou k zabalení více souborů do jednoho.
+    Odpovídá vlastnosti [dcat:packageFormat](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format).
 : Vlastnost
 :: `typ_média_balíčku`, `dcat:packageFormat`
 : Typ
@@ -659,7 +665,7 @@ distribuce: dct:title "Kontroly plnění povinností zaměstnavatelů v oblasti 
 distribuce: dcat:accessService služba: .
     ```
 
-Třída: Datová služba {#třída-služba}
+Třída: Datová služba {#třída-datová-služba}
 --------------
 
 : Popis
@@ -686,7 +692,7 @@ služba: a dcat:DataService .
 služba: dct:title "SPARQL endpoint České správy sociálního zabezpečení"@sk, "Czech Social Security Administration SPARQL endpoint"@en .
     ```
 
-### Přístupový bod
+### Přístupový bod ### {#datová-služba-přístupový-bod}
 
 : Popis
 :: Tato vlastnost obsahuje URL přístupového bodu datové služby. Odpovídá vlastnosti [dcat:endpointURL](https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_url).
@@ -706,9 +712,9 @@ služba: dcat:endpointURL <https://data.cssz.cz/sparql> .
 
 : Popis
 :: Tato vlastnost odkazuje na specifikaci, jíž se datová služba řídí.
-Takovou specifikací je například [SPARQL](https://www.w3.org/TR/sparql11-protocol/).
-Seznam možných hodnot lze nalézt například v [seznamu udržovaném Open Source Geospatial Foundation](https://github.com/OSGeo/Cat-Interop/blob/master/LinkPropertyLookupTable.csv).
-Odpovídá vlastnosti [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to).
+    Takovou specifikací je například \[SPARQL](https://www.w3.org/TR/sparql11-protocol/).
+    Seznam možných hodnot lze nalézt například v [seznamu udržovaném Open Source Geospatial Foundation](https://github.com/OSGeo/Cat-Interop/blob/master/LinkPropertyLookupTable.csv).
+    Odpovídá vlastnosti [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to).
 : Vlastnost
 :: `specifikace`, `dct:conformsTo`
 : Typ
@@ -754,7 +760,7 @@ V této sekci uvádíme příklady katalogů užívajících rozhraní SPARQL en
 - [https://data.cssz.cz/sparql](https://data.cssz.cz/sparql)
 - [https://data.mvcr.gov.cz/sparql](https://data.mvcr.gov.cz/sparql)
 - [https://opendata.mfcr.cz/lod/sparql](https://opendata.mfcr.cz/lod/sparql)
-</div>
+    </div>
 
 Rozhraní DCAT-AP Dokumenty
 ==========================
@@ -1039,13 +1045,13 @@ V této sekci uvádíme příklady katalogů užívajících rozhraní DCAT-AP D
 <div class='example'>
 - [https://open.datakhk.cz/katalog.jsonld](https://open.datakhk.cz/katalog.jsonld)
 - [https://kod.brno.cz/nkod/index.ttl](https://kod.brno.cz/nkod/index.ttl)
-</div>
+    </div>
 
 Rozhraní CKAN API
 =================
-CKAN API je rozhraní implementace datového katalogu [CKAN](https://ckan.org/).
+CKAN API je rozhraní implementace datového katalogu \[CKAN](https://ckan.org/).
 Je založené na formátu JSON [[!ECMA-404]], a obsahuje dvě hlavní funkce, `package_list` a `package_show`.
-Toto rozhraní je implemetováno samotným katalogem [CKAN](https://ckan.org/) a také katalogem [DKAN](https://getdkan.org/).
+Toto rozhraní je implemetováno samotným katalogem \[CKAN](https://ckan.org/) a také katalogem \[DKAN](https://getdkan.org/).
 
 <div class='advisement'>
 Rozhraní CKAN API je podporováno jen z důvodu zpětné kompatibility.
@@ -1120,14 +1126,14 @@ V této sekci jsou popsány položky týkající se datové sady ve funkci `pack
 :: Povinná
 : Příklad
 :: 
-```json
-{
-    "success": true,
-    "result": {
-        "title": "Číselník ČSÚ: Druh voleb (kód 1051)"
+    ```json
+    {
+        "success": true,
+        "result": {
+            "title": "Číselník ČSÚ: Druh voleb (kód 1051)"
+        }
     }
-}
-```
+    ```
 
 ### Popis datové sady
 
@@ -1139,20 +1145,21 @@ V této sekci jsou popsány položky týkající se datové sady ve funkci `pack
 :: Povinná
 : Příklad
 :: 
-```json
-{
-    "success": true,
-    "result": {
-        "notes": "Druh voleb"
+    ```json
+    {
+        "success": true,
+        "result": {
+            "notes": "Druh voleb"
+        }
     }
-}
-```
+    ```
 
 ### Odkaz na podmínky užití
 
 Ve standardu DCAT-AP, na kterém je Národní katalog otevřených dat založen, jsou podmínky užití vlastností distribuce datové sady.
 V rozhraní CKAN API je to však vlastností celé datové sady.
 Podmínky užití se tedy interpretují jako identické pro všechny distribuce datové sady.
+Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití v souladu s právním řádem, viz [[#specifikace-podmínek-užití]].
 
 : Vlastnost
 :: `license_link`
@@ -1162,14 +1169,14 @@ Podmínky užití se tedy interpretují jako identické pro všechny distribuce 
 :: Povinná
 : Příklad
 :: 
-```json
-{
-    "success": true,
-    "result": {
-        "license_link": "https://creativecommons.org/licenses/by/4.0/"
+    ```json
+    {
+        "success": true,
+        "result": {
+            "license_link": "https://creativecommons.org/licenses/by/4.0/"
+        }
     }
-}
-```
+    ```
 
 ### Email Kurátora dat
 
@@ -1181,14 +1188,14 @@ Podmínky užití se tedy interpretují jako identické pro všechny distribuce 
 :: Nepovinná
 : Příklad
 :: 
-```json
-{
-    "success": true,
-    "result": {
-        "maintainer_email": "vdb@czso.cz"
+    ```json
+    {
+        "success": true,
+        "result": {
+            "maintainer_email": "vdb@czso.cz"
+        }
     }
-}
-```
+    ```
 
 ### Jméno Kurátora dat
 
@@ -1200,14 +1207,14 @@ Podmínky užití se tedy interpretují jako identické pro všechny distribuce 
 :: Nepovinná
 : Příklad
 :: 
-```json
-{
-    "success": true,
-    "result": {
-        "maintainer": "Český statistický úřad"
+    ```json
+    {
+        "success": true,
+        "result": {
+            "maintainer": "Český statistický úřad"
+        }
     }
-}
-```
+    ```
 
 ### Klíčová slova
 
@@ -1219,20 +1226,20 @@ Podmínky užití se tedy interpretují jako identické pro všechny distribuce 
 :: Povinná
 : Příklad
 :: 
-```json
-{
-    "success": true,
-    "result": {
-        "tags": [{
-            "name": "VOLBY"
-        }, {
-            "name": "číselník"
-        }, {
-            "name": "ČSÚ"
-        }]
+    ```json
+    {
+        "success": true,
+        "result": {
+            "tags": [{
+                "name": "VOLBY"
+            }, {
+                "name": "číselník"
+            }, {
+                "name": "ČSÚ"
+            }]
+        }
     }
-}
-```
+    ```
 
 ### Distribuce datové sady
 
@@ -1244,18 +1251,18 @@ Podmínky užití se tedy interpretují jako identické pro všechny distribuce 
 :: Povinná
 : Příklad
 :: 
-```json
-{
-    "success": true,
-    "result": {
-        "resources": [{
-            "url": "https://apl.czso.cz/iSMS/cisexp.jsp?kodcis=1051&typdat=0&cisjaz=203&format=0",
-            "format": "text/xml",
-            "name": "Číselník v XML"
-        }]
+    ```json
+    {
+        "success": true,
+        "result": {
+            "resources": [{
+                "url": "https://apl.czso.cz/iSMS/cisexp.jsp?kodcis=1051&typdat=0&cisjaz=203&format=0",
+                "format": "text/xml",
+                "name": "Číselník v XML"
+            }]
+        }
     }
-}
-```
+    ```
 
 Podmnožina hodnot pro CKAN API distribuci datové sady {#CKAN-distribuce}
 ------------------------------------------------------------------------
@@ -1271,16 +1278,16 @@ V této sekci jsou popsány položky týkající se distribuce datové sady, tj.
 :: Povinná
 : Příklad
 :: 
-```json
-{
-    "success": true,
-    "result": {
-        "resources": [{
-            "url": "https://apl.czso.cz/iSMS/cisexp.jsp?kodcis=1051&typdat=0&cisjaz=203&format=0"
-        }]
+    ```json
+    {
+        "success": true,
+        "result": {
+            "resources": [{
+                "url": "https://apl.czso.cz/iSMS/cisexp.jsp?kodcis=1051&typdat=0&cisjaz=203&format=0"
+            }]
+        }
     }
-}
-```
+    ```
 
 ### Media type souboru ke stažení
 
@@ -1292,16 +1299,16 @@ V této sekci jsou popsány položky týkající se distribuce datové sady, tj.
 :: Povinná
 : Příklad
 :: 
-```json
-{
-    "success": true,
-    "result": {
-        "resources": [{
-            "format": "text/xml"
-        }]
+    ```json
+    {
+        "success": true,
+        "result": {
+            "resources": [{
+                "format": "text/xml"
+            }]
+        }
     }
-}
-```
+    ```
 
 ### Název distribuce datové sady
 
@@ -1313,13 +1320,13 @@ V této sekci jsou popsány položky týkající se distribuce datové sady, tj.
 :: Nepovinná
 : Příklad
 :: 
-```json
-{
-    "success": true,
-    "result": {
-        "resources": [{
-            "name": "Číselník v XML"
-        }]
+    ```json
+    {
+        "success": true,
+        "result": {
+            "resources": [{
+                "name": "Číselník v XML"
+            }]
+        }
     }
-}
-```
+    ```

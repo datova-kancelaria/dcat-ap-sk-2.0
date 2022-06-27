@@ -1487,8 +1487,8 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 511ccb7, updated Mon Jun 6 13:31:59 2022 -0700" name="generator">
-  <link href="https://jakubklimek.github.io/dcat-ap-sk/" rel="canonical">
+  <meta content="Bikeshed version 37b7e7e68, updated Fri May 27 15:08:11 2022 -0700" name="generator">
+  <link href="https://datova-kancelaria.github.io/dcat-ap-sk/" rel="canonical">
 <style>/* style-autolinks */
 
 .css.css, .property.property, .descriptor.descriptor {
@@ -2008,11 +2008,13 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref allcaps" id="title">DCAT-AP-SK</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2022-06-10">10 June 2022</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2022-06-27">27 June 2022</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
-     <dd><a class="u-url" href="https://jakubklimek.github.io/dcat-ap-sk/">https://jakubklimek.github.io/dcat-ap-sk/</a>
+     <dd><a class="u-url" href="https://datova-kancelaria.github.io/dcat-ap-sk/">https://datova-kancelaria.github.io/dcat-ap-sk/</a>
+     <dt>Issue Tracking:
+     <dd><a href="https://github.com/datova-kancelaria/dcat-ap-sk/issues/">GitHub</a>
      <dt class="editor">Editor:
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="https://jakub.klímek.com/">Jakub Klímek</a> (<a class="p-org org" href="https://www.mff.cuni.cz">Charles University</a>) <a class="u-email email" href="mailto:jakub.klimek@matfyz.cuni.cz">jakub.klimek@matfyz.cuni.cz</a>
     </dl>
@@ -2066,8 +2068,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
       <li>
        <a href="#třída-distribuce"><span class="secno">2.4</span> <span class="content">Třída: Distribuce datové sady</span></a>
        <ol class="toc">
-        <li><a href="#podmnky-uit"><span class="secno">2.4.1</span> <span class="content">Podmínky užití</span></a>
-        <li><a href="#distribuce-stažení-souboru"><span class="secno">2.4.2</span> <span class="content">Odkaz na stažení souboru {#distribuce-stažení-souboru}</span></a>
+        <li><a href="#specifikace-podmínek-užití"><span class="secno">2.4.1</span> <span class="content">Specifikace podmínek užití</span></a>
+        <li><a href="#distribuce-stažení-souboru"><span class="secno">2.4.2</span> <span class="content">Odkaz na stažení souboru</span></a>
         <li><a href="#pstupov-url"><span class="secno">2.4.3</span> <span class="content">Přístupové URL</span></a>
         <li><a href="#formt-souboru-ke-staen"><span class="secno">2.4.4</span> <span class="content">Formát souboru ke stažení</span></a>
         <li><a href="#media-type-souboru-ke-staen"><span class="secno">2.4.5</span> <span class="content">Media type souboru ke stažení</span></a>
@@ -2078,10 +2080,10 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#vazba-pstupov-sluba"><span class="secno">2.4.10</span> <span class="content">Vazba: přístupová služba</span></a>
        </ol>
       <li>
-       <a href="#třída-služba"><span class="secno">2.5</span> <span class="content">Třída: Datová služba</span></a>
+       <a href="#třída-datová-služba"><span class="secno">2.5</span> <span class="content">Třída: Datová služba</span></a>
        <ol class="toc">
         <li><a href="#nzev②"><span class="secno">2.5.1</span> <span class="content">Název</span></a>
-        <li><a href="#pstupov-bod"><span class="secno">2.5.2</span> <span class="content">Přístupový bod</span></a>
+        <li><a href="#datová-služba-přístupový-bod"><span class="secno">2.5.2</span> <span class="content">Přístupový bod</span></a>
         <li><a href="#odkaz-na-specifikaci①"><span class="secno">2.5.3</span> <span class="content">Odkaz na specifikaci</span></a>
         <li><a href="#popis-pstupovho-bodu"><span class="secno">2.5.4</span> <span class="content">Popis přístupového bodu</span></a>
        </ol>
@@ -2165,6 +2167,7 @@ Obsahově by distribuce měly být ekvivalentní.</p>
 <c- k>@prefix</c-> <c- nn>kontakt:</c-> <c- g>&lt;https://data.gov.sk/zdroj/datová-sada/1/kontaktní-bod></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>podmínky:</c-> <c- g>&lt;https://data.gov.sk/zdroj/datová-sada/1/distribuce/1/podmínky-užití></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>správce:</c-> <c- g>&lt;https://data.gov.sk/zdroj/katalog/kontaktní-bod></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>pu:</c-> <c- g>&lt;https://data.gov.sk/slovník/podmienky-užitie/></c-> <c- p>.</c->
 </pre>
    <h3 class="heading settled" data-level="2.2" id="třída-katalog"><span class="secno">2.2. </span><span class="content">Třída: Katalog</span><a class="self-link" href="#třída-katalog"></a></h3>
    <dl>
@@ -2649,32 +2652,37 @@ Odpovídá třídě <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Distribut
 <pre class="language-turtle highlight"><c- nn>distribuce</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.1" id="podmnky-uit"><span class="secno">2.4.1. </span><span class="content">Podmínky užití</span><a class="self-link" href="#podmnky-uit"></a></h4>
+   <h4 class="heading settled" data-level="2.4.1" id="specifikace-podmínek-užití"><span class="secno">2.4.1. </span><span class="content">Specifikace podmínek užití</span><a class="self-link" href="#specifikace-podmínek-užití"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Podmínky užití
-Odpovídá vlastnosti <a href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/license">dct:license</a>.</p>
+     <p>Tato vlastnost odkazuje na strukturovaný popis podmínek užití této distribuce datové sady. Hodnoty se řídí TODO:dokument</p>
     <dt data-md>Vlastnost
     <dd data-md>
-     <p><code>podmínky_užití</code>, <code>dct:license</code></p>
+     <p><code>podmínky_užití</code>, <code>pu:špecifikácia</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>IRI</p>
+     <p>Entita typu <code>pu:Špecifikácia</code> s vlastnostmi <code>pu:autorské-dielo</code>, <code>pu:databáza-ako-autorské-dielo</code>, <code>pu:databáza-chránená-zvláštnymi-právami</code> a <code>pu:osobné-údaje</code>.
+Volitelně také <code>pu:autor</code> a <code>pu:autor-databáze</code>. Viz TODO:dokument.</p>
     <dt data-md>Povinnost
     <dd data-md>
      <p>Povinná</p>
     <dt data-md>Příklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribuce</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>license</c-> <c- g>&lt;https://creativecommons.org/publicdomain/zero/1.0/></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>distribuce</c-><c- p>:</c-> <c- nn>pu</c-><c- p>:</c-><c- f>špecifikácia</c-> <c- nn>podmienky</c-><c- p>:</c-> <c- p>.</c->
+
+<c- nn>podmienky</c-><c- p>:</c-> <c- b>a</c-> <c- nn>pu</c-><c- p>:</c-><c- f>Špecifikácia</c-> <c- p>;</c->
+    <c- nn>pu</c-><c- p>:</c-><c- f>autorské-dielo</c-> <c- g>&lt;https://data.gov.cz/podmínky-užití/neobsahuje-autorská-díla/></c-> <c- p>;</c->
+    <c- nn>pu</c-><c- p>:</c-><c- f>databáza-ako-autorské-dielo</c-> <c- g>&lt;https://data.gov.cz/podmínky-užití/není-autorskoprávně-chráněnou-databází/></c-> <c- p>;</c->
+    <c- nn>pu</c-><c- p>:</c-><c- f>databáza-chránená-zvláštnymi-právami</c-> <c- g>&lt;https://data.gov.cz/podmínky-užití/není-chráněna-zvláštním-právem-pořizovatele-databáze/></c-> <c- p>;</c->
+    <c- nn>pu</c-><c- p>:</c-><c- f>osobné-údaje</c-> <c- g>&lt;https://data.gov.cz/podmínky-užití/neobsahuje-osobní-údaje/></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.4.2" id="distribuce-stažení-souboru"><span class="secno">2.4.2. </span><span class="content">Odkaz na stažení souboru {#distribuce-stažení-souboru}</span><a class="self-link" href="#distribuce-stažení-souboru"></a></h4>
+   <h4 class="heading settled" data-level="2.4.2" id="distribuce-stažení-souboru"><span class="secno">2.4.2. </span><span class="content">Odkaz na stažení souboru</span><a class="self-link" href="#distribuce-stažení-souboru"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Podmínky užití
-Tato vlastnost obsahuje URL, které je přímým odkazem na stažitelný soubor v daném formátu.
+     <p>Tato vlastnost obsahuje URL, které je přímým odkazem na stažitelný soubor v daném formátu.
 Odpovídá vlastnosti <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url">dcat:downloadURL</a>.</p>
     <dt data-md>Vlastnost
     <dd data-md>
@@ -2852,7 +2860,7 @@ Odpovídá vlastnosti <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dist
 <pre class="language-turtle highlight"><c- nn>distribuce</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>accessService</c-> <c- nn>služba</c-><c- p>:</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h3 class="heading settled" data-level="2.5" id="třída-služba"><span class="secno">2.5. </span><span class="content">Třída: Datová služba</span><a class="self-link" href="#třída-služba"></a></h3>
+   <h3 class="heading settled" data-level="2.5" id="třída-datová-služba"><span class="secno">2.5. </span><span class="content">Třída: Datová služba</span><a class="self-link" href="#třída-datová-služba"></a></h3>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2881,7 +2889,7 @@ Odpovídá vlastnosti <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dist
 <pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint České správy sociálního zabezpečení"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Czech Social Security Administration SPARQL endpoint"</c-><c- o>@</c->en <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.5.2" id="pstupov-bod"><span class="secno">2.5.2. </span><span class="content">Přístupový bod</span><a class="self-link" href="#pstupov-bod"></a></h4>
+   <h4 class="heading settled" data-level="2.5.2" id="datová-služba-přístupový-bod"><span class="secno">2.5.2. </span><span class="content">Přístupový bod</span><a class="self-link" href="#datová-služba-přístupový-bod"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -3333,7 +3341,8 @@ Nesmí však obsahovat mezeru.
    <h4 class="heading settled" data-level="5.3.3" id="odkaz-na-podmnky-uit"><span class="secno">5.3.3. </span><span class="content">Odkaz na podmínky užití</span><a class="self-link" href="#odkaz-na-podmnky-uit"></a></h4>
    <p>Ve standardu DCAT-AP, na kterém je Národní katalog otevřených dat založen, jsou podmínky užití vlastností distribuce datové sady.
 V rozhraní CKAN API je to však vlastností celé datové sady.
-Podmínky užití se tedy interpretují jako identické pro všechny distribuce datové sady.</p>
+Podmínky užití se tedy interpretují jako identické pro všechny distribuce datové sady.
+Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití v souladu s právním řádem, viz <a href="#specifikace-podmínek-užití">§ 2.4.1 Specifikace podmínek užití</a>.</p>
    <dl>
     <dt data-md>Vlastnost
     <dd data-md>
