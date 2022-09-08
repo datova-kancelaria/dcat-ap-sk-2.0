@@ -24,7 +24,7 @@ V této sekci jsou popsány položky, které mohou být evidované v Národním 
 Položky se řídí standardem [DCAT Application Profile for data portals in Europe Version 2.1.1 (DCAT-AP 2.1.1)](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211).
 
 <figure>
-    <img alt="Konceptuální model DCAT-AP-SK 2.0" src="dcat-ap-sk.svg">
+    <img alt="Konceptuální model DCAT-AP-SK 2.0" src="dcat-ap-sk-2.0.svg">
     <figcaption>Diagram datového modelu DCAT-AP-SK 2.0. Šedě podbarvené části jsou specifikovány číselníky.</figcaption>
 </figure>
 
