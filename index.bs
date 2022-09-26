@@ -806,6 +806,7 @@ Soubor katalogu je soubor v RDF serializaci Turtle [[!turtle]] či JSON-LD [[!js
 </div>
 
 <div class='example'>
+<a href="příklady/katalog.jsonld">Příklad v JSON-LD</a>, <a href="schémata/katalog.json">JSON Schéma</a>, <a href="kontexty/rozhraní-katalogů-otevřených-dat.jsonld">JSON-LD kontext</a>
 ```json
 {
     "@context": "https://data.gov.sk/.../kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
@@ -923,6 +924,7 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
 </div>
 
 <div class='example'>
+<a href="příklady/dataset.jsonld">Příklad v JSON-LD</a>, <a href="schémata/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhraní-katalogů-otevřených-dat.jsonld">JSON-LD kontext</a>
 ```json
 {
     "@context": "https://data.gov.sk/.../kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
