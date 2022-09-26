@@ -1,0 +1,117 @@
+{
+    "@context": "https://data.gov.sk/.../kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
+    "iri": "https://data.gov.sk/set/vld",
+    "typ": "Datová sada",
+    "název": {
+        "sk": "Jízdní řády veřejné linkové dopravy",
+        "en": "Public transport timetables"
+    },
+    "popis": {
+        "sk": "Obsahem datové sady jsou schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu.",
+        "en": "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."
+    },
+    "poskytovatel": "https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652",
+    "typ_datasetu": "https://data.gov.sk/def/dataset-type/1",
+    "téma": [
+        "http://publications.europa.eu/resource/authority/data-theme/TRAN"
+    ],
+    "periodicita_aktualizace": "http://publications.europa.eu/resource/authority/frequency/WEEKLY_3",
+    "klíčové_slovo": {
+        "sk": [
+            "jízdní řády",
+            "veřejná linková doprava",
+            "autobus"
+        ],
+        "en": [
+            "timetable",
+            "public transport",
+            "bus"
+        ]
+    },
+    "geografické_území": [
+        "http://publications.europa.eu/resource/authority/continent/EUROPE"
+    ],
+    "prvek_rúian": [
+        "https://linked.cuzk.cz/resource/ruian/stat/1"
+    ],
+    "časové_pokrytí": {
+        "typ": "Časový interval",
+        "začátek": "2009-01-01",
+        "konec": "2017-12-31"
+    },
+    "kontaktní_bod": {
+        "typ": "Organizace",
+        "jméno": {
+            "sk": "Ministerstvo dopravy, Odbor veřejné dopravy",
+            "en": "Ministry of Transport"
+        },
+        "e-mail": "mailto:sekretariat.190@mdcr.cz"
+    },
+    "dokumentace": "https://www.mdcr.cz/Dokumenty/Verejna-doprava/Jizdni-rady,-kalendare-pro-jizdni-rady,-metodi-(1)/Jizdni-rady-verejne-dopravy",
+    "specifikace": [
+        "https://ofn.gov.cz/jízdní-řády/2020-05-01/"
+    ],
+    "koncept_euroVoc": [
+        "http://eurovoc.europa.eu/4512"
+    ],
+    "prostorové_rozlišení_v_metrech": 12.0,
+    "časové_rozlišení": "P1D",
+    "distribuce": [{
+            "iri": "https://data.gov.sk/set/vld/resource/csv",
+            "typ": "Distribuce",
+            "podmínky_užití": {
+                "typ": "Specifikace podmínek užití",
+                "autorské_dílo": "https://creativecommons.org/licenses/by/4.0/",
+                "autor": {
+                    "sk": "Ministerstvo dopravy, Odbor veřejné dopravy"
+                },
+                "databáze_chráněná_zvláštními_právy": "https://creativecommons.org/publicdomain/zero/1.0/",
+                "databáze_jako_autorské_dílo": "https://creativecommons.org/licenses/by/4.0/",
+                "autor_databáze": {
+                    "sk": "Ministerstvo dopravy, Odbor veřejné dopravy"
+                },
+                "osobní_údaje": "https://data.gov.sk/def/personal-data-occurence-type/2"
+            },
+            "přístupové_url": "https://portal.cisjr.cz/pub/draha/mestske/JDF.zip",
+            "soubor_ke_stažení": "https://portal.cisjr.cz/pub/draha/mestske/JDF.zip",
+            "formát": "http://publications.europa.eu/resource/authority/file-type/ZIP",
+            "typ_média": "http://www.iana.org/assignments/media-types/application/json",
+            "schéma": "https://portal.cisjr.cz/schemata/json-schema.json",
+            "typ_média_komprese": "http://www.iana.org/assignments/media-types/application/zip",
+            "typ_média_balíčku": "http://www.iana.org/assignments/media-types/application/zip",
+            "název": {
+                "en": "JSON distribution in ZIP file",
+                "sk": "JSON distribuce v ZIP soubrou"
+            }
+        },
+        {
+            "iri": "https://data.gov.sk/set/vld/resource/sparql",
+            "typ": "Distribuce",
+            "podmínky_užití": {
+                "typ": "Specifikace podmínek užití",
+                "autorské_dílo": "https://data.gov.sk/def/authors-work-type/3",
+                "databáze_chráněná_zvláštními_právy": "https://data.gov.sk/def/codelist/database-creator-special-rights-type/2",
+                "databáze_jako_autorské_dílo": "https://data.gov.sk/def/original-database-type/3",
+                "osobní_údaje": "https://data.gov.sk/def/personal-data-occurence-type/2"
+            },
+            "přístupové_url": "https://portal.cisjr.cz/sparql",
+            "název": {
+                "en": "SPARQL endpoint for timetables",
+                "sk": "SPARQL endpoint pro jízdní řády"
+            },
+            "přístupová_služba": {
+                "iri": "https://data.gov.sk/id/egov/app-service/123",
+                "typ": "Datová služba",
+                "název": {
+                    "sk": "SPARQL endpoint pro jízdní řády",
+                    "en": "SPARQL endpoint for timetables"
+                },
+                "specifikace": [
+                    "https://www.w3.org/TR/sparql11-protocol/"
+                ],
+                "přístupový_bod": "https://portal.cisjr.cz/sparql",
+                "popis_přístupového_bodu": "https://portal.cisjr.cz/sparql"
+            }
+        }
+    ]
+}

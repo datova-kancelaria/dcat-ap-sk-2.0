@@ -1,0 +1,19 @@
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard2006: <http://www.w3.org/2006/vcard/ns#> .
+
+<https://data.gov.sk/lkod/mdcr/katalog> a dcat:Catalog ;
+    dct:title "Katalog otevřených dat Ministerstva dopravy"@sk, "Open Data Catalog of the Ministry of Transport"@en ;
+    dct:description "Otevřená data Ministerstva dopravy. Obsahuje datové sady o jízdních řádech a liniových vedeních veřejné dopravy."@sk;
+    dct:description "Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."@en ;
+    dct:publisher <https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652> ;
+    foaf:homepage <https://data.gov.sk/datové-sady?poskytovatel=Ministerstvo%20dopravy> ;
+    dcat:contactPoint [
+        a vcard2006:Organization ;
+        vcard2006:fn "Ministerstvo dopravy, Odbor veřejné dopravy"@sk, "Ministry of Transport"@en ;
+        vcard2006:hasEmail <mailto:sekretariat.190@mdcr.cz>
+    ] ;
+    dcat:dataset  <https://data.gov.sk/lkod/mdcr/datové-sady/seznam-zastavky> ,
+                  <https://data.gov.sk/lkod/mdcr/datové-sady/vld> ,
+                  <https://data.gov.sk/lkod/mdcr/datové-sady/seznam-trate> .

@@ -57,13 +57,13 @@ Pro přehlednost zápisu budou použity ještě následující prefixy zkracují
 
 ```turtle
 @prefix sada: <https://data.gov.sk/dataset/1> .
-@prefix katalog: <https://data.gov.sk/catalog/1> .
-@prefix distribuce: <https://data.gov.sk/dataset/1/resource/1> .
-@prefix služba: <https://data.gov.sk/dataset/1/resource/1/service/1> .
-@prefix čas: <https://data.gov.sk/dataset/1/temporal> .
-@prefix kontakt: <https://data.gov.sk/dataset/1/contact-point> .
-@prefix podmínky: <https://data.gov.sk/dataset/1/resource/1/terms-of-use> .
-@prefix správce: <https://data.gov.sk/katalog/1/kontaktní-bod> .
+@prefix katalog: <https://data.gov.sk/set/catalog/lkod/1> .
+@prefix distribuce: <https://data.gov.sk/set/1/resource/1> .
+@prefix služba: <https://data.gov.sk/id/egov/app-service/1> .
+@prefix čas: <https://data.gov.sk/set/1/temporal> .
+@prefix kontakt: <https://data.gov.sk/set/1/contact-point> .
+@prefix podmínky: <https://data.gov.sk/set/1/resource/1/terms-of-use> .
+@prefix správce: <https://data.gov.sk/catalog/lkod/1/contact-point> .
 ```
 
 Třída: Katalog {#třída-katalog}
@@ -123,7 +123,7 @@ katalog: dct:description "Otevřená data Ministerstva dopravy. Obsahuje datové
 : Příklad
 :: 
     ```turtle
-katalog: dct:publisher <https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008> .
+katalog: dct:publisher <https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652> .
     ```
 
 ### Kontaktní bod - jméno a email ### {#katalog-kontaktní-bod}
@@ -234,7 +234,7 @@ sada: dct:description "Statistika kontrol plnění povinností zaměstnavatelů 
 : Příklad
 :: 
     ```turtle
-sada: dct:publisher <https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008> .
+sada: dct:publisher <https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652> .
     ```
 
 ### Téma ### {#datová-sada-téma}
@@ -299,8 +299,8 @@ sada: dcat:keyword "kontrola"@sk, "statistika"@sk, "inspection"@en, "statistics"
 :: `typ_datasetu`, `dct:type`
 : Typ
 :: IRI položek z číselníku [typů datasetu](https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101817682).
-: Nepovinná
-:: Povinná
+: Povinnost
+:: Nepovinná
 : Příklady
 :: 
     ```turtle
@@ -317,8 +317,8 @@ sada: dct:type <https://data.gov.sk/def/dataset-type/1> .
 :: `geografické_území`, `dct:spatial`
 : Typ
 :: IRI položek z evropských číselníků [zemí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/country), [kontinentů](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/continent), [míst](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/place) nebo IRI objektu z [Geonames](https://www.geonames.org/).
-: Nepovinná
-:: Povinná
+: Povinnost
+:: Nepovinná
 : Příklady
 :: 
     ```turtle
@@ -768,17 +768,6 @@ Jedná se o nejjednodušší způsob registrace lokálního katalogu otevřenýc
 
 Datové sady, distribuce a datové služby musí být identifikovány svými IRI, nesmí se jednat o [RDF blank nody](https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes) [[!rdf11-concepts]].
 
-Příklady lokálních katalogů typu SPARQL endpoint  {#rozhraní-sparql-endpoint-příklady}
---------------------------------------------------------------------------------------
-
-V této sekci uvádíme příklady katalogů užívajících rozhraní SPARQL endpoint.
-
-<div class='example'>
-- [https://data.cssz.cz/sparql](https://data.cssz.cz/sparql)
-- [https://data.mvcr.gov.cz/sparql](https://data.mvcr.gov.cz/sparql)
-- [https://opendata.mfcr.cz/lod/sparql](https://opendata.mfcr.cz/lod/sparql)
-    </div>
-
 Rozhraní DCAT-AP Dokumenty {#rozhraní-dcat-ap-dokumenty}
 =========================================================
 Tato varianta rozhraní je určena pro instituce, které nechtějí nebo nemohou provozovat pro účely harvestace metadat o datových sadách do NKOD SPARQL endpoint.
@@ -803,7 +792,7 @@ Soubor katalogu je soubor v RDF serializaci Turtle [[!turtle]] či JSON-LD [[!js
     dct:title "Katalog otevřených dat Ministerstva dopravy"@sk, "Open Data Catalog of the Ministry of Transport"@en ;
     dct:description "Otevřená data Ministerstva dopravy. Obsahuje datové sady o jízdních řádech a liniových vedeních veřejné dopravy."@sk;
     dct:description "Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."@en ;
-    dct:publisher <https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008> ;
+    dct:publisher <https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652> ;
     foaf:homepage <https://data.gov.sk/datové-sady?poskytovatel=Ministerstvo%20dopravy> ;
     dcat:contactPoint [
         a vcard2006:Organization ;
@@ -819,27 +808,27 @@ Soubor katalogu je soubor v RDF serializaci Turtle [[!turtle]] či JSON-LD [[!js
 <div class='example'>
 ```json
 {
-    "@context": "https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
+    "@context": "https://data.gov.sk/.../kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
     "iri": "https://data.gov.sk/lkod/mdcr/katalog",
     "typ": "Katalog",
     "název": {
-        "cs": "Katalog otevřených dat Ministerstva dopravy",
+        "sk": "Katalog otevřených dat Ministerstva dopravy",
         "en": "Open Data Catalog of the Ministry of Transport"
     },
     "popis": {
-        "cs": "Otevřená data Ministerstva dopravy. Obsahuje datové sady o jízdních řádech a liniových vedeních veřejné dopravy.",
+        "sk": "Otevřená data Ministerstva dopravy. Obsahuje datové sady o jízdních řádech a liniových vedeních veřejné dopravy.",
         "en": "Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."
     },
     "kontaktní_bod": {
         "typ": "Organizace",
         "jméno": {
-          "cs": "Ministerstvo dopravy, Odbor veřejné dopravy",
+          "sk": "Ministerstvo dopravy, Odbor veřejné dopravy",
           "en": "Ministry of Transport"
         },
         "e-mail": "mailto:sekretariat.190@mdcr.cz"
     },
     "domovská_stránka": "https://data.gov.sk/datové-sady?poskytovatel=Ministerstvo%20dopravy",
-    "poskytovatel": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008",
+    "poskytovatel": "https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652",
     "datová_sada": [
          "https://data.gov.sk/lkod/mdcr/datové-sady/vld",
          "https://data.gov.sk/lkod/mdcr/datové-sady/seznam-zastavky",
@@ -866,16 +855,16 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
 @prefix freq: <http://publications.europa.eu/resource/authority/frequency/> .
 @prefix theme: <http://publications.europa.eu/resource/authority/data-theme/> .
 @prefix continent: <http://publications.europa.eu/resource/authority/continent/> .
-@prefix ruian_ST: <https://linked.cuzk.cz/resource/ruian/stat/> .
 @prefix euroVoc: <http://eurovoc.europa.eu/> .
 
 @prefix law: <https://data.gov.sk/def/ontology/law/> .
 
-<https://data.gov.sk/lkod/mdcr/datové-sady/vld> a dcat:Dataset ;
+<https://data.gov.sk/set/vld> a dcat:Dataset ;
     dct:title "Jízdní řády veřejné linkové dopravy"@sk, "Public transport timetables"@en;
     dct:description "Obsahem datové sady jsou schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu."@sk ;
     dct:description "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."@en ;
-    dct:publisher <https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008> ;
+    dct:publisher <https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652> ;
+    dct:type <https://data.gov.sk/def/dataset-type/1> ;
     dcat:theme theme:TRAN ;
     dct:accrualPeriodicity freq:WEEKLY_3 ;
     dcat:keyword "autobusy"@sk, "jízdní řády"@sk, "veřejná linková doprava"@sk, "timetable"@en, "bus"@en, "public transport"@en ;
@@ -895,10 +884,10 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
     dcat:theme euroVoc:4512 ;
     dcat:spatialResolutionInMeters 12.0 ;
     dcat:temporalResolution "P1D"^^xsd:duration ;
-    dcat:distribution <https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/csv> ;
-    dcat:distribution <https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/sparql> .
+    dcat:distribution <https://data.gov.sk/set/vld/resource/csv> ;
+    dcat:distribution <https://data.gov.sk/set/vld/resource/sparql> .
 
-<https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/csv> a dcat:Distribution ;
+<https://data.gov.sk/set/vld/resource/csv> a dcat:Distribution ;
     law:termsOfUse [ a law:TermsOfUse ;
                     law:authorsWorkType <https://creativecommons.org/licenses/by/4.0/> ;
                     law:authorName "Ministerstvo dopravy, Odbor veřejné dopravy"@sk ;
@@ -915,7 +904,7 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
     dcat:packageFormat application:zip ;
     dct:title "JSON distribuce v ZIP soubrou"@sk, "JSON distribution in ZIP file"@en .
 
-<https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/sparql> a dcat:Distribution ;
+<https://data.gov.sk/set/vld/resource/sparql> a dcat:Distribution ;
     law:termsOfUse [ a law:TermsOfUse ;
                     law:authorsWorkType <https://data.gov.sk/def/authors-work-type/3> ;
                     law:databaseProtectedBySpecialRightsType <https://data.gov.sk/def/codelist/database-creator-special-rights-type/2> ;
@@ -923,9 +912,9 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
                     law:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
     dcat:accessURL <https://portal.cisjr.cz/sparql> ;
     dct:title "SPARQL endpoint pro jízdní řády"@sk, "SPARQL endpoint for timetables"@en ;
-    dcat:accessService <https://data.gov.sk/lkod/mdcr/datové-sady/vld/služba/sparql> .
+    dcat:accessService <https://data.gov.sk/id/egov/app-service/123> .
 
-<https://data.gov.sk/lkod/mdcr/datové-sady/vld/služba/sparql> a dcat:DataService ;
+<https://data.gov.sk/id/egov/app-service/123> a dcat:DataService ;
     dct:title "SPARQL endpoint pro jízdní řády"@sk, "SPARQL endpoint for timetables"@en ;
     dcat:endpointURL <https://portal.cisjr.cz/sparql> ;
     dcat:endpointDescription <https://portal.cisjr.cz/sparql> ;
@@ -936,24 +925,25 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
 <div class='example'>
 ```json
 {
-    "@context": "https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
-    "iri": "https://data.gov.sk/lkod/mdcr/datové-sady/vld",
+    "@context": "https://data.gov.sk/.../kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
+    "iri": "https://data.gov.sk/set/vld",
     "typ": "Datová sada",
     "název": {
-        "cs": "Jízdní řády veřejné linkové dopravy",
+        "sk": "Jízdní řády veřejné linkové dopravy",
         "en": "Public transport timetables"
     },
     "popis": {
-        "cs": "Obsahem datové sady jsou schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu.",
+        "sk": "Obsahem datové sady jsou schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu.",
         "en": "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."
     },
-    "poskytovatel": "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008",
+    "poskytovatel": "https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652",
+    "typ_datasetu": "https://data.gov.sk/def/dataset-type/1",
     "téma": [
         "http://publications.europa.eu/resource/authority/data-theme/TRAN"
     ],
     "periodicita_aktualizace": "http://publications.europa.eu/resource/authority/frequency/WEEKLY_3",
     "klíčové_slovo": {
-        "cs": [
+        "sk": [
             "jízdní řády",
             "veřejná linková doprava",
             "autobus"
@@ -978,7 +968,7 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
     "kontaktní_bod": {
         "typ": "Organizace",
         "jméno": {
-            "cs": "Ministerstvo dopravy, Odbor veřejné dopravy",
+            "sk": "Ministerstvo dopravy, Odbor veřejné dopravy",
             "en": "Ministry of Transport"
         },
         "e-mail": "mailto:sekretariat.190@mdcr.cz"
@@ -993,18 +983,18 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
     "prostorové_rozlišení_v_metrech": 12.0,
     "časové_rozlišení": "P1D",
     "distribuce": [{
-            "iri": "https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/csv",
+            "iri": "https://data.gov.sk/set/vld/resource/csv",
             "typ": "Distribuce",
             "podmínky_užití": {
                 "typ": "Specifikace podmínek užití",
                 "autorské_dílo": "https://creativecommons.org/licenses/by/4.0/",
                 "autor": {
-                    "cs": "Ministerstvo dopravy, Odbor veřejné dopravy"
+                    "sk": "Ministerstvo dopravy, Odbor veřejné dopravy"
                 },
                 "databáze_chráněná_zvláštními_právy": "https://creativecommons.org/publicdomain/zero/1.0/",
                 "databáze_jako_autorské_dílo": "https://creativecommons.org/licenses/by/4.0/",
                 "autor_databáze": {
-                    "cs": "Ministerstvo dopravy, Odbor veřejné dopravy"
+                    "sk": "Ministerstvo dopravy, Odbor veřejné dopravy"
                 },
                 "osobní_údaje": "https://data.gov.sk/def/personal-data-occurence-type/2"
             },
@@ -1017,11 +1007,11 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
             "typ_média_balíčku": "http://www.iana.org/assignments/media-types/application/zip",
             "název": {
                 "en": "JSON distribution in ZIP file",
-                "cs": "JSON distribuce v ZIP soubrou"
+                "sk": "JSON distribuce v ZIP soubrou"
             }
         },
         {
-            "iri": "https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/sparql",
+            "iri": "https://data.gov.sk/set/vld/resource/sparql",
             "typ": "Distribuce",
             "podmínky_užití": {
                 "typ": "Specifikace podmínek užití",
@@ -1033,13 +1023,13 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
             "přístupové_url": "https://portal.cisjr.cz/sparql",
             "název": {
                 "en": "SPARQL endpoint for timetables",
-                "cs": "SPARQL endpoint pro jízdní řády"
+                "sk": "SPARQL endpoint pro jízdní řády"
             },
             "přístupová_služba": {
-                "iri": "https://data.gov.sk/lkod/mdcr/datové-sady/vld/služba/sparql",
+                "iri": "https://data.gov.sk/id/egov/app-service/123",
                 "typ": "Datová služba",
                 "název": {
-                    "cs": "SPARQL endpoint pro jízdní řády",
+                    "sk": "SPARQL endpoint pro jízdní řády",
                     "en": "SPARQL endpoint for timetables"
                 },
                 "specifikace": [
@@ -1053,16 +1043,6 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
 }
 ```
 </div>
-
-Příklady lokálních katalogů typu DCAT-AP Dokumenty {#rozhraní-dcat-ap-dokumenty-příklady}
---------------------------------------------------
-
-V této sekci uvádíme příklady katalogů užívajících rozhraní DCAT-AP Dokumenty.
-
-<div class='example'>
-- [https://open.datakhk.cz/katalog.jsonld](https://open.datakhk.cz/katalog.jsonld)
-- [https://kod.brno.cz/nkod/index.ttl](https://kod.brno.cz/nkod/index.ttl)
-    </div>
 
 Rozhraní CKAN API {#rozhraní-ckan-api}
 =================

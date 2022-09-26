@@ -1,0 +1,28 @@
+{
+    "@context": "https://data.gov.sk/.../kontexty/rozhraní-katalogů-otevřených-dat.jsonld",
+    "iri": "https://data.gov.sk/lkod/mdcr/katalog",
+    "typ": "Katalog",
+    "název": {
+        "sk": "Katalog otevřených dat Ministerstva dopravy",
+        "en": "Open Data Catalog of the Ministry of Transport"
+    },
+    "popis": {
+        "sk": "Otevřená data Ministerstva dopravy. Obsahuje datové sady o jízdních řádech a liniových vedeních veřejné dopravy.",
+        "en": "Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."
+    },
+    "kontaktní_bod": {
+        "typ": "Organizace",
+        "jméno": {
+          "sk": "Ministerstvo dopravy, Odbor veřejné dopravy",
+          "en": "Ministry of Transport"
+        },
+        "e-mail": "mailto:sekretariat.190@mdcr.cz"
+    },
+    "domovská_stránka": "https://data.gov.sk/datové-sady?poskytovatel=Ministerstvo%20dopravy",
+    "poskytovatel": "https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652",
+    "datová_sada": [
+         "https://data.gov.sk/lkod/mdcr/datové-sady/vld",
+         "https://data.gov.sk/lkod/mdcr/datové-sady/seznam-zastavky",
+         "https://data.gov.sk/lkod/mdcr/datové-sady/seznam-trate"
+  ]
+}

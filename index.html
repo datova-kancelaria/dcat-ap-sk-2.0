@@ -2008,7 +2008,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref allcaps" id="title">DCAT-AP-SK 2.0</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2022-09-08">8 September 2022</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2022-09-26">26 September 2022</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2089,17 +2089,12 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#datová-služba-přístupový-bod-popis"><span class="secno">2.5.4</span> <span class="content">Popis přístupového bodu</span></a>
        </ol>
      </ol>
-    <li>
-     <a href="#rozhraní-sparql-endpoint"><span class="secno">3</span> <span class="content">Rozhraní DCAT-AP SPARQL Endpoint</span></a>
-     <ol class="toc">
-      <li><a href="#rozhraní-sparql-endpoint-příklady"><span class="secno">3.1</span> <span class="content">Příklady lokálních katalogů typu SPARQL endpoint</span></a>
-     </ol>
+    <li><a href="#rozhraní-sparql-endpoint"><span class="secno">3</span> <span class="content">Rozhraní DCAT-AP SPARQL Endpoint</span></a>
     <li>
      <a href="#rozhraní-dcat-ap-dokumenty"><span class="secno">4</span> <span class="content">Rozhraní DCAT-AP Dokumenty</span></a>
      <ol class="toc">
       <li><a href="#rozhraní-dcat-ap-dokumenty-katalog"><span class="secno">4.1</span> <span class="content">Soubor katalogu</span></a>
       <li><a href="#rozhraní-dcat-ap-datová-sada"><span class="secno">4.2</span> <span class="content">Soubor datové sady</span></a>
-      <li><a href="#rozhraní-dcat-ap-dokumenty-příklady"><span class="secno">4.3</span> <span class="content">Příklady lokálních katalogů typu DCAT-AP Dokumenty</span></a>
      </ol>
     <li>
      <a href="#rozhraní-ckan-api"><span class="secno">5</span> <span class="content">Rozhraní CKAN API</span></a>
@@ -2162,13 +2157,13 @@ Obsahově by distribuce měly být ekvivalentní.</p>
 </pre>
    <p>Pro přehlednost zápisu budou použity ještě následující prefixy zkracující IRI vzorových entit.</p>
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>sada:</c-> <c- g>&lt;https://data.gov.sk/dataset/1></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>katalog:</c-> <c- g>&lt;https://data.gov.sk/catalog/1></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>distribuce:</c-> <c- g>&lt;https://data.gov.sk/dataset/1/resource/1></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>služba:</c-> <c- g>&lt;https://data.gov.sk/dataset/1/resource/1/service/1></c-> <c- p>.</c->
-@prefix <c- nn>čas</c-><c- p>:</c-> <c- g>&lt;https://data.gov.sk/dataset/1/temporal></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>kontakt:</c-> <c- g>&lt;https://data.gov.sk/dataset/1/contact-point></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>podmínky:</c-> <c- g>&lt;https://data.gov.sk/dataset/1/resource/1/terms-of-use></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>správce:</c-> <c- g>&lt;https://data.gov.sk/katalog/1/kontaktní-bod></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>katalog:</c-> <c- g>&lt;https://data.gov.sk/set/catalog/lkod/1></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>distribuce:</c-> <c- g>&lt;https://data.gov.sk/set/1/resource/1></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>služba:</c-> <c- g>&lt;https://data.gov.sk/id/egov/app-service/1></c-> <c- p>.</c->
+@prefix <c- nn>čas</c-><c- p>:</c-> <c- g>&lt;https://data.gov.sk/set/1/temporal></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>kontakt:</c-> <c- g>&lt;https://data.gov.sk/set/1/contact-point></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>podmínky:</c-> <c- g>&lt;https://data.gov.sk/set/1/resource/1/terms-of-use></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>správce:</c-> <c- g>&lt;https://data.gov.sk/catalog/lkod/1/contact-point></c-> <c- p>.</c->
 </pre>
    <h3 class="heading settled" data-level="2.2" id="třída-katalog"><span class="secno">2.2. </span><span class="content">Třída: Katalog</span><a class="self-link" href="#třída-katalog"></a></h3>
    <dl>
@@ -2235,7 +2230,7 @@ Obsahově by distribuce měly být ekvivalentní.</p>
      <p>Povinná</p>
     <dt data-md>Příklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652></c-> <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="2.2.4" id="katalog-kontaktní-bod"><span class="secno">2.2.4. </span><span class="content">Kontaktní bod - jméno a email</span><a class="self-link" href="#katalog-kontaktní-bod"></a></h4>
@@ -2363,7 +2358,7 @@ Obsahově by distribuce měly být ekvivalentní.</p>
      <p>Povinná</p>
     <dt data-md>Příklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>sada</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>sada</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652></c-> <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="2.3.4" id="datová-sada-téma"><span class="secno">2.3.4. </span><span class="content">Téma</span><a class="self-link" href="#datová-sada-téma"></a></h4>
@@ -2440,9 +2435,9 @@ Odpovídá vlastnosti <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:reso
     <dt data-md>Typ
     <dd data-md>
      <p>IRI položek z číselníku <a href="https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101817682">typů datasetu</a>.</p>
-    <dt data-md>Nepovinná
+    <dt data-md>Povinnost
     <dd data-md>
-     <p>Povinná</p>
+     <p>Nepovinná</p>
     <dt data-md>Příklady
     <dd data-md>
 <pre class="language-turtle highlight"><c- nn>sada</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>type</c-> <c- g>&lt;https://data.gov.sk/def/dataset-type/1></c-> <c- p>.</c->
@@ -2461,9 +2456,9 @@ Odpovídá vlastnosti <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:data
     <dt data-md>Typ
     <dd data-md>
      <p>IRI položek z evropských číselníků <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/country">zemí</a>, <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/continent">kontinentů</a>, <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/place">míst</a> nebo IRI objektu z <a href="https://www.geonames.org/">Geonames</a>.</p>
-    <dt data-md>Nepovinná
+    <dt data-md>Povinnost
     <dd data-md>
-     <p>Povinná</p>
+     <p>Nepovinná</p>
     <dt data-md>Příklady
     <dd data-md>
 <pre class="language-turtle highlight"><c- nn>sada</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/continent/EUROPE></c-> <c- p>.</c->
@@ -2975,19 +2970,6 @@ Odpovídá vlastnosti <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:reso
 Po registraci tohoto SPARQL endpointu se na něm NKOD zeptá nejprve na seznam instancí třídy <code>dcat:Dataset</code>, a poté se po skupinách bude ptát na povinné, nepovinné i další položky jednotlivých datových sad dle této specifikace a specifikace <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT-AP 2.1.1</a>.
 Jedná se o nejjednodušší způsob registrace lokálního katalogu otevřených dat. 
    <p>Datové sady, distribuce a datové služby musí být identifikovány svými IRI, nesmí se jednat o <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">RDF blank nody</a> <a data-link-type="biblio" href="#biblio-rdf11-concepts">[rdf11-concepts]</a>.</p>
-   <h3 class="heading settled" data-level="3.1" id="rozhraní-sparql-endpoint-příklady"><span class="secno">3.1. </span><span class="content">Příklady lokálních katalogů typu SPARQL endpoint</span><a class="self-link" href="#rozhraní-sparql-endpoint-příklady"></a></h3>
-   <p>V této sekci uvádíme příklady katalogů užívajících rozhraní SPARQL endpoint.</p>
-   <div class="example" id="example-c1e7ba0f">
-    <a class="self-link" href="#example-c1e7ba0f"></a> 
-    <ul>
-     <li data-md>
-      <p><a href="https://data.cssz.cz/sparql">https://data.cssz.cz/sparql</a></p>
-     <li data-md>
-      <p><a href="https://data.mvcr.gov.cz/sparql">https://data.mvcr.gov.cz/sparql</a></p>
-     <li data-md>
-      <p><a href="https://opendata.mfcr.cz/lod/sparql">https://opendata.mfcr.cz/lod/sparql</a></p>
-    </ul>
-   </div>
    <h2 class="heading settled" data-level="4" id="rozhraní-dcat-ap-dokumenty"><span class="secno">4. </span><span class="content">Rozhraní DCAT-AP Dokumenty</span><a class="self-link" href="#rozhraní-dcat-ap-dokumenty"></a></h2>
     Tato varianta rozhraní je určena pro instituce, které nechtějí nebo nemohou provozovat pro účely harvestace metadat o datových sadách do NKOD SPARQL endpoint.
 Počítá se serializací metadat o datových sadách do statických souborů umístěných na web.
@@ -2996,8 +2978,8 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
    <p>Datové sady, distribuce a datové služby musí být identifikovány svými IRI, nesmí se jednat o <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">RDF blank nody</a> <a data-link-type="biblio" href="#biblio-rdf11-concepts">[rdf11-concepts]</a>.</p>
    <h3 class="heading settled" data-level="4.1" id="rozhraní-dcat-ap-dokumenty-katalog"><span class="secno">4.1. </span><span class="content">Soubor katalogu</span><a class="self-link" href="#rozhraní-dcat-ap-dokumenty-katalog"></a></h3>
     Soubor katalogu je soubor v RDF serializaci Turtle <a data-link-type="biblio" href="#biblio-turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11">[json-ld11]</a>, který obsahuje instanci třídy <code>dcat:Catalog</code> a odkazy na jednotlivé katalogizované datové sady. 
-   <div class="example" id="example-42213257">
-    <a class="self-link" href="#example-42213257"></a> 
+   <div class="example" id="example-0bf46f96">
+    <a class="self-link" href="#example-0bf46f96"></a> 
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c->    <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>dct:</c->     <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
@@ -3007,7 +2989,7 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
     <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Katalog otevřených dat Ministerstva dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Open Data Catalog of the Ministry of Transport"</c-><c- o>@</c->en <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Otevřená data Ministerstva dopravy. Obsahuje datové sady o jízdních řádech a liniových vedeních veřejné dopravy."</c-><c- o>@</c->sk<c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."</c-><c- o>@</c->en <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652></c-> <c- p>;</c->
     <c- nn>foaf</c-><c- p>:</c-><c- f>homepage</c-> <c- g>&lt;https://data.gov.sk/datové-sady?poskytovatel=Ministerstvo%20dopravy></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>contactPoint</c-> <c- p>[</c->
         <c- b>a</c-> <c- nn>vcard2006</c-><c- p>:</c-><c- f>Organization</c-> <c- p>;</c->
@@ -3019,30 +3001,30 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
                   <c- g>&lt;https://data.gov.sk/lkod/mdcr/datové-sady/seznam-trate></c-> <c- p>.</c->
 </pre>
    </div>
-   <div class="example" id="example-1eea5c08">
-    <a class="self-link" href="#example-1eea5c08"></a> 
+   <div class="example" id="example-ed3a2043">
+    <a class="self-link" href="#example-ed3a2043"></a> 
 <pre class="language-json highlight"><c- p>{</c->
-    <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/kontexty/rozhraní-katalogů-otevřených-dat.jsonld"</c-><c- p>,</c->
+    <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/.../kontexty/rozhraní-katalogů-otevřených-dat.jsonld"</c-><c- p>,</c->
     <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/lkod/mdcr/katalog"</c-><c- p>,</c->
     <c- f>"typ"</c-><c- p>:</c-> <c- u>"Katalog"</c-><c- p>,</c->
     <c- f>"název"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"cs"</c-><c- p>:</c-> <c- u>"Katalog otevřených dat Ministerstva dopravy"</c-><c- p>,</c->
+        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Katalog otevřených dat Ministerstva dopravy"</c-><c- p>,</c->
         <c- f>"en"</c-><c- p>:</c-> <c- u>"Open Data Catalog of the Ministry of Transport"</c->
     <c- p>},</c->
     <c- f>"popis"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"cs"</c-><c- p>:</c-> <c- u>"Otevřená data Ministerstva dopravy. Obsahuje datové sady o jízdních řádech a liniových vedeních veřejné dopravy."</c-><c- p>,</c->
+        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Otevřená data Ministerstva dopravy. Obsahuje datové sady o jízdních řádech a liniových vedeních veřejné dopravy."</c-><c- p>,</c->
         <c- f>"en"</c-><c- p>:</c-> <c- u>"Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."</c->
     <c- p>},</c->
     <c- f>"kontaktní_bod"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"typ"</c-><c- p>:</c-> <c- u>"Organizace"</c-><c- p>,</c->
         <c- f>"jméno"</c-><c- p>:</c-> <c- p>{</c->
-          <c- f>"cs"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c-><c- p>,</c->
+          <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c-><c- p>,</c->
           <c- f>"en"</c-><c- p>:</c-> <c- u>"Ministry of Transport"</c->
         <c- p>},</c->
         <c- f>"e-mail"</c-><c- p>:</c-> <c- u>"mailto:sekretariat.190@mdcr.cz"</c->
     <c- p>},</c->
     <c- f>"domovská_stránka"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/datové-sady?poskytovatel=Ministerstvo%20dopravy"</c-><c- p>,</c->
-    <c- f>"poskytovatel"</c-><c- p>:</c-> <c- u>"https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008"</c-><c- p>,</c->
+    <c- f>"poskytovatel"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652"</c-><c- p>,</c->
     <c- f>"datová_sada"</c-><c- p>:</c-> <c- p>[</c->
          <c- u>"https://data.gov.sk/lkod/mdcr/datové-sady/vld"</c-><c- p>,</c->
          <c- u>"https://data.gov.sk/lkod/mdcr/datové-sady/seznam-zastavky"</c-><c- p>,</c->
@@ -3053,8 +3035,8 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
    </div>
    <h3 class="heading settled" data-level="4.2" id="rozhraní-dcat-ap-datová-sada"><span class="secno">4.2. </span><span class="content">Soubor datové sady</span><a class="self-link" href="#rozhraní-dcat-ap-datová-sada"></a></h3>
     Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF serializaci Turtle <a data-link-type="biblio" href="#biblio-turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11">[json-ld11]</a> obsahující kompletní metadatový záznam datové sady, včetně distribucí. 
-   <div class="example" id="example-d8911725">
-    <a class="self-link" href="#example-d8911725"></a> 
+   <div class="example" id="example-589bd580">
+    <a class="self-link" href="#example-589bd580"></a> 
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
@@ -3066,16 +3048,16 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
 <c- k>@prefix</c-> <c- nn>freq:</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/frequency/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>theme:</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/data-theme/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>continent:</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/continent/></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>ruian_ST:</c-> <c- g>&lt;https://linked.cuzk.cz/resource/ruian/stat/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>euroVoc:</c-> <c- g>&lt;http://eurovoc.europa.eu/></c-> <c- p>.</c->
 
 <c- k>@prefix</c-> <c- nn>law:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/law/></c-> <c- p>.</c->
 
-<c- g>&lt;https://data.gov.sk/lkod/mdcr/datové-sady/vld></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>;</c->
+<c- g>&lt;https://data.gov.sk/set/vld></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Jízdní řády veřejné linkové dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Public transport timetables"</c-><c- o>@</c->en<c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Obsahem datové sady jsou schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu."</c-><c- o>@</c->sk <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."</c-><c- o>@</c->en <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>type</c-> <c- g>&lt;https://data.gov.sk/def/dataset-type/1></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- nn>theme</c-><c- p>:</c-><c- f>TRAN</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- nn>freq</c-><c- p>:</c-><c- f>WEEKLY_3</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>keyword</c-> <c- s>"autobusy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"jízdní řády"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"veřejná linková doprava"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"timetable"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"bus"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"public transport"</c-><c- o>@</c->en <c- p>;</c->
@@ -3095,10 +3077,10 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
     <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- nn>euroVoc</c-><c- p>:</c-><c- f>4512</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>spatialResolutionInMeters</c-> <c- mf>12.0</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>temporalResolution</c-> <c- s>"P1D"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>duration</c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- g>&lt;https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/csv></c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- g>&lt;https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/sparql></c-> <c- p>.</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- g>&lt;https://data.gov.sk/set/vld/resource/csv></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- g>&lt;https://data.gov.sk/set/vld/resource/sparql></c-> <c- p>.</c->
 
-<c- g>&lt;https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/csv></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
+<c- g>&lt;https://data.gov.sk/set/vld/resource/csv></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
     <c- nn>law</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>[</c-> <c- b>a</c-> <c- nn>law</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
                     <c- nn>law</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://creativecommons.org/licenses/by/4.0/></c-> <c- p>;</c->
                     <c- nn>law</c-><c- p>:</c-><c- f>authorName</c-> <c- s>"Ministerstvo dopravy, Odbor veřejné dopravy"</c-><c- o>@</c->sk <c- p>;</c->
@@ -3115,7 +3097,7 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
     <c- nn>dcat</c-><c- p>:</c-><c- f>packageFormat</c-> <c- nn>application</c-><c- p>:</c-><c- f>zip</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"JSON distribuce v ZIP soubrou"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"JSON distribution in ZIP file"</c-><c- o>@</c->en <c- p>.</c->
 
-<c- g>&lt;https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/sparql></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
+<c- g>&lt;https://data.gov.sk/set/vld/resource/sparql></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
     <c- nn>law</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>[</c-> <c- b>a</c-> <c- nn>law</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
                     <c- nn>law</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://data.gov.sk/def/authors-work-type/3></c-> <c- p>;</c->
                     <c- nn>law</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;https://data.gov.sk/def/codelist/database-creator-special-rights-type/2></c-> <c- p>;</c->
@@ -3123,36 +3105,37 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
                     <c- nn>law</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>]</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://portal.cisjr.cz/sparql></c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pro jízdní řády"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>accessService</c-> <c- g>&lt;https://data.gov.sk/lkod/mdcr/datové-sady/vld/služba/sparql></c-> <c- p>.</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>accessService</c-> <c- g>&lt;https://data.gov.sk/id/egov/app-service/123></c-> <c- p>.</c->
 
-<c- g>&lt;https://data.gov.sk/lkod/mdcr/datové-sady/vld/služba/sparql></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>DataService</c-> <c- p>;</c->
+<c- g>&lt;https://data.gov.sk/id/egov/app-service/123></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>DataService</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pro jízdní řády"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://portal.cisjr.cz/sparql></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>endpointDescription</c-> <c- g>&lt;https://portal.cisjr.cz/sparql></c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c->
 </pre>
    </div>
-   <div class="example" id="example-8c59ccc6">
-    <a class="self-link" href="#example-8c59ccc6"></a> 
+   <div class="example" id="example-3d8a6034">
+    <a class="self-link" href="#example-3d8a6034"></a> 
 <pre class="language-json highlight"><c- p>{</c->
-    <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://ofn.gov.cz/rozhraní-katalogů-otevřených-dat/2021-01-11/kontexty/rozhraní-katalogů-otevřených-dat.jsonld"</c-><c- p>,</c->
-    <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/lkod/mdcr/datové-sady/vld"</c-><c- p>,</c->
+    <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/.../kontexty/rozhraní-katalogů-otevřených-dat.jsonld"</c-><c- p>,</c->
+    <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld"</c-><c- p>,</c->
     <c- f>"typ"</c-><c- p>:</c-> <c- u>"Datová sada"</c-><c- p>,</c->
     <c- f>"název"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"cs"</c-><c- p>:</c-> <c- u>"Jízdní řády veřejné linkové dopravy"</c-><c- p>,</c->
+        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Jízdní řády veřejné linkové dopravy"</c-><c- p>,</c->
         <c- f>"en"</c-><c- p>:</c-> <c- u>"Public transport timetables"</c->
     <c- p>},</c->
     <c- f>"popis"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"cs"</c-><c- p>:</c-> <c- u>"Obsahem datové sady jsou schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu."</c-><c- p>,</c->
+        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Obsahem datové sady jsou schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu."</c-><c- p>,</c->
         <c- f>"en"</c-><c- p>:</c-> <c- u>"This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."</c->
     <c- p>},</c->
-    <c- f>"poskytovatel"</c-><c- p>:</c-> <c- u>"https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008"</c-><c- p>,</c->
+    <c- f>"poskytovatel"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652"</c-><c- p>,</c->
+    <c- f>"typ_datasetu"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/dataset-type/1"</c-><c- p>,</c->
     <c- f>"téma"</c-><c- p>:</c-> <c- p>[</c->
         <c- u>"http://publications.europa.eu/resource/authority/data-theme/TRAN"</c->
     <c- p>],</c->
     <c- f>"periodicita_aktualizace"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/frequency/WEEKLY_3"</c-><c- p>,</c->
     <c- f>"klíčové_slovo"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"cs"</c-><c- p>:</c-> <c- p>[</c->
+        <c- f>"sk"</c-><c- p>:</c-> <c- p>[</c->
             <c- u>"jízdní řády"</c-><c- p>,</c->
             <c- u>"veřejná linková doprava"</c-><c- p>,</c->
             <c- u>"autobus"</c->
@@ -3177,7 +3160,7 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
     <c- f>"kontaktní_bod"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"typ"</c-><c- p>:</c-> <c- u>"Organizace"</c-><c- p>,</c->
         <c- f>"jméno"</c-><c- p>:</c-> <c- p>{</c->
-            <c- f>"cs"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c-><c- p>,</c->
+            <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c-><c- p>,</c->
             <c- f>"en"</c-><c- p>:</c-> <c- u>"Ministry of Transport"</c->
         <c- p>},</c->
         <c- f>"e-mail"</c-><c- p>:</c-> <c- u>"mailto:sekretariat.190@mdcr.cz"</c->
@@ -3192,18 +3175,18 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
     <c- f>"prostorové_rozlišení_v_metrech"</c-><c- p>:</c-> <c- mf>12.0</c-><c- p>,</c->
     <c- f>"časové_rozlišení"</c-><c- p>:</c-> <c- u>"P1D"</c-><c- p>,</c->
     <c- f>"distribuce"</c-><c- p>:</c-> <c- p>[{</c->
-            <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/csv"</c-><c- p>,</c->
+            <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld/resource/csv"</c-><c- p>,</c->
             <c- f>"typ"</c-><c- p>:</c-> <c- u>"Distribuce"</c-><c- p>,</c->
             <c- f>"podmínky_užití"</c-><c- p>:</c-> <c- p>{</c->
                 <c- f>"typ"</c-><c- p>:</c-> <c- u>"Specifikace podmínek užití"</c-><c- p>,</c->
                 <c- f>"autorské_dílo"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/licenses/by/4.0/"</c-><c- p>,</c->
                 <c- f>"autor"</c-><c- p>:</c-> <c- p>{</c->
-                    <c- f>"cs"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c->
+                    <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c->
                 <c- p>},</c->
                 <c- f>"databáze_chráněná_zvláštními_právy"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/publicdomain/zero/1.0/"</c-><c- p>,</c->
                 <c- f>"databáze_jako_autorské_dílo"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/licenses/by/4.0/"</c-><c- p>,</c->
                 <c- f>"autor_databáze"</c-><c- p>:</c-> <c- p>{</c->
-                    <c- f>"cs"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c->
+                    <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c->
                 <c- p>},</c->
                 <c- f>"osobní_údaje"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/personal-data-occurence-type/2"</c->
             <c- p>},</c->
@@ -3216,11 +3199,11 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
             <c- f>"typ_média_balíčku"</c-><c- p>:</c-> <c- u>"http://www.iana.org/assignments/media-types/application/zip"</c-><c- p>,</c->
             <c- f>"název"</c-><c- p>:</c-> <c- p>{</c->
                 <c- f>"en"</c-><c- p>:</c-> <c- u>"JSON distribution in ZIP file"</c-><c- p>,</c->
-                <c- f>"cs"</c-><c- p>:</c-> <c- u>"JSON distribuce v ZIP soubrou"</c->
+                <c- f>"sk"</c-><c- p>:</c-> <c- u>"JSON distribuce v ZIP soubrou"</c->
             <c- p>}</c->
         <c- p>},</c->
         <c- p>{</c->
-            <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/lkod/mdcr/datové-sady/vld/distribuce/sparql"</c-><c- p>,</c->
+            <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld/resource/sparql"</c-><c- p>,</c->
             <c- f>"typ"</c-><c- p>:</c-> <c- u>"Distribuce"</c-><c- p>,</c->
             <c- f>"podmínky_užití"</c-><c- p>:</c-> <c- p>{</c->
                 <c- f>"typ"</c-><c- p>:</c-> <c- u>"Specifikace podmínek užití"</c-><c- p>,</c->
@@ -3232,13 +3215,13 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
             <c- f>"přístupové_url"</c-><c- p>:</c-> <c- u>"https://portal.cisjr.cz/sparql"</c-><c- p>,</c->
             <c- f>"název"</c-><c- p>:</c-> <c- p>{</c->
                 <c- f>"en"</c-><c- p>:</c-> <c- u>"SPARQL endpoint for timetables"</c-><c- p>,</c->
-                <c- f>"cs"</c-><c- p>:</c-> <c- u>"SPARQL endpoint pro jízdní řády"</c->
+                <c- f>"sk"</c-><c- p>:</c-> <c- u>"SPARQL endpoint pro jízdní řády"</c->
             <c- p>},</c->
             <c- f>"přístupová_služba"</c-><c- p>:</c-> <c- p>{</c->
-                <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/lkod/mdcr/datové-sady/vld/služba/sparql"</c-><c- p>,</c->
+                <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/id/egov/app-service/123"</c-><c- p>,</c->
                 <c- f>"typ"</c-><c- p>:</c-> <c- u>"Datová služba"</c-><c- p>,</c->
                 <c- f>"název"</c-><c- p>:</c-> <c- p>{</c->
-                    <c- f>"cs"</c-><c- p>:</c-> <c- u>"SPARQL endpoint pro jízdní řády"</c-><c- p>,</c->
+                    <c- f>"sk"</c-><c- p>:</c-> <c- u>"SPARQL endpoint pro jízdní řády"</c-><c- p>,</c->
                     <c- f>"en"</c-><c- p>:</c-> <c- u>"SPARQL endpoint for timetables"</c->
                 <c- p>},</c->
                 <c- f>"specifikace"</c-><c- p>:</c-> <c- p>[</c->
@@ -3251,17 +3234,6 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
     <c- p>]</c->
 <c- p>}</c->
 </pre>
-   </div>
-   <h3 class="heading settled" data-level="4.3" id="rozhraní-dcat-ap-dokumenty-příklady"><span class="secno">4.3. </span><span class="content">Příklady lokálních katalogů typu DCAT-AP Dokumenty</span><a class="self-link" href="#rozhraní-dcat-ap-dokumenty-příklady"></a></h3>
-   <p>V této sekci uvádíme příklady katalogů užívajících rozhraní DCAT-AP Dokumenty.</p>
-   <div class="example" id="example-0b681988">
-    <a class="self-link" href="#example-0b681988"></a> 
-    <ul>
-     <li data-md>
-      <p><a href="https://open.datakhk.cz/katalog.jsonld">https://open.datakhk.cz/katalog.jsonld</a></p>
-     <li data-md>
-      <p><a href="https://kod.brno.cz/nkod/index.ttl">https://kod.brno.cz/nkod/index.ttl</a></p>
-    </ul>
    </div>
    <h2 class="heading settled" data-level="5" id="rozhraní-ckan-api"><span class="secno">5. </span><span class="content">Rozhraní CKAN API</span><a class="self-link" href="#rozhraní-ckan-api"></a></h2>
     CKAN API je rozhraní implementace datového katalogu <a href="https://ckan.org/">CKAN</a>.
