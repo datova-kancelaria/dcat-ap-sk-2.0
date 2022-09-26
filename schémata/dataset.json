@@ -133,8 +133,7 @@
         "poskytovatel",
         "téma",
         "periodicita_aktualizace",
-        "klíčové_slovo",
-        "prvek_rúian"
+        "klíčové_slovo"
     ],
     "properties": {
         "typ": {
@@ -174,7 +173,7 @@
             "format": "iri",
             "title": "Poskytovatel",
             "examples": [
-                "https://rpp-opendata.egon.gov.cz/odrpp/zdroj/orgán-veřejné-moci/66003008"
+                "https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652"
             ]
         },
         "typ_datasetu": {
@@ -207,18 +206,6 @@
         },
         "klíčové_slovo": {
             "$ref": "#/$defs/více-textů"
-        },
-        "prvek_rúian": {
-            "type": "array",
-            "items": {
-                "type": "string",
-                "format": "iri",
-                "title": "Související geografické území - prvek z RÚIAN",
-                "pattern": "^https\\://linked\\.cuzk\\.cz/resource/ruian/.*$",
-                "examples": [
-                    "https://linked.cuzk.cz/resource/ruian/stat/1"
-                ]
-            }
         },
         "geografické_území": {
             "type": "array",
