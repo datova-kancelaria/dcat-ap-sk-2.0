@@ -869,7 +869,7 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
     dcat:theme theme:TRAN ;
     dct:accrualPeriodicity freq:WEEKLY_3 ;
     dcat:keyword "autobusy"@sk, "jízdní řády"@sk, "veřejná linková doprava"@sk, "timetable"@en, "bus"@en, "public transport"@en ;
-    dct:spatial ruian_ST:1, continent:EUROPE ;
+    dct:spatial continent:EUROPE ;
     dct:temporal [
         a dct:PeriodOfTime ;
         dcat:startDate "2009-01-01"^^xsd:date ;
