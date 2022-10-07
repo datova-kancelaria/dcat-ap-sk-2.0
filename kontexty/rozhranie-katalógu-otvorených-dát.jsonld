@@ -22,12 +22,12 @@
 		"iri": "@id",
 		"typ": "@type",
 
-		"Katalog": "dcat:Catalog",
-		"poskytovatel": {
+		"Katalóg": "dcat:Catalog",
+		"poskytovateľ": {
 			"@id": "dcterms:publisher",
 			"@type": "@id"
 		},
-		"datová_sada": {
+		"dataset": {
 			"@id": "dcat:dataset",
 			"@type": "@id"
 		},
@@ -36,8 +36,8 @@
 			"@type": "@id"
 		},
 
-		"Datová sada": "dcat:Dataset",
-		"název": {
+		"Dataset": "dcat:Dataset",
+		"názov": {
 			"@id": "dcterms:title",
 			"@container": "@language"
 		},
@@ -53,50 +53,50 @@
 			"@id": "dcterms:type",
 			"@type": "@id"
 		},
-		"periodicita_aktualizace": {
+		"periodicita_aktualizácie": {
 			"@id": "dcterms:accrualPeriodicity",
 			"@type": "@id"
 		},
-		"klíčové_slovo": {
+		"klúčové_slovo": {
 			"@id": "dcat:keyword",
 			"@container": "@language"
 		},
-		"geografické_území": {
+		"geografické_územie": {
 			"@id": "dcterms:spatial",
 			"@type": "@id"
 		},
-		"prvek_rúian": {
+		"prvek_registra_adries": {
 			"@id": "dcterms:spatial",
 			"@type": "@id"
 		},
-		"prostorové_pokrytí": {
+		"priestorové_pokrytie": {
 			"@id": "dcterms:spatial",
 			"@type": "@id"
 		},
-		"časové_pokrytí": {
+		"časové_pokrytie": {
 			"@id": "dcterms:temporal",
 			"@type": "@id"
 		},
 		"Časový interval": "dcterms:PeriodOfTime",
-		"začátek": {
+		"začiatok": {
 			"@id": "dcat:startDate",
 			"@type": "xsd:date"
 		},
-		"konec": {
+		"koniec": {
 			"@id": "dcat:endDate",
 			"@type": "xsd:date"
 		},
-		"je_součástí": {
+		"je_súčásťou": {
 			"@id": "dcterms:isPartOf",
 			"@type": "@id"
 		},
 
-		"kontaktní_bod": {
+		"kontaktný_bod": {
 			"@id": "dcat:contactPoint",
 			"@type": "@id"
 		},
-		"Organizace": "vcard:Organization",
-		"jméno": {
+		"Organizácia": "vcard:Organization",
+		"meno": {
 			"@id": "vcard:fn",
 			"@container": "@language"
 		},
@@ -105,11 +105,11 @@
 			"@type": "@id"
 		},
 
-		"dokumentace": {
+		"dokumentácia": {
 			"@id": "foaf:page",
 			"@type": "@id"
 		},
-		"specifikace": {
+		"špecifikácia": {
 			"@id": "dcterms:conformsTo",
 			"@type": "@id"
 		},
@@ -117,27 +117,27 @@
 			"@id": "dcat:theme",
 			"@type": "@id"
 		},
-		"prostorové_rozlišení_v_metrech": {
+		"priestorové_rozlišenie_v_metroch": {
 			"@id": "dcat:spatialResolutionInMeters",
 			"@type": "xsd:double"
 		},
-		"časové_rozlišení": {
+		"časové_rozlišenie": {
 			"@id": "dcat:temporalResolution",
 			"@type": "xsd:duration"
 		},
-		"distribuce": {
+		"distribúcia": {
 			"@id": "dcat:distribution",
 			"@type": "@id"
 		},
 
-		"Distribuce": "dcat:Distribution",
-		"podmínky_užití": {
+		"Distribúcia": "dcat:Distribution",
+		"podmienky_použitia": {
 			"@id": "pu:specifikace",
 			"@type": "@id"
 		},
 		
-		"Specifikace podmínek užití": "pu:Specifikace",
-		"autorské_dílo": {
+		"Špecifikácia podmienok použitia": "pu:Specifikace",
+		"autorské_dielo": {
 			"@id": "pu:autorské-dílo",
 			"@type": "@id"
 		},
@@ -145,28 +145,28 @@
 			"@id": "pu:autor",
 			"@container": "@language"
 		},
-		"databáze_jako_autorské_dílo": {
+		"databáza_ako_autorské_dielo": {
 			"@id": "pu:databáze-jako-autorské-dílo",
 			"@type": "@id"
 		},
-		"autor_databáze": {
+		"autor_databázy": {
 			"@id": "pu:autor-databáze",
 			"@container": "@language"
 		},
-		"databáze_chráněná_zvláštními_právy": {
+		"databáza_chránená_zvláštnými_právami": {
 			"@id": "pu:databáze-chráněná-zvláštními-právy",
 			"@type": "@id"
 		},
-		"osobní_údaje": {
+		"osobné_údaje": {
 			"@id": "pu:osobní-údaje",
 			"@type": "@id"
 		},
 
-		"přístupové_url": {
+		"prístupové_url": {
 			"@id": "dcat:accessURL",
 			"@type": "@id"
 		},
-		"soubor_ke_stažení": {
+		"subor_na_stiahnutie": {
 			"@id": "dcat:downloadURL",
 			"@type": "@id"
 		},
@@ -182,29 +182,29 @@
 			"@id": "dcterms:conformsTo",
 			"@type": "@id"
 		},
-		"typ_média_komprese": {
+		"typ_média_kompresie": {
 			"@id": "dcat:compressFormat",
 			"@type": "@id"
 		},
-		"typ_média_balíčku": {
+		"typ_média_balíčka": {
 			"@id": "dcat:packageFormat",
 			"@type": "@id"
 		},
-		"přístupová_služba": {
+		"prístupová_služba": {
 			"@id": "dcat:accessService",
 			"@type": "@id"
 		},
 
-		"Datová služba": "dcat:DataService",
-		"přístupový_bod": {
+		"Dátová služba": "dcat:DataService",
+		"prístupový_bod": {
 			"@id": "dcat:endpointURL",
 			"@type": "@id"
 		},
-		"popis_přístupového_bodu": {
+		"popis_prístupového_bodu": {
 			"@id": "dcat:endpointDescription",
 			"@type": "@id"
 		},
-		"poskytuje_datovou_sadu": {
+		"poskytuje_dataset": {
 			"@id": "dcat:servesDataset",
 			"@type": "@id"
 		}

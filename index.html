@@ -1487,7 +1487,7 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 37b7e7e68, updated Fri May 27 15:08:11 2022 -0700" name="generator">
+  <meta content="Bikeshed version 44af0bf3e, updated Fri Jul 29 17:05:16 2022 -0700" name="generator">
   <link href="https://datova-kancelaria.github.io/dcat-ap-sk-2.0/" rel="canonical">
 <style>/* style-autolinks */
 
@@ -2008,13 +2008,14 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref allcaps" id="title">DCAT-AP-SK 2.0</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2022-09-28">28 September 2022</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2022-10-06">6 October 2022</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
      <dd><a class="u-url" href="https://datova-kancelaria.github.io/dcat-ap-sk-2.0/">https://datova-kancelaria.github.io/dcat-ap-sk-2.0/</a>
-     <dt class="editor">Editor:
+     <dt class="editor">Editors:
      <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="https://jakub.klímek.com/">Jakub Klímek</a> (<a class="p-org org" href="https://www.mff.cuni.cz">Charles University</a>) <a class="u-email email" href="mailto:jakub.klimek@matfyz.cuni.cz">jakub.klimek@matfyz.cuni.cz</a>
+     <dd class="editor p-author h-card vcard"><a class="p-name fn u-url url" href="https://www.linkedin.com/in/miroslavliska">Miroslav Líška</a> (<span class="p-org org">Ministerstvo Investícií SR</span>) <a class="u-email email" href="mailto:miroslav.liska@mirri.gov.sk">miroslav.liska@mirri.gov.sk</a>
     </dl>
    </div>
    <div data-fill-with="warning"></div>
@@ -2022,7 +2023,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="no-num no-toc no-ref heading settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>Cílem tohoto dokumentu je specifikovat datový model a rozhraní lokálních katalogů otevřených dat (LKOD) pro jejich harvestování Národním katalogem otevřených dat (NKOD). Stejná specifikace platí i pro datový model NKOD a data poskytovaná z NKOD v podobě souborů ke stažení či SPARQL endpointu. Nejprve je specifikován datový model katalogizačního záznamu. Poté jsou specifikovány 2 varianty rozhraní pro harvestaci, které jsou založeny na <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">standardu DCAT-AP 2.1.1</a>, jedna využívá SPARQL endpoint a jedna specifikuje variantu uložení záznamů v souborech, bez použití SPARQL endpointu.</p>
+   <p>Cieľom tohto dokumentu je špecifikovať dátový model a rozhranie lokálných katalógov otvorených dát (LKOD) pre ich harvestovanie Národným katalógom otevrených dát (NKOD). Rovnaká špecifikáce platí aj pre datový model NKOD a dáta poskytované z NKOD v podobe súborov na stiahnutie resp. SPARQL endpointu. Nejskôr je špecifikovaný dátový model katalogizačného záznamu. Následne sú špecifikované 2 varianty rozhrania pre harvestáciu, ktoré sú založené na <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210">štandarde DCAT-AP 2.1.0</a>, jedna používá SPARQL endpoint a druhá špecifikuje variantu uloženia záznamov v súboroch, bez použitia SPARQL endpointu.</p>
   </div>
   <div data-fill-with="at-risk"></div>
   <nav data-fill-with="table-of-contents" id="toc">
@@ -2127,22 +2128,22 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="úvod"><span class="secno">1. </span><span class="content">Úvod</span><a class="self-link" href="#úvod"></a></h2>
-    Provozování lokálního katalogu otevřených dat (LKOD) je jedním ze způsobů zajištění katalogizace dat v Národním katalogu otevřených dat (NKOD). 
+    Prevádzkovanie lokálneho katalógu otvorených dát (LKOD) je jeden zo spôsobov zaistenie katalogizácie dát v Národnom katalógu otvorených dát (NKOD). 
    <h2 class="heading settled" data-level="2" id="položky-metadatového-záznamu"><span class="secno">2. </span><span class="content">Položky metadatového záznamu</span><a class="self-link" href="#položky-metadatového-záznamu"></a></h2>
-   <p>V této sekci jsou popsány položky, které mohou být evidované v Národním katalogu otevřených dat (NKOD) pro každou datovou sadu a její distribuci.
-Položky se řídí standardem <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT Application Profile for data portals in Europe Version 2.1.1 (DCAT-AP 2.1.1)</a>.</p>
+   <p>V tejto sekcii sú popísané položky, ktoré môžu byť evidované v Národnom katalógu otvorených dát (NKOD) pre každý dataset a jeho distribúciu.
+Položky sa riadia štandardom <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT Application Profile for data portals in Europe Version 2.1.1 (DCAT-AP 2.1.1)</a>.</p>
    <figure>
-     <img alt="Konceptuální model DCAT-AP-SK 2.0" src="dcat-ap-sk-2.0.svg"> 
-    <figcaption>Diagram datového modelu DCAT-AP-SK 2.0. Šedě podbarvené části jsou specifikovány číselníky.</figcaption>
+     <img alt="Konceptuálný model DCAT-AP-SK 2.0" src="dcat-ap-sk-2.0.svg"> 
+    <figcaption>Diagram dátového modelu DCAT-AP-SK 2.0. Šedou zafarabené časti sú špecifikované číselníkmi.</figcaption>
    </figure>
-   <p>DCAT-AP 2.1.1 rozlišuje tři základní typy entit.
-Datovou sadu, její distribuci a datovou službu.
-Metadata datové sady ji popisují bez ohledu na konkrétní reprezentaci jejích dat.
-Ta je popsána jako distribuce datové sady, která reprezentuje buď soubor ke stažení, nebo odkazuje na datovou službu, přes kterou jsou data k dispozici.
-Distribucí může mít datová sada více, lišit se ale mohou pouze formátem souboru ke stažení (např. CSV či JSON) či způsobem zpřístupnění (soubor ke stažení či datová služba).
-Obsahově by distribuce měly být ekvivalentní.</p>
+   <p>DCAT-AP 2.1.1 rozlišuje tri základné typy entít.
+Dataset, jeho distribúciu a dátovú službu.
+Metadáta datasetu ich popisujú bez ohľadu na konkrétnú reprezentáciu ich dát.
+Tie sú popsáné ako distribúcie datasetu, ktoré reprezentuje buď súbor na stiahnutie, alebo odkazuje na dátovou službu, prostredníctvom ktorej sú dáta k dispozícii.
+Distribúcií môže mať dataset viacej, líšiť sa ale môžu jedine formátom súboru na stiahnutie (např. CSV či JSON) alebo spôsobom sprístupnenia (súbor na stiahnutie alebo dátová služba).
+Obsahovo musia byť distribúcie totožné.</p>
    <h3 class="heading settled" data-level="2.1" id="použité-prefixy"><span class="secno">2.1. </span><span class="content">Použité prefixy</span><a class="self-link" href="#použité-prefixy"></a></h3>
-   <p>V popisu položek a rozhraní budou použity následující prefixy slovníků.</p>
+   <p>V popisu položiek a rozhraní budú použité následujúce prefixy slovníkov.</p>
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
@@ -2153,14 +2154,14 @@ Obsahově by distribuce měly být ekvivalentní.</p>
 <c- k>@prefix</c-> <c- nn>vcard:</c-> <c- g>&lt;http://www.w3.org/2006/vcard/ns#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>law:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/law/></c-> <c- p>.</c->
 </pre>
-   <p>Pro přehlednost zápisu budou použity ještě následující prefixy zkracující IRI vzorových entit.</p>
-<pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>sada:</c-> <c- g>&lt;https://data.gov.sk/dataset/1></c-> <c- p>.</c->
+   <p>Pre prehľadnosť zápisu budú použité aj následujíce prefixy skracujúce IRI vzorových entít.</p>
+<pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dataset:</c-> <c- g>&lt;https://data.gov.sk/dataset/1></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>katalog:</c-> <c- g>&lt;https://data.gov.sk/set/catalog/lkod/1></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>distribuce:</c-> <c- g>&lt;https://data.gov.sk/set/1/resource/1></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>distribúcia:</c-> <c- g>&lt;https://data.gov.sk/set/1/resource/1></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>služba:</c-> <c- g>&lt;https://data.gov.sk/id/egov/app-service/1></c-> <c- p>.</c->
 @prefix <c- nn>čas</c-><c- p>:</c-> <c- g>&lt;https://data.gov.sk/set/1/temporal></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>kontakt:</c-> <c- g>&lt;https://data.gov.sk/set/1/contact-point></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>podmínky:</c-> <c- g>&lt;https://data.gov.sk/set/1/resource/1/terms-of-use></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>podmienky:</c-> <c- g>&lt;https://data.gov.sk/set/1/resource/1/terms-of-use></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>správce:</c-> <c- g>&lt;https://data.gov.sk/catalog/lkod/1/contact-point></c-> <c- p>.</c->
 </pre>
    <h3 class="heading settled" data-level="2.2" id="třída-katalog"><span class="secno">2.2. </span><span class="content">Třída: Katalog</span><a class="self-link" href="#třída-katalog"></a></h3>
@@ -3657,7 +3658,7 @@ Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití
    <dt id="biblio-iana-media-types">[IANA-MEDIA-TYPES]
    <dd><a href="https://www.iana.org/assignments/media-types/"><cite>Media Types</cite></a>. URL: <a href="https://www.iana.org/assignments/media-types/">https://www.iana.org/assignments/media-types/</a>
    <dt id="biblio-json-ld11">[JSON-LD11]
-   <dd>Gregg Kellogg; Pierre-Antoine Champin; Dave Longley. <a href="https://www.w3.org/TR/json-ld11/"><cite>JSON-LD 1.1</cite></a>. 16 July 2020. REC. URL: <a href="https://www.w3.org/TR/json-ld11/">https://www.w3.org/TR/json-ld11/</a>
+   <dd>Gregg Kellogg; Pierre-Antoine Champin; Dave Longley. <a href="https://w3c.github.io/json-ld-syntax/"><cite>JSON-LD 1.1</cite></a>. URL: <a href="https://w3c.github.io/json-ld-syntax/">https://w3c.github.io/json-ld-syntax/</a>
    <dt id="biblio-rdf11-concepts">[RDF11-CONCEPTS]
    <dd>Richard Cyganiak; David Wood; Markus Lanthaler. <a href="https://www.w3.org/TR/rdf11-concepts/"><cite>RDF 1.1 Concepts and Abstract Syntax</cite></a>. 25 February 2014. REC. URL: <a href="https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a>
    <dt id="biblio-sparql11-protocol">[SPARQL11-PROTOCOL]
