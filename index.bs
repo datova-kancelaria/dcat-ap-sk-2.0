@@ -497,7 +497,7 @@ Trieda: Distribúcia datasetu {#trieda-distribúcia}
 --------------
 
 : Popis
-:: Fyzická podoba datasetu v konkrétnóm formáte alebo ako konkrétná dátová služba, nikdy súčasne.
+:: Fyzická podoba datasetu v konkrétnom formáte alebo ako konkrétná dátová služba, nikdy súčasne.
     Je definovaná ako [dcat:Distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution).
 : Príklad
 ::  
@@ -505,12 +505,12 @@ Trieda: Distribúcia datasetu {#trieda-distribúcia}
 distribuce: a dcat:Distribution .
     ```
 
-### Specifikace podmínek užití ### {#specifikace-podmínek-užití}
+### Špecifikácia podmienok použitia ### {#špecifikácia-podmienok-použitia}
 
 : Popis
-:: Táto Vlastnosť odkazuje na strukturovaný popis podmínek užití této distribuce datasetu. Hodnoty se řídí TODO:dokument
+:: Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia tejto distribúcie datasetu. Hodnoty se riadia TODO:dokument
 : Vlastnosť
-:: `podmínky_užití`, `law:termsOfUse`
+:: `podmienky_použitia`, `law:termsOfUse`
 : Typ
 :: Entita typu `law:TermsOfUse` s Vlastnosťmi `law:authorsWorkType`, `law:originalDatabaseType`, `law:databaseProtectedBySpecialRightsType` a `law:personalDataContainmentType`.
     Volitelně také `law:authorName` a `law:originalDatabaseAuthorName`. Viz [Návrh URI pre NKOD](https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101811456)
@@ -528,85 +528,85 @@ podmienky: a law:TermsOfUse ;
     law:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> .
     ```
 
-### Odkaz na stažení souboru ### {#distribuce-stažení-souboru}
+### Odkaz na stiahnutie súboru ### {#distribÚcia-stiahnutie-súboru}
 
 : Popis
-:: Táto Vlastnosť obsahuje URL, které je přímým odkazem na stažitelný soubor v daném formátu.
+:: Táto Vlastnosť obsahuje URL, které je priamym odkazom na stiahnuteľný súbor v danom formáte.
     Je definovaná ako [dcat:downloadURL](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_download_url).
 : Vlastnosť
-:: `soubor_ke_stažení`, `dcat:downloadURL`
+:: `súbor_na_stiahnutie`, `dcat:downloadURL`
 : Typ
-:: URL souboru ke stažení.
+:: URL súbor na stiahnutie.
 : Povinnosť
-:: Povinná pro soubor ke stažení
+:: Povinná pre súbor na stiahnutie
 : Príklad
 :: 
     ```turtle
-distribuce: dcat:downloadURL <https://data.cssz.cz/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv> .
+distribuce: dcat:downloadURL <https://mindop.sk/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv> .
     ```
 
-### Přístupové URL ### {#distribuce-přístupové-url}
+### Prístupové URL ### {#distribúcia-prístupové-url}
 
 : Popis
-:: Táto Vlastnosť obsahuje URL, pomocí kterého se lze dostat k distribuci datasetu.
+:: Táto Vlastnosť obsahuje URL, pomocou ktorého sa je možné dostať k distribúcii datasetu.
     Je definovaná ako [dcat:accessURL](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url).
-    Pro účely katalogů otevřených dat je hodnota této Vlastnosťi buďto stejná jako [odkaz na stažení souboru](#distribuce-stažení-souboru) v případě distribuce reprezentující soubor ke stažení, nebo stejná jako [přístupový bod](#datová-služba-přístupový-bod) v případě distribuce reprezentující dátovú službu.
+    Pre účely katalógov otvorených dát je hodnota tejto Vlastnosti buď rovnaká ako [odkaz na stiahnutie súboru](#distribuce-stažení-souboru) v případě distribuce reprezentující soubor ke stažení, nebo stejná jako [přístupový bod](#datová-služba-přístupový-bod) v případě distribuce reprezentující dátovú službu.
 : Vlastnosť
 :: `přístupové_url`, `dcat:accessURL`
 : Typ
-:: Přístupové URL distribuce datasetu.
+:: Prístupové URL distribúcie datasetu.
 : Povinnosť
 :: Povinná
 : Príklad
 :: 
     ```turtle
-distribuce: dcat:accessURL <https://data.cssz.cz/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv> .
+distribúcia: dcat:accessURL <https://data.cssz.cz/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv> .
     ```
 
-### Formát souboru ke stažení ### {#distribuce-formát-souboru}
+### Formát súboru na stiahnutie ### {#distribúcia-formát-súboru}
 
 : Popis
-:: Táto Vlastnosť odkazuje na typ souboru s distribucí.
+:: Táto Vlastnosť odkazuje na typ súboru s distribúcou.
     Je definovaná ako [dct:format](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format).
-    Dle DCAT-AP 2.1.1 sú hodnoty z [európského číselníka typů souboru](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type).
+    Podľa DCAT-AP 2.1.1 sú hodnoty z [európského číselníka typov súborov](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type).
 : Vlastnosť
 :: `formát`, `dct:format`
 : Typ
 :: IRI položky z [európského číselníka typů souboru](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type)
 : Povinnosť
-:: Povinná pro soubor ke stažení
+:: Povinná pre súbor na stiahnutie
 : Príklad
 :: 
     ```turtle
 distribuce: dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> .
     ```
 
-### Media type souboru ke stažení ### {#distribuce-media-type}
+### Typ média súboru na stiahnutie ### {#distribúcia-media-type}
 
 : Popis
-:: Táto Vlastnosť odkazuje na typ média distribuce tak, jak je definováno v oficiálním rejstříku typů médií spravovaném IANA [[!IANA-MEDIA-TYPES]].
+:: Táto Vlastnosť odkazuje na typ média distribúcie podľa oficiálneho registra typov médií spravovaného v IANA [[!IANA-MEDIA-TYPES]].
     Je definovaná ako [dcat:mediaType](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_media_type).
 : Vlastnosť
 :: `typ_média`, `dcat:mediaType`
 : Typ
-:: IRI Media type z [rejstříku IANA](https://www.iana.org/assignments/media-types/media-types.xhtml).
+:: IRI Typ média z [registra IANA](https://www.iana.org/assignments/media-types/media-types.xhtml).
 : Povinnosť
-:: Povinná pro soubor ke stažení
+:: Povinná pre súbor na stiahnutie
 : Príklad
 :: 
     ```turtle
 distribuce: dcat:mediaType <http://www.iana.org/assignments/media-types/text/csv> .
     ```
 
-### Odkaz na strojově čitelné schéma souboru ke stažení ### {#distribuce-schéma}
+### Odkaz na strojovo-čitateľnú schému súboru na stiahnutie ### {#distribuce-schéma}
 
 : Popis
-:: Táto Vlastnosť odkazuje na ustanovené schéma, jímž se popisovaná distribuce řídí.
+:: Táto Vlastnosť odkazuje na stanovenú schému, ktorou sa riadi popisovaná distribúcia.
     Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_conforms_to).
 : Vlastnosť
 :: `schéma`, `dct:conformsTo`
 : Typ
-:: URL schématu.
+:: URL schémy.
 : Povinnosť
 :: Nepovinná
 : Príklad
@@ -615,16 +615,16 @@ distribuce: dcat:mediaType <http://www.iana.org/assignments/media-types/text/csv
 distribuce: dct:conformsTo <https://data.cssz.cz/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni-schema.json> .
     ```
 
-### Media type kompresního formátu ### {#distribuce-media-type-komprese}
+### Typ média kompresného formátu ### {#distribúcia-media-type-kompresia}
 
 : Popis
-:: Táto Vlastnosť odkazuje na media typ kompresního formátu souboru ke stažení tak, jak je definováno v oficiálním rejstříku typů médií spravovaném IANA [[!IANA-MEDIA-TYPES]].
-    Kompresní formát určuje techniku použitou ke zmenšení velikosti jednoho souboru ke stažení.
+:: Táto Vlastnosť odkazuje na typ média kompresného formátu súboru podľa oficiálneho registra typov médií spravovaného v IANA [[!IANA-MEDIA-TYPES]].
+    Kompresný formát určuje techniku použitú na zmenšenie veľkosti jedného súboru na stiahnutie.
     Je definovaná ako [dcat:compressFormat](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_compression_format).
 : Vlastnosť
-:: `typ_média_komprese`, `dcat:compressFormat`
+:: `typ_média_kompresie`, `dcat:compressFormat`
 : Typ
-:: IRI Media type z [rejstříku IANA](https://www.iana.org/assignments/media-types/media-types.xhtml).
+:: IRI Typ media z [registra IANA](https://www.iana.org/assignments/media-types/media-types.xhtml).
 : Povinnosť
 :: Nepovinná
 : Príklad
@@ -633,25 +633,25 @@ distribuce: dct:conformsTo <https://data.cssz.cz/dump/kontroly-plneni-Povinnosť
 distribuce: dcat:compressFormat <http://www.iana.org/assignments/media-types/application/zip> .
     ```
 
-### Media type balíčkovacího formátu ### {#distribuce-media-type-balíčku}
+### Typ média balíčkovacieho formátu ### {#distribúcia-media-type-balíčka}
 
 : Popis
-:: Táto Vlastnosť odkazuje na media typ balíčkovacího formátu souboru ke stažení tak, jak je definováno v oficiálním rejstříku typů médií spravovaném IANA [[!IANA-MEDIA-TYPES]].
-    Balíčkovací formát určuje techniku použitou k zabalení více souborů do jednoho.
+:: Táto Vlastnosť odkazuje na typ média balíčkovacího formátu súboru podľa oficiálneho registra typov médií spravovaném v IANA [[!IANA-MEDIA-TYPES]].
+    Balíčkovací formát určuje techniku použitú na zabalenie viacero súborov do jednoho.
     Je definovaná ako [dcat:packageFormat](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_packaging_format).
 : Vlastnosť
 :: `typ_média_balíčku`, `dcat:packageFormat`
 : Typ
-:: IRI Media type z [rejstříku IANA](https://www.iana.org/assignments/media-types/media-types.xhtml).
+:: IRI Typ média z [registra IANA](https://www.iana.org/assignments/media-types/media-types.xhtml).
 : Povinnosť
 :: Nepovinná
 : Príklad
 :: 
     ```turtle
-distribuce: dcat:packageFormat <http://www.iana.org/assignments/media-types/application/zip> .
+distribúcia: dcat:packageFormat <http://www.iana.org/assignments/media-types/application/zip> .
     ```
 
-### Názov distribuce datasetu ### {#distribuce-názov}
+### Názov distribúcie datasetu ### {#distribúcia-názov}
 
 : Popis
 :: Táto Vlastnosť obsahuje názov distribuce. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title).
@@ -667,16 +667,16 @@ distribuce: dcat:packageFormat <http://www.iana.org/assignments/media-types/appl
 distribuce: dct:title "Kontroly plnění Povinnosťí zaměstnavatelů v oblasti sociálního zabezpečení v CSV."@sk, "CSV representation of inspections in the area of social security."@en .
     ```
 
-### Väzba: přístupová služba ### {#distribuce-služba}
+### Väzba: prístupová služba ### {#distribúcia-služba}
 
 : Popis
-:: Datová služba sprístupňujúcu distribuci datasetu. Je definovaná ako [dcat:accessService](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_service).
+:: Dátová služba sprístupňujúca distribúciu datasetu. Je definovaná ako [dcat:accessService](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_service).
 : Vlastnosť
-:: `přístupová_služba`, `dcat:accessService`
+:: `prístupová_služba`, `dcat:accessService`
 : Typ
 :: Entita typu [datová služba](#trieda-datová-služba).
 : Povinnosť
-:: Povinná pro dátovú službu
+:: Povinná pre dátovú službu
 : Príklad
 :: 
     ```turtle
@@ -697,7 +697,7 @@ služba: a dcat:DataService .
 ### Názov ### {#dátová-služba-názov}
 
 : Popis
-:: Táto Vlastnosť obsahuje názov datové služby. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title).
+:: Táto Vlastnosť obsahuje názov datovej služby. Je definovaná ako [dct:title](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_title).
 : Vlastnosť
 :: `názov`, `dct:title`
 : Typ
@@ -707,15 +707,15 @@ služba: a dcat:DataService .
 : Príklad
 :: 
     ```turtle
-služba: dct:title "SPARQL endpoint České správy sociálního zabezpečení"@sk, "Czech Social Security Administration SPARQL endpoint"@en .
+služba: dct:title "SPARQL endpoint Slovenskej správy sociálného zabezpečenia"@sk, "Czech Social Security Administration SPARQL endpoint"@en .
     ```
 
-### Přístupový bod ### {#datová-služba-přístupový-bod}
+### Prístupový bod ### {#dátová-služba-prístupový-bod}
 
 : Popis
-:: Táto Vlastnosť obsahuje URL přístupového bodu datové služby. Je definovaná ako [dcat:endpointURL](https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_url).
+:: Táto Vlastnosť obsahuje URL prístupového bodu dátovej služby. Je definovaná ako [dcat:endpointURL](https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_url).
 : Vlastnosť
-:: `přístupový_bod`, `dcat:endpointURL`
+:: `prístupový_bod`, `dcat:endpointURL`
 : Typ
 :: Text
 : URL
@@ -726,17 +726,17 @@ služba: dct:title "SPARQL endpoint České správy sociálního zabezpečení"@
 služba: dcat:endpointURL <https://data.cssz.cz/sparql> .
     ```
 
-### Odkaz na specifikaci ### {#datová-služba-specifikace}
+### Odkaz na špecifikáciu ### {#datová-služba-špecifikácia}
 
 : Popis
-:: Táto Vlastnosť odkazuje na specifikaci, jíž se datová služba řídí.
-    Takovou specifikací je naPríklad \[SPARQL](https://www.w3.org/TR/sparql11-protocol/).
-    Seznam možných hodnot lze nalézt naPríklad v [seznamu udržovaném Open Source Geospatial Foundation](https://github.com/OSGeo/Cat-Interop/blob/master/LinkPropertyLookupTable.csv).
+:: Táto Vlastnosť odkazuje na špecifikáciu, ktorou sa dátová služba riadi.
+    Takou špecifikáciou je napríklad \[SPARQL](https://www.w3.org/TR/sparql11-protocol/).
+    Zoznam možných hodnôt je možné nájsť napríklad v [zoznamue udržiavanom Open Source Geospatial Foundation](https://github.com/OSGeo/Cat-Interop/blob/master/LinkPropertyLookupTable.csv).
     Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to).
 : Vlastnosť
-:: `specifikace`, `dct:conformsTo`
+:: `špecifikácia`, `dct:conformsTo`
 : Typ
-:: URL specifikace.
+:: URL špecifikácie.
 : URL
 :: Nepovinná
 : Príklad
@@ -745,12 +745,12 @@ služba: dcat:endpointURL <https://data.cssz.cz/sparql> .
 služba: dct:conformsTo <https://www.w3.org/TR/sparql11-protocol/> .
     ```
 
-### Popis přístupového bodu ### {#datová-služba-přístupový-bod-popis}
+### Popis prístupového bodu ### {#dátová-služba-prístupový-bod-popis}
 
 : Popis
-:: Táto Vlastnosť obsahuje URL popisu přístupového bodu datové služby. Je definovaná ako [dcat:endpointDescription](https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_description).
+:: Táto Vlastnosť obsahuje URL popisu prístupového bodu dátovej služby. Je definovaná ako [dcat:endpointDescription](https://www.w3.org/TR/vocab-dcat-2/#Property:data_service_endpoint_description).
 : Vlastnosť
-:: `popis_přístupového_bodu`, `dcat:endpointDescription`
+:: `popis_prístupového_bodu`, `dcat:endpointDescription`
 : Typ
 :: URL
 : URL
@@ -761,13 +761,13 @@ služba: dct:conformsTo <https://www.w3.org/TR/sparql11-protocol/> .
 služba: dcat:endpointDescription <https://data.cssz.cz/sparql> .
     ```
 
-Rozhraní DCAT-AP SPARQL Endpoint {#rozhranie-sparql-endpoint}
+Rozhranie DCAT-AP SPARQL Endpoint {#rozhranie-sparql-endpoint}
 ================================
-Toto rozhraní předpokládá, že metadata datových sad dle této specifikace sú uložena a přístupná ve SPARQL endpointu [[!sparql11-protocol]].
-Po registraci tohoto SPARQL endpointu se na něm NKOD zeptá nejprve na seznam instancí třídy `dcat:Dataset`, a poté se po skupinách bude ptát na povinné, nepovinné i další položky jednotlivých datových sad dle této specifikace a specifikace [DCAT-AP 2.1.1](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211).
+Toto rozhranie predpokládá, že metadáta datasetov podľa tejto špecifikácie sú uložené a sprístupnené prostredníctvom SPARQL endpointu [[!sparql11-protocol]].
+Po registráci tohto SPARQL endpointu se na ňom NKOD spýta najskôr na zoznam inštancií tried `dcat:Dataset`, a následne sa po skupinách bude pýtat na povinné, nepovinné i dalšie položky jednotlivých datasetov podľa tejto špecifikácie a špecifikácie [DCAT-AP 2.1.1](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211).
 Jedná se o nejjednodušší způsob registrace lokálního katalogu otevřených dat.
 
-datasetu, distribuce a datové služby musí byť identifikovány svými IRI, nesmí se jednat o [RDF blank nody](https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes) [[!rdf11-concepts]].
+datasety, distribúcie a dátové služby musia byť identifikovateľné svojimi IRI, nesmie se jednat o [RDF prázdne uzly](https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes) [[!rdf11-concepts]].
 
 Rozhraní DCAT-AP Dokumenty {#rozhranie-dcat-ap-dokumenty}
 =========================================================
