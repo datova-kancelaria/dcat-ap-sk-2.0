@@ -10,7 +10,7 @@ Status: LS
 Group: MIRRI
 URL: https://datova-kancelaria.github.io/dcat-ap-sk-2.0/
 Editor: Jakub Klímek, Charles University https://www.mff.cuni.cz, jakub.klimek@matfyz.cuni.cz, https://jakub.klímek.com/
-Editor: Miroslav Líška, Ministerstvo Investícií SR , miroslav.liska@mirri.gov.sk, https://www.linkedin.com/in/miroslavliska
+Editor: Miroslav Líška, MIRRI SR https://www.mirri.gov.sk/, miroslav.liska@mirri.gov.sk, https://www.linkedin.com/in/miroslavliska
 Abstract: Cieľom tohto dokumentu je špecifikovať dátový model a rozhranie lokálných katalógov otvorených dát (LKOD) pre ich harvestovanie Národným katalógom otevrených dát (NKOD). Rovnaká špecifikáce platí aj pre datový model NKOD a dáta poskytované z NKOD v podobe súborov na stiahnutie resp. SPARQL endpointu. Nejskôr je špecifikovaný dátový model katalogizačného záznamu. Následne sú špecifikované 2 varianty rozhrania pre harvestáciu, ktoré sú založené na [štandarde DCAT-AP 2.1.0](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/210), jedna používá SPARQL endpoint a druhá špecifikuje variantu uloženia záznamov v súboroch, bez použitia SPARQL endpointu.
 </pre>
 
@@ -244,7 +244,7 @@ dataset: dct:publisher <https://data.gov.sk/legal-subject/30416094> .
 :: Táto Vlastnosť odkazuje na kategóriu alebo tému datasetu.
     Dataset môže byť popísaný viacerými témami.
     Je definovaná ako [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
-    Podľa DCAT-AP 2.1.1 musí byť aspoň jedna téma z [europského číselníka dátových tém](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
+    Podľa DCAT-AP 2.1.1 musí byť aspoň jedna téma z [európského číselníka dátových tém](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
 : Vlastnosť
 :: `téma`, `dcat:theme`
 : Typ
@@ -371,13 +371,13 @@ kontakt: a vcard:Individual ;
          vcard:hasEmail <mailto:jan.novak@mindop.sk> .
     ```
 
-### Odkaz na dokumentáciu ### {#dataset-dokumentace}
+### Odkaz na dokumentáciu ### {#dataset-dokumentácia}
 
 : Popis
 :: Táto Vlastnosť odkazuje na stránku alebo dokument o datasete.
     Je definovaná ako [foaf:page](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page).
 : Vlastnosť
-:: `dokumentace`, `foaf:page`
+:: `dokumentácia`, `foaf:page`
 : Typ
 :: URL webové stránky dokumentácie.
 : Povinnosť
@@ -491,13 +491,13 @@ dataset: dct:isPartOf <https://data.gov.sk/set/pohladavky-mindop> .
 :: 
     ```turtle
 dataset: dcat:distribution distribuce: .
-    ```Vi
+    ```
 
-Trieda: Distribúcia datasetu {#trieda-distribuce}
+Trieda: Distribúcia datasetu {#trieda-distribúcia}
 --------------
 
 : Popis
-:: Fyzická podoba datasetu v konkrétním formátu nebo jako konkrétní služba, nikdy obojí.
+:: Fyzická podoba datasetu v konkrétnóm formáte alebo ako konkrétná dátová služba, nikdy súčasne.
     Je definovaná ako [dcat:Distribution](https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution).
 : Príklad
 ::  
@@ -761,7 +761,7 @@ služba: dct:conformsTo <https://www.w3.org/TR/sparql11-protocol/> .
 služba: dcat:endpointDescription <https://data.cssz.cz/sparql> .
     ```
 
-Rozhraní DCAT-AP SPARQL Endpoint {#rozhraní-sparql-endpoint}
+Rozhraní DCAT-AP SPARQL Endpoint {#rozhranie-sparql-endpoint}
 ================================
 Toto rozhraní předpokládá, že metadata datových sad dle této specifikace sú uložena a přístupná ve SPARQL endpointu [[!sparql11-protocol]].
 Po registraci tohoto SPARQL endpointu se na něm NKOD zeptá nejprve na seznam instancí třídy `dcat:Dataset`, a poté se po skupinách bude ptát na povinné, nepovinné i další položky jednotlivých datových sad dle této specifikace a specifikace [DCAT-AP 2.1.1](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211).
@@ -769,7 +769,7 @@ Jedná se o nejjednodušší způsob registrace lokálního katalogu otevřenýc
 
 datasetu, distribuce a datové služby musí byť identifikovány svými IRI, nesmí se jednat o [RDF blank nody](https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes) [[!rdf11-concepts]].
 
-Rozhraní DCAT-AP Dokumenty {#rozhraní-dcat-ap-dokumenty}
+Rozhraní DCAT-AP Dokumenty {#rozhranie-dcat-ap-dokumenty}
 =========================================================
 Táto varianta rozhraní je určena pro instituce, které nechtějí nebo nemohou provozovat pro účely harvestace metadat o datových sadách do NKOD SPARQL endpoint.
 Počítá se serializací metadat o datových sadách do statických souborů umístěných na web.
@@ -778,7 +778,7 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
 
 datasetu, distribuce a datové služby musí byť identifikovány svými IRI, nesmí se jednat o [RDF blank nody](https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes) [[!rdf11-concepts]].
 
-Soubor katalogu {#rozhraní-dcat-ap-dokumenty-katalog}
+Soubor katalogu {#rozhranie-dcat-ap-dokumenty-katalog}
 ---------------
 Soubor katalogu je soubor v RDF serializaci Turtle [[!turtle]] či JSON-LD [[!json-ld11]], který obsahuje instanci třídy `dcat:Catalog` a odkazy na jednotlivé katalogizované datasetu.
 
@@ -840,7 +840,7 @@ Soubor katalogu je soubor v RDF serializaci Turtle [[!turtle]] či JSON-LD [[!js
 ```
 </div>
 
-Soubor datasetu {#rozhraní-dcat-ap-dataset}
+Soubor datasetu {#rozhranie-dcat-ap-dataset}
 ------------------
 Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF serializaci Turtle [[!turtle]] či JSON-LD [[!json-ld11]] obsahující kompletní metadatový záznam datasetu, včetně distribucí.
 
@@ -1047,7 +1047,7 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
 ```
 </div>
 
-Rozhraní CKAN API {#rozhraní-ckan-api}
+Rozhraní CKAN API {#rozhranie-ckan-api}
 =================
 CKAN API je rozhraní implementace datového katalogu \[CKAN](https://ckan.org/).
 Je založené na formátu JSON [[!ECMA-404]], a obsahuje dvě hlavní funkce, `package_list` a `package_show`.
@@ -1059,7 +1059,7 @@ Nebude se rozšiřovat o nové položky či funkcionality a neumožňuje kvalitn
 Pokud je to možné, použijte jedno z rozhraní kompatibilních s DCAT-AP.
 </div>
 
-Funkce `package_list`  {#rozhraní-ckan-api-package-list}
+Funkce `package_list`  {#rozhranie-ckan-api-package-list}
 ---------------------
 Táto funkce vrací seznam identifikátorů jednotlivých datových sad registrovaných v LKOD.
 Tyto identifikátory se pak předávají funkci `package_show` v parametru `id`.
@@ -1080,7 +1080,7 @@ Pro URL `https://organizacia.sk/api/3/action/package_list`
 ```
 </div>
 
-Funkce `package_show`   {#rozhraní-ckan-api-package-show}
+Funkce `package_show`   {#rozhranie-ckan-api-package-show}
 ---------------------
 Táto funkce vrací metadatový záznam pro datovou sadu, jejíž identifikátor je předán v parametru `id`.
 
@@ -1112,7 +1112,7 @@ Pro URL `https://organizacia.sk/api/3/action/package_show?id=zeleznice`
 ```
 </div>
 
-Podmnožina hodnot pro CKAN API záznam datasetu   {#rozhraní-ckan-api-hodnoty}
+Podmnožina hodnot pro CKAN API záznam datasetu   {#rozhranie-ckan-api-hodnoty}
 -------------------------------------------------
 V této sekci sú popsány položky týkající se datasetu ve funkci `package_show`.
 
