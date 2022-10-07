@@ -242,13 +242,13 @@ dataset: dct:publisher <https://data.gov.sk/legal-subject/30416094> .
 
 : Popis
 :: Táto Vlastnosť odkazuje na kategóriu alebo tému datasetu.
-    dataset môže byť popsána více tématy.
+    Dataset môže byť popísaný viacerými témami.
     Je definovaná ako [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
-    Dle DCAT-AP 2.1.1 musí byť alespoň jedno téma z [evropského číselníku datových témat](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
+    Podľa DCAT-AP 2.1.1 musí byť aspoň jedna téma z [europského číselníka dátových tém](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
 : Vlastnosť
 :: `téma`, `dcat:theme`
 : Typ
-:: Více IRI
+:: Viac IRI
 : Povinnosť
 :: Povinná
 : Príklad
@@ -257,16 +257,16 @@ dataset: dct:publisher <https://data.gov.sk/legal-subject/30416094> .
 dataset: dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TRAN> .
     ```
 
-### Periodicita aktualizace ### {#dataset-periodicita-aktualizace}
+### Periodicita aktualizácie ### {#dataset-periodicita-aktualizácie}
 
 : Popis
-:: Táto Vlastnosť odkazuje na frekvenci, se kterou je dataset aktualizována.
+:: Táto Vlastnosť odkazuje na frekvenciu, se kterou je dataset aktualizována.
     Je definovaná ako [dct:accrualPeriodicity](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_frequency).
-    Dle DCAT-AP 2.1.1 jsou hodnoty z [evropského číselníku frekvencí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency).
+    Podľa DCAT-AP 2.1.1 sú hodnoty z [európského číselníka frekvencí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency).
 : Vlastnosť
 :: `periodicita_aktualizace`, `dct:accrualPeriodicity`
 : Typ
-:: IRI položky z [evropského číselníku frekvencí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency)
+:: IRI položky z [európského číselníka frekvencí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/frequency)
 : Povinnosť
 :: Povinná
 : Príklad
@@ -275,12 +275,12 @@ dataset: dcat:theme <http://publications.europa.eu/resource/authority/data-theme
 dataset: dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/MONTHLY> .
     ```
 
-### Klíčová slova ### {#dataset-klíčová-slova}
+### Klúčové slová ### {#dataset-kľúčové-slová}
 
 : Popis
-:: Táto Vlastnosť obsahuje klíčové slovo nebo značku popisující datovou sadu. Je definovaná ako [dcat:keyword](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_keyword).
+:: Táto Vlastnosť obsahuje klľúové slovo alebo značku popisující dataset. Je definovaná ako [dcat:keyword](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_keyword).
 : Vlastnosť
-:: `klíčové_slovo`, `dcat:keyword`
+:: `kľúčové_slovo`, `dcat:keyword`
 : Typ
 :: Text, opakovaná Vlastnosť
 : Povinnosť
@@ -288,7 +288,7 @@ dataset: dct:accrualPeriodicity <http://publications.europa.eu/resource/authorit
 : Príklad
 :: 
     ```turtle
-dataset: dcat:keyword "kontrola"@sk, "statistika"@sk, "inspection"@en, "statistics"@en .
+dataset: dcat:keyword "kontrola"@sk, "štatistika"@sk, "inspection"@en, "statistics"@en .
     ```
 
 ### Typ datasetu ### {#dataset-typ}
@@ -308,16 +308,16 @@ dataset: dcat:keyword "kontrola"@sk, "statistika"@sk, "inspection"@en, "statisti
 dataset: dct:type <https://data.gov.sk/def/dataset-type/1> .
     ```
 
-### Související geografické území ### {#dataset-geografické-území}
+### Súvisiace geografické územie ### {#dataset-geografické-územia}
 
 : Popis
-:: Táto Vlastnosť odkazuje na geografickou oblast pokrytou datovou sadou.
-    dataset môže byť popsána více geografickými oblastmi.
+:: Táto Vlastnosť odkazuje na geografickou oblasť pokrytú datasetom.
+    dataset môže byť popísaný viacerými geografickými oblasťami.
     Je definovaná ako [dct:spatial](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial).
 : Vlastnosť
-:: `geografické_území`, `dct:spatial`
+:: `geografické_územie`, `dct:spatial`
 : Typ
-:: IRI položek z evropských číselníků [zemí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/country), [kontinentů](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/continent), [míst](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/place) nebo IRI objektu z [Geonames](https://www.geonames.org/).
+:: IRI položek z európských číselníkov [zemí](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/country), [kontinentů](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/continent), [míst](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/place) nebo IRI objektu z [Geonames](https://www.geonames.org/).
 : Povinnosť
 :: Nepovinná
 : Príklady
@@ -330,15 +330,15 @@ dataset: dct:spatial <http://publications.europa.eu/resource/authority/continent
 dataset: dct:spatial <https://sws.geonames.org/6290257/> .
     ```
 
-### Časové pokrytí ### {#dataset-časové-pokrytí}
+### Časové pokrytie ### {#dataset-časové-pokrytie}
 
 : Popis
-:: Táto Vlastnosť odkazuje na časový úsek pokrytý datovou sadou.
+:: Táto Vlastnosť odkazuje na časový úsek pokrytý datasetom.
     Je definovaná ako [dct:temporal](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal).
 : Vlastnosť
-:: `časové_pokrytí`, `dct:temporal`
+:: `časové_pokrytie`, `dct:temporal`
 : Typ
-:: Entita typu `dct:PeriodOfTime` s Vlastnosťmi `dcat:startDate` a `dcat:endDate`, které mají datový typ `xsd:date`.
+:: Entita typu `dct:PeriodOfTime` s Vlastnosťami `dcat:startDate` a `dcat:endDate`, ktoré majú dátový typ `xsd:date`.
 : Povinnosť
 :: Nepovinná
 : Príklad
@@ -353,12 +353,12 @@ dataset: dct:temporal čas: .
 ### Kontaktný bod - meno a email ### {#dataset-kontaktní-bod}
 
 : Popis
-:: Táto Vlastnosť obsahuje kontaktní informáce, které mohou byť využity pro zasílání připomínek k datové sadě.
+:: Táto Vlastnosť obsahuje kontaktné informáce, které mohou byť využité pre zasílánie pripomienok k datasetu.
     Je definovaná ako [dcat:contactPoint](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_contact_point).
 : Vlastnosť
-:: `kontaktní_bod`, `dcat:contactPoint`
+:: `kontaktný_bod`, `dcat:contactPoint`
 : Typ
-:: Entita podtypu `vcard:Kind` s Vlastnosťmi `vcard:fn` a `vcard:hasEmail`.
+:: Entita podtypu `vcard:Kind` s Vlastnosťami `vcard:fn` a `vcard:hasEmail`.
 : Povinnosť
 :: Nepovinná
 : Príklad
@@ -368,53 +368,53 @@ dataset: dcat:contactPoint kontakt: .
 
 kontakt: a vcard:Individual ;
          vcard:fn "Jan Novák"@sk ;
-         vcard:hasEmail <mailto:jan.novak@organizace.cz> .
+         vcard:hasEmail <mailto:jan.novak@mindop.sk> .
     ```
 
-### Odkaz na dokumentaci ### {#dataset-dokumentace}
+### Odkaz na dokumentáciu ### {#dataset-dokumentace}
 
 : Popis
-:: Táto Vlastnosť odkazuje na stránku nebo dokument o datové sadě.
+:: Táto Vlastnosť odkazuje na stránku alebo dokument o datasete.
     Je definovaná ako [foaf:page](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page).
 : Vlastnosť
 :: `dokumentace`, `foaf:page`
 : Typ
-:: URL webové stránky dokumentace.
+:: URL webové stránky dokumentácie.
 : Povinnosť
 :: Nepovinná
 : Príklad
 :: 
     ```turtle
-dataset: foaf:page <https://data.cssz.cz/documentation/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni> .
+dataset: foaf:page <https://mindop.sk/documentation/kontroly-plnenia-Povinnosťi-zamestnavatelov-v-oblasti-socialneho-zabezpecenia> .
     ```
 
-### Odkaz na specifikaci ### {#dataset-specifikace}
+### Odkaz na špecifikáciu ### {#dataset-špecifikácia}
 
 : Popis
-:: Táto Vlastnosť odkazuje na specifikaci, jíž se dataset řídí.
+:: Táto Vlastnosť odkazuje na špecifikáci, ktorou se riadi dataset.
     Je definovaná ako [dct:conformsTo](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_conforms_to).
 : Vlastnosť
-:: `specifikace`, `dct:conformsTo`
+:: `špecifikácia`, `dct:conformsTo`
 : Typ
-:: URL specifikace.
+:: URL špecifikácie.
 : Povinnosť
 :: Nepovinná
 : Príklad
 :: 
     ```turtle
-dataset: dct:conformsTo <https://ofn.gov.cz/turistické-cíle/2020-07-01/> .
+dataset: dct:conformsTo <https://data.gov.sk/def/ontology/finance/> .
     ```
 
-### Klasifikace dle EuroVoc ### {#dataset-eurovoc}
+### Klasifikácia podľa EuroVoc ### {#dataset-eurovoc}
 
 : Popis
-:: Táto Vlastnosť odkazuje na kategorii či téma datasetu dle EuroVoc.
+:: Táto Vlastnosť odkazuje na kategóriu alebo tému datasetu podľa EuroVoc.
     dataset môže byť popísaný viacerými témamy.
     Je definovaná ako [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
 : Vlastnosť
 :: `koncept_euroVoc`, `dcat:theme`
 : Typ
-:: IRI konceptov z evropského tezauru [EuroVoc](https://op.europa.eu/cs/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc).
+:: IRI konceptov z európského tezauru [EuroVoc](https://op.europa.eu/cs/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc).
 : Povinnosť
 :: Nepovinná
 : Príklad
@@ -491,9 +491,9 @@ dataset: dct:isPartOf <https://data.gov.sk/set/pohladavky-mindop> .
 :: 
     ```turtle
 dataset: dcat:distribution distribuce: .
-    ```
+    ```Vi
 
-Trieda: Distribuce datasetu {#trieda-distribuce}
+Trieda: Distribúcia datasetu {#trieda-distribuce}
 --------------
 
 : Popis
@@ -568,11 +568,11 @@ distribuce: dcat:accessURL <https://data.cssz.cz/dump/kontroly-plneni-Povinnosť
 : Popis
 :: Táto Vlastnosť odkazuje na typ souboru s distribucí.
     Je definovaná ako [dct:format](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_format).
-    Dle DCAT-AP 2.1.1 jsou hodnoty z [evropského číselníku typů souboru](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type).
+    Dle DCAT-AP 2.1.1 sú hodnoty z [európského číselníka typů souboru](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type).
 : Vlastnosť
 :: `formát`, `dct:format`
 : Typ
-:: IRI položky z [evropského číselníku typů souboru](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type)
+:: IRI položky z [európského číselníka typů souboru](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type)
 : Povinnosť
 :: Povinná pro soubor ke stažení
 : Príklad
@@ -763,7 +763,7 @@ služba: dcat:endpointDescription <https://data.cssz.cz/sparql> .
 
 Rozhraní DCAT-AP SPARQL Endpoint {#rozhraní-sparql-endpoint}
 ================================
-Toto rozhraní předpokládá, že metadata datových sad dle této specifikace jsou uložena a přístupná ve SPARQL endpointu [[!sparql11-protocol]].
+Toto rozhraní předpokládá, že metadata datových sad dle této specifikace sú uložena a přístupná ve SPARQL endpointu [[!sparql11-protocol]].
 Po registraci tohoto SPARQL endpointu se na něm NKOD zeptá nejprve na seznam instancí třídy `dcat:Dataset`, a poté se po skupinách bude ptát na povinné, nepovinné i další položky jednotlivých datových sad dle této specifikace a specifikace [DCAT-AP 2.1.1](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211).
 Jedná se o nejjednodušší způsob registrace lokálního katalogu otevřených dat.
 
@@ -863,7 +863,7 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
 
 <https://data.gov.sk/set/vld> a dcat:Dataset ;
     dct:title "Jízdní řády veřejné linkové dopravy"@sk, "Public transport timetables"@en;
-    dct:description "Obsahem datasetu jsou schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu."@sk ;
+    dct:description "Obsahem datasetu sú schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu."@sk ;
     dct:description "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."@en ;
     dct:publisher <https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652> ;
     dct:type <https://data.gov.sk/def/dataset-type/1> ;
@@ -936,7 +936,7 @@ Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF ser
         "en": "Public transport timetables"
     },
     "popis": {
-        "sk": "Obsahem datasetu jsou schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu.",
+        "sk": "Obsahem datasetu sú schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu.",
         "en": "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."
     },
     "poskytovateľ": "https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652",
@@ -1114,7 +1114,7 @@ Pro URL `https://organizacia.sk/api/3/action/package_show?id=zeleznice`
 
 Podmnožina hodnot pro CKAN API záznam datasetu   {#rozhraní-ckan-api-hodnoty}
 -------------------------------------------------
-V této sekci jsou popsány položky týkající se datasetu ve funkci `package_show`.
+V této sekci sú popsány položky týkající se datasetu ve funkci `package_show`.
 
 ### Názov datasetu ### {#ckan-api-názov}
 
@@ -1156,7 +1156,7 @@ V této sekci jsou popsány položky týkající se datasetu ve funkci `package_
 
 ### Odkaz na podmínky užití  ### {#ckan-api-podmínky-užití}
 
-Ve standardu DCAT-AP, na kterém je Národní katalog otevřených dat založen, jsou podmínky užití Vlastnosťí distribuce datasetu.
+Ve standardu DCAT-AP, na kterém je Národní katalog otevřených dat založen, sú podmínky užití Vlastnosťí distribuce datasetu.
 V rozhraní CKAN API je to však Vlastnosťí celé datasetu.
 Podmínky užití se tedy interpretují jako identické pro všechny distribuce datasetu.
 Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití v souladu s právním řádem, viz [[#specifikace-podmínek-užití]].
@@ -1266,7 +1266,7 @@ Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití
 
 Podmnožina hodnot pro CKAN API distribuci datasetu {#ckan-api-distribuce}
 ------------------------------------------------------------------------
-V této sekci jsou popsány položky týkající se distribuce datasetu, tj. pole `resources` ve funkci `package_show`.
+V této sekci sú popsány položky týkající se distribuce datasetu, tj. pole `resources` ve funkci `package_show`.
 
 ### Odkaz na stažení souboru ### {#ckan-api-distribuce-stažení-souboru}
 
