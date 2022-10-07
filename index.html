@@ -2060,10 +2060,10 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#dataset-dokumentace"><span class="secno">2.3.11</span> <span class="content">Odkaz na dokumentaci</span></a>
         <li><a href="#dataset-specifikace"><span class="secno">2.3.12</span> <span class="content">Odkaz na specifikaci</span></a>
         <li><a href="#dataset-eurovoc"><span class="secno">2.3.13</span> <span class="content">Klasifikace dle EuroVoc</span></a>
-        <li><a href="#dataset-prostorové-rozlišení"><span class="secno">2.3.14</span> <span class="content">Prostorové rozlišení v metrech</span></a>
-        <li><a href="#dataset-časové-rozlišení"><span class="secno">2.3.15</span> <span class="content">Časové rozlišení</span></a>
-        <li><a href="#dataset-je-součástí"><span class="secno">2.3.16</span> <span class="content">Väzba: Je součástí</span></a>
-        <li><a href="#dataset-distribuce"><span class="secno">2.3.17</span> <span class="content">Väzba: Distribuce datasetu</span></a>
+        <li><a href="#dataset-priestorové-rozlišenie"><span class="secno">2.3.14</span> <span class="content">Priestorové rozlíšenie v metroch</span></a>
+        <li><a href="#dataset-časové-rozlíšenie"><span class="secno">2.3.15</span> <span class="content">Časové rozlíšenie</span></a>
+        <li><a href="#dataset-je-súčasťou"><span class="secno">2.3.16</span> <span class="content">Väzba: Je súčásťou</span></a>
+        <li><a href="#dataset-distribúcia"><span class="secno">2.3.17</span> <span class="content">Väzba: Distribúcia datasetu</span></a>
        </ol>
       <li>
        <a href="#trieda-distribuce"><span class="secno">2.4</span> <span class="content">Trieda: Distribuce datasetu</span></a>
@@ -2259,7 +2259,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje na domovskou stránku lokálneho katalógu, kde môžu chodiť používatelia. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_homepage">foaf:homepage</a>.</p>
+     <p>Táto Vlastnosť odkazuje na domovskú stránku lokálneho katalógu, kde môžu chodiť používatelia. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_homepage">foaf:homepage</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>domovská_stránka</code>, <code>foaf:homepage</code></p>
@@ -2271,7 +2271,7 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>foaf</c-><c- p>:</c-><c- f>homepage</c-> <c- g>&lt;https://data.gov.sk/></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>foaf</c-><c- p>:</c-><c- f>homepage</c-> <c- g>&lt;https://opendata.mindop.sk/></c-> <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="2.2.6" id="katalóg-dataset"><span class="secno">2.2.6. </span><span class="content">Väzba: dataset</span><a class="self-link" href="#katalóg-dataset"></a></h4>
@@ -2281,7 +2281,7 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Táto Vlastnosť odkazuje na dataset v katalógu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset">dcat:dataset</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>datová_sada</code>, <code>dcat:dataset</code></p>
+     <p><code>dataset</code>, <code>dcat:dataset</code></p>
     <dt data-md>Typ
     <dd data-md>
      <p>Entita typu <a href="#trieda-dataset">dataset</a></p>
@@ -2297,7 +2297,7 @@ Obsahovo musia byť distribúcie totožné.</p>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Klíčová třída reprezentující poskytovanou informaci. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset">dcat:Dataset</a>.</p>
+     <p>Kľúčová trieda reprezentujúca poskytovanú informáciu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset">dcat:Dataset</a>.</p>
     <dt data-md>Príklad
     <dd data-md>
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>.</c->
@@ -2319,7 +2319,7 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Kontroly plnění Povinnosťí zaměstnavatelů v oblasti sociálního zabezpečení"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Duty fulfillment inspections in the area of social security"</c-><c- o>@</c->en <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Kontroly plnenia Povinnosti zamestnávateľov v oblasti sociálneho zabezpečenia"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Duty fulfillment inspections in the area of social security"</c-><c- o>@</c->en <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="2.3.2" id="dataset-popis"><span class="secno">2.3.2. </span><span class="content">Popis</span><a class="self-link" href="#dataset-popis"></a></h4>
@@ -2338,7 +2338,7 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Statistika kontrol plnění Povinnosťí zaměstnavatelů v oblasti sociálního zabezpečení od roku 2009"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Social security statistics for 2009"</c-><c- o>@</c->en <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Štatistika kontrol plnenia Povinností zamestnávateľov v oblasti sociálneho zabezpečenia od roku 2009"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Social security statistics for 2009"</c-><c- o>@</c->en <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="2.3.3" id="dataset-poskytovateľ"><span class="secno">2.3.3. </span><span class="content">Poskytovateľ</span><a class="self-link" href="#dataset-poskytovateľ"></a></h4>
@@ -2357,15 +2357,15 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="2.3.4" id="dataset-téma"><span class="secno">2.3.4. </span><span class="content">Téma</span><a class="self-link" href="#dataset-téma"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje na kategorii či téma datasetu.
-dataset může byť popsána více tématy.
+     <p>Táto Vlastnosť odkazuje na kategóriu alebo tému datasetu.
+dataset môže byť popsána více tématy.
 Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme">dcat:theme</a>.
 Dle DCAT-AP 2.1.1 musí byť alespoň jedno téma z <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme">evropského číselníku datových témat</a>.</p>
     <dt data-md>Vlastnosť
@@ -2447,7 +2447,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na geografickou oblast pokrytou datovou sadou.
-dataset může byť popsána více geografickými oblastmi.
+dataset môže byť popsána více geografickými oblastmi.
 Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial">dct:spatial</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -2558,14 +2558,14 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
     <dt data-md>Popis
     <dd data-md>
      <p>Táto Vlastnosť odkazuje na kategorii či téma datasetu dle EuroVoc.
-dataset může byť popsána více tématy.
+dataset môže byť popísaný viacerými témamy.
 Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme">dcat:theme</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>koncept_euroVoc</code>, <code>dcat:theme</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>IRI konceptů z evropského tezauru <a href="https://op.europa.eu/cs/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc">EuroVoc</a>.</p>
+     <p>IRI konceptov z evropského tezauru <a href="https://op.europa.eu/cs/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc">EuroVoc</a>.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Nepovinná</p>
@@ -2574,19 +2574,19 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- g>&lt;http://eurovoc.europa.eu/1001></c-><c- p>,</c-> <c- g>&lt;http://eurovoc.europa.eu/4050></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.14" id="dataset-prostorové-rozlišení"><span class="secno">2.3.14. </span><span class="content">Prostorové rozlišení v metrech</span><a class="self-link" href="#dataset-prostorové-rozlišení"></a></h4>
+   <h4 class="heading settled" data-level="2.3.14" id="dataset-priestorové-rozlišenie"><span class="secno">2.3.14. </span><span class="content">Priestorové rozlíšenie v metroch</span><a class="self-link" href="#dataset-priestorové-rozlišenie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť určuje prostorové rozlišení dat v datové sadě v metrech.
-Jedná se o nejmenší prostorový rozdíl v datové sadě.
+     <p>Táto Vlastnosť určuje priestorové rozlišenie dát v datasete v metroch.
+Jedná se o nejmenší priestorový rozdiel v datasete.
 Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution">dcat:spatialResolutionInMeters</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>prostorové_rozlišení_v_metrech</code>, <code>dcat:spatialResolutionInMeters</code></p>
+     <p><code>priestorové_rozlišenie_v_metroch</code>, <code>dcat:spatialResolutionInMeters</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>Desetinné číslo</p>
+     <p>Desatinné číslo</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Nepovinná</p>
@@ -2595,16 +2595,16 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>spatialResolutionInMeters</c-> <c- mf>0.5</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.15" id="dataset-časové-rozlišení"><span class="secno">2.3.15. </span><span class="content">Časové rozlišení</span><a class="self-link" href="#dataset-časové-rozlišení"></a></h4>
+   <h4 class="heading settled" data-level="2.3.15" id="dataset-časové-rozlíšenie"><span class="secno">2.3.15. </span><span class="content">Časové rozlíšenie</span><a class="self-link" href="#dataset-časové-rozlíšenie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť určuje časové rozlišení dat v datové sadě.
-Jedná se o nejmenší časový rozdíl v datové sadě.
+     <p>Táto Vlastnosť určuje časové rozlišenie dát v datasete.
+Jedná se o najmenší časový rozdiel v datasete.
 Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal_resolution">dcat:temporalResolution</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>časové_rozlišení</code>, <code>dcat:temporalResolution</code></p>
+     <p><code>časové_rozlišenie</code>, <code>dcat:temporalResolution</code></p>
     <dt data-md>Typ
     <dd data-md>
      <p><code>xsd:duration</code></p>
@@ -2616,41 +2616,41 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>temporalResolution</c-> <c- s>"P1D"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>duration</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.16" id="dataset-je-součástí"><span class="secno">2.3.16. </span><span class="content">Väzba: Je součástí</span><a class="self-link" href="#dataset-je-součástí"></a></h4>
+   <h4 class="heading settled" data-level="2.3.16" id="dataset-je-súčasťou"><span class="secno">2.3.16. </span><span class="content">Väzba: Je súčásťou</span><a class="self-link" href="#dataset-je-súčasťou"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje na zastřešujúci dataset dátovej série, ktorého je tento dataset súčasťou.
+     <p>Táto Vlastnosť odkazuje na zastrešujúci dataset dátovej série, ktorého je tento dataset súčasťou.
 Je definovaná ako <a href="https://dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf">dct:isPartOf</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>je_sučásťou</code>, <code>dct:isPartOf</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>IRI zastřešujúceho datasetu.</p>
+     <p>IRI zastrešujúceho datasetu.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>isPartOf</c-> <c- g>&lt;https://datový.katalog.cz/zdroj/datové-sady/zastřešující></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>isPartOf</c-> <c- g>&lt;https://data.gov.sk/set/pohladavky-mindop></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.17" id="dataset-distribuce"><span class="secno">2.3.17. </span><span class="content">Väzba: Distribuce datasetu</span><a class="self-link" href="#dataset-distribuce"></a></h4>
+   <h4 class="heading settled" data-level="2.3.17" id="dataset-distribúcia"><span class="secno">2.3.17. </span><span class="content">Väzba: Distribúcia datasetu</span><a class="self-link" href="#dataset-distribúcia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje z datasetu na její distribuci.
+     <p>Táto Vlastnosť odkazuje z datasetu na jej distribúciu.
 Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution">dcat:distribution</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>distribuce</code>, <code>dcat:distribution</code></p>
+     <p><code>distribúcia</code>, <code>dcat:distribution</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>Entita typu <a href="#trieda-distribuce">distribuce datasetu</a>.</p>
+     <p>Entita typu <a href="#trieda-distribúcia">distribúcia datasetu</a>.</p>
     <dt data-md>Povinnosť
     <dd data-md>
-     <p>Povinná, pokud se nejedná o zastřešující datovou sadu datové série.</p>
+     <p>Povinná, pokiaľ nejde o zastrešujúci dataset dátovej série.</p>
     <dt data-md>Príklad
     <dd data-md>
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- nn>distribuce</c-><c- p>:</c-> <c- p>.</c->

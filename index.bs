@@ -150,7 +150,7 @@ správca: a vcard:Individual ;
 ### Domovská stránka ### {#katalóg-domovská-stránka}
 
 : Popis
-:: Táto Vlastnosť odkazuje na domovskou stránku lokálneho katalógu, kde môžu chodiť používatelia. Je definovaná ako [foaf:homepage](https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_homepage).
+:: Táto Vlastnosť odkazuje na domovskú stránku lokálneho katalógu, kde môžu chodiť používatelia. Je definovaná ako [foaf:homepage](https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_homepage).
 : Vlastnosť
 :: `domovská_stránka`, `foaf:homepage`
 : Typ
@@ -160,7 +160,7 @@ správca: a vcard:Individual ;
 : Príklad
 :: 
     ```turtle
-katalog: foaf:homepage <https://data.gov.sk/> .
+katalog: foaf:homepage <https://opendata.mindop.sk/> .
     ```
 
 ### Väzba: dataset ### {#katalóg-dataset}
@@ -168,7 +168,7 @@ katalog: foaf:homepage <https://data.gov.sk/> .
 : Popis
 :: Táto Vlastnosť odkazuje na dataset v katalógu. Je definovaná ako [dcat:dataset](https://www.w3.org/TR/vocab-dcat-2/#Property:catalog_dataset).
 : Vlastnosť
-:: `datová_sada`, `dcat:dataset`
+:: `dataset`, `dcat:dataset`
 : Typ
 :: Entita typu [dataset](#trieda-dataset)
 : Povinnosť
@@ -183,7 +183,7 @@ Trieda: dataset {#trieda-dataset}
 --------------
 
 : Popis
-:: Klíčová třída reprezentující poskytovanou informaci. Je definovaná ako [dcat:Dataset](https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset).
+:: Kľúčová trieda reprezentujúca poskytovanú informáciu. Je definovaná ako [dcat:Dataset](https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset).
 : Príklad
 ::  
     ```turtle
@@ -203,7 +203,7 @@ dataset: a dcat:Dataset .
 : Príklad
 :: 
     ```turtle
-dataset: dct:title "Kontroly plnění Povinnosťí zaměstnavatelů v oblasti sociálního zabezpečení"@sk, "Duty fulfillment inspections in the area of social security"@en .
+dataset: dct:title "Kontroly plnenia Povinnosti zamestnávateľov v oblasti sociálneho zabezpečenia"@sk, "Duty fulfillment inspections in the area of social security"@en .
     ```
 
 ### Popis ### {#dataset-popis}
@@ -219,7 +219,7 @@ dataset: dct:title "Kontroly plnění Povinnosťí zaměstnavatelů v oblasti so
 : Príklad
 :: 
     ```turtle
-dataset: dct:description "Statistika kontrol plnění Povinnosťí zaměstnavatelů v oblasti sociálního zabezpečení od roku 2009"@sk, "Social security statistics for 2009"@en .
+dataset: dct:description "Štatistika kontrol plnenia Povinností zamestnávateľov v oblasti sociálneho zabezpečenia od roku 2009"@sk, "Social security statistics for 2009"@en .
     ```
 
 ### Poskytovateľ ### {#dataset-poskytovateľ}
@@ -235,14 +235,14 @@ dataset: dct:description "Statistika kontrol plnění Povinnosťí zaměstnavate
 : Príklad
 :: 
     ```turtle
-dataset: dct:publisher <https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652> .
+dataset: dct:publisher <https://data.gov.sk/legal-subject/30416094> .
     ```
 
 ### Téma ### {#dataset-téma}
 
 : Popis
-:: Táto Vlastnosť odkazuje na kategorii či téma datasetu.
-    dataset může byť popsána více tématy.
+:: Táto Vlastnosť odkazuje na kategóriu alebo tému datasetu.
+    dataset môže byť popsána více tématy.
     Je definovaná ako [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
     Dle DCAT-AP 2.1.1 musí byť alespoň jedno téma z [evropského číselníku datových témat](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/data-theme).
 : Vlastnosť
@@ -312,7 +312,7 @@ dataset: dct:type <https://data.gov.sk/def/dataset-type/1> .
 
 : Popis
 :: Táto Vlastnosť odkazuje na geografickou oblast pokrytou datovou sadou.
-    dataset může byť popsána více geografickými oblastmi.
+    dataset môže byť popsána více geografickými oblastmi.
     Je definovaná ako [dct:spatial](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial).
 : Vlastnosť
 :: `geografické_území`, `dct:spatial`
@@ -409,12 +409,12 @@ dataset: dct:conformsTo <https://ofn.gov.cz/turistické-cíle/2020-07-01/> .
 
 : Popis
 :: Táto Vlastnosť odkazuje na kategorii či téma datasetu dle EuroVoc.
-    dataset může byť popsána více tématy.
+    dataset môže byť popísaný viacerými témamy.
     Je definovaná ako [dcat:theme](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_theme).
 : Vlastnosť
 :: `koncept_euroVoc`, `dcat:theme`
 : Typ
-:: IRI konceptů z evropského tezauru [EuroVoc](https://op.europa.eu/cs/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc).
+:: IRI konceptov z evropského tezauru [EuroVoc](https://op.europa.eu/cs/web/eu-vocabularies/th-dataset/-/resource/dataset/eurovoc).
 : Povinnosť
 :: Nepovinná
 : Príklad
@@ -423,16 +423,16 @@ dataset: dct:conformsTo <https://ofn.gov.cz/turistické-cíle/2020-07-01/> .
 dataset: dcat:theme <http://eurovoc.europa.eu/1001>, <http://eurovoc.europa.eu/4050> .
     ```
 
-### Prostorové rozlišení v metrech ### {#dataset-prostorové-rozlišení}
+### Priestorové rozlíšenie v metroch ### {#dataset-priestorové-rozlišenie}
 
 : Popis
-:: Táto Vlastnosť určuje prostorové rozlišení dat v datové sadě v metrech.
-    Jedná se o nejmenší prostorový rozdíl v datové sadě.
+:: Táto Vlastnosť určuje priestorové rozlišenie dát v datasete v metroch.
+    Jedná se o nejmenší priestorový rozdiel v datasete.
     Je definovaná ako [dcat:spatialResolutionInMeters](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_spatial_resolution).
 : Vlastnosť
-:: `prostorové_rozlišení_v_metrech`, `dcat:spatialResolutionInMeters`
+:: `priestorové_rozlišenie_v_metroch`, `dcat:spatialResolutionInMeters`
 : Typ
-:: Desetinné číslo
+:: Desatinné číslo
 : Povinnosť
 :: Nepovinná
 : Príklad
@@ -441,14 +441,14 @@ dataset: dcat:theme <http://eurovoc.europa.eu/1001>, <http://eurovoc.europa.eu/4
 dataset: dcat:spatialResolutionInMeters 0.5 .
     ```
 
-### Časové rozlišení ### {#dataset-časové-rozlišení}
+### Časové rozlíšenie ### {#dataset-časové-rozlíšenie}
 
 : Popis
-:: Táto Vlastnosť určuje časové rozlišení dat v datové sadě.
-    Jedná se o nejmenší časový rozdíl v datové sadě.
+:: Táto Vlastnosť určuje časové rozlišenie dát v datasete.
+    Jedná se o najmenší časový rozdiel v datasete.
     Je definovaná ako [dcat:temporalResolution](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_temporal_resolution).
 : Vlastnosť
-:: `časové_rozlišení`, `dcat:temporalResolution`
+:: `časové_rozlišenie`, `dcat:temporalResolution`
 : Typ
 :: `xsd:duration`
 : Povinnosť
@@ -459,34 +459,34 @@ dataset: dcat:spatialResolutionInMeters 0.5 .
 dataset: dcat:temporalResolution "P1D"^^xsd:duration .
     ```
 
-### Väzba: Je součástí ### {#dataset-je-součástí}
+### Väzba: Je súčásťou ### {#dataset-je-súčasťou}
 
 : Popis
-:: Táto Vlastnosť odkazuje na zastřešujúci dataset dátovej série, ktorého je tento dataset súčasťou.
+:: Táto Vlastnosť odkazuje na zastrešujúci dataset dátovej série, ktorého je tento dataset súčasťou.
     Je definovaná ako [dct:isPartOf](https://dublincore.org/specifications/dublin-core/dcmi-terms/#isPartOf).
 : Vlastnosť
 :: `je_sučásťou`, `dct:isPartOf`
 : Typ
-:: IRI zastřešujúceho datasetu.
+:: IRI zastrešujúceho datasetu.
 : Povinnosť
 :: Nepovinná
 : Príklad
 :: 
     ```turtle
-dataset: dct:isPartOf <https://datový.katalog.cz/zdroj/datové-sady/zastřešující> .
+dataset: dct:isPartOf <https://data.gov.sk/set/pohladavky-mindop> .
     ```
 
-### Väzba: Distribuce datasetu ### {#dataset-distribuce}
+### Väzba: Distribúcia datasetu ### {#dataset-distribúcia}
 
 : Popis
-:: Táto Vlastnosť odkazuje z datasetu na její distribuci.
+:: Táto Vlastnosť odkazuje z datasetu na jej distribúciu.
     Je definovaná ako [dcat:distribution](https://www.w3.org/TR/vocab-dcat-2/#Property:dataset_distribution).
 : Vlastnosť
-:: `distribuce`, `dcat:distribution`
+:: `distribúcia`, `dcat:distribution`
 : Typ
-:: Entita typu [distribuce datasetu](#trieda-distribuce).
+:: Entita typu [distribúcia datasetu](#trieda-distribúcia).
 : Povinnosť
-:: Povinná, pokud se nejedná o zastřešující datovou sadu datové série.
+:: Povinná, pokiaľ nejde o zastrešujúci dataset dátovej série.
 : Príklad
 :: 
     ```turtle
