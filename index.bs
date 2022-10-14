@@ -1,5 +1,5 @@
 <pre class='metadata'>
-Title: DCAT-AP-SK 2.0
+Title: Rozhranie katalógu otvorených dát DCAT-AP-SK 2.0
 Shortname: dcat-ap-sk-2.0
 Boilerplate: conformance no, copyright no
 Logo: 
