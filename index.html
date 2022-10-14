@@ -1487,7 +1487,7 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 44af0bf3e, updated Fri Jul 29 17:05:16 2022 -0700" name="generator">
+  <meta content="Bikeshed version b0de3432c, updated Thu Oct 13 09:16:59 2022 -0700" name="generator">
   <link href="https://datova-kancelaria.github.io/dcat-ap-sk-2.0/" rel="canonical">
 <style>/* style-autolinks */
 
@@ -2008,7 +2008,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref allcaps" id="title">DCAT-AP-SK 2.0</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2022-10-07">7 October 2022</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2022-10-14">14 October 2022</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2080,7 +2080,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#distribúcia-služba"><span class="secno">2.4.10</span> <span class="content">Väzba: prístupová služba</span></a>
        </ol>
       <li>
-       <a href="#trieda-datová-služba"><span class="secno">2.5</span> <span class="content">Trieda: Datová služba</span></a>
+       <a href="#trieda-datová-služba"><span class="secno">2.5</span> <span class="content">Trieda: Dátová služba</span></a>
        <ol class="toc">
         <li><a href="#dátová-služba-názov"><span class="secno">2.5.1</span> <span class="content">Názov</span></a>
         <li><a href="#dátová-služba-prístupový-bod"><span class="secno">2.5.2</span> <span class="content">Prístupový bod</span></a>
@@ -2090,33 +2090,33 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
      </ol>
     <li><a href="#rozhranie-sparql-endpoint"><span class="secno">3</span> <span class="content">Rozhranie DCAT-AP SPARQL Endpoint</span></a>
     <li>
-     <a href="#rozhranie-dcat-ap-dokumenty"><span class="secno">4</span> <span class="content">Rozhraní DCAT-AP Dokumenty</span></a>
+     <a href="#rozhranie-dcat-ap-dokumenty"><span class="secno">4</span> <span class="content">Rozhranie DCAT-AP Dokumenty</span></a>
      <ol class="toc">
-      <li><a href="#rozhranie-dcat-ap-dokumenty-katalog"><span class="secno">4.1</span> <span class="content">Soubor katalogu</span></a>
-      <li><a href="#rozhranie-dcat-ap-dataset"><span class="secno">4.2</span> <span class="content">Soubor datasetu</span></a>
+      <li><a href="#rozhranie-dcat-ap-dokumenty-katalóg"><span class="secno">4.1</span> <span class="content">Súbor katalógu</span></a>
+      <li><a href="#rozhranie-dcat-ap-dataset"><span class="secno">4.2</span> <span class="content">Súbor datasetu</span></a>
      </ol>
     <li>
-     <a href="#rozhranie-ckan-api"><span class="secno">5</span> <span class="content">Rozhraní CKAN API</span></a>
+     <a href="#rozhranie-ckan-api"><span class="secno">5</span> <span class="content">Rozhranie CKAN API</span></a>
      <ol class="toc">
-      <li><a href="#rozhranie-ckan-api-package-list"><span class="secno">5.1</span> <span class="content">Funkce <code>package_list</code></span></a>
-      <li><a href="#rozhranie-ckan-api-package-show"><span class="secno">5.2</span> <span class="content">Funkce <code>package_show</code></span></a>
+      <li><a href="#rozhranie-ckan-api-package-list"><span class="secno">5.1</span> <span class="content">Funkcia <code>package_list</code></span></a>
+      <li><a href="#rozhranie-ckan-api-package-show"><span class="secno">5.2</span> <span class="content">Funkcia <code>package_show</code></span></a>
       <li>
-       <a href="#rozhranie-ckan-api-hodnoty"><span class="secno">5.3</span> <span class="content">Podmnožina hodnot pro CKAN API záznam datasetu</span></a>
+       <a href="#rozhranie-ckan-api-hodnoty"><span class="secno">5.3</span> <span class="content">Podmnožina hodnôt pre CKAN API záznam datasetu</span></a>
        <ol class="toc">
         <li><a href="#ckan-api-názov"><span class="secno">5.3.1</span> <span class="content">Názov datasetu</span></a>
         <li><a href="#ckan-api-popis"><span class="secno">5.3.2</span> <span class="content">Popis datasetu</span></a>
-        <li><a href="#ckan-api-podmínky-užití"><span class="secno">5.3.3</span> <span class="content">Odkaz na podmínky užití</span></a>
-        <li><a href="#ckan-api-e-mail"><span class="secno">5.3.4</span> <span class="content">Email Kurátora dat</span></a>
-        <li><a href="#ckan-api-kurátor"><span class="secno">5.3.5</span> <span class="content">Jméno Kurátora dat</span></a>
-        <li><a href="#ckan-api-klíčová-slova"><span class="secno">5.3.6</span> <span class="content">Klíčová slova</span></a>
-        <li><a href="#ckan-api-resources"><span class="secno">5.3.7</span> <span class="content">Distribuce datasetu</span></a>
+        <li><a href="#ckan-api-podmienky-pužitia"><span class="secno">5.3.3</span> <span class="content">Odkaz na podmienky pužitia</span></a>
+        <li><a href="#ckan-api-e-mail"><span class="secno">5.3.4</span> <span class="content">Email Kurátora dát</span></a>
+        <li><a href="#ckan-api-kurátor"><span class="secno">5.3.5</span> <span class="content">Meno Kurátora dát</span></a>
+        <li><a href="#ckan-api-kľúčová-slová"><span class="secno">5.3.6</span> <span class="content">Kľúčové slová</span></a>
+        <li><a href="#ckan-api-resources"><span class="secno">5.3.7</span> <span class="content">Distribúcia datasetu</span></a>
        </ol>
       <li>
-       <a href="#ckan-api-distribuce"><span class="secno">5.4</span> <span class="content">Podmnožina hodnot pro CKAN API distribuci datasetu</span></a>
+       <a href="#ckan-api-distribúcia"><span class="secno">5.4</span> <span class="content">Podmnožina hodnôt pre CKAN API distribúciu datasetu</span></a>
        <ol class="toc">
-        <li><a href="#ckan-api-distribuce-stažení-souboru"><span class="secno">5.4.1</span> <span class="content">Odkaz na stažení souboru</span></a>
-        <li><a href="#ckan-api-distribuce-media-type"><span class="secno">5.4.2</span> <span class="content">Media type souboru ke stažení</span></a>
-        <li><a href="#ckan-api-distribuce-názov"><span class="secno">5.4.3</span> <span class="content">Názov distribuce datasetu</span></a>
+        <li><a href="#ckan-api-distribúcia-stiahnutia-súboru"><span class="secno">5.4.1</span> <span class="content">Odkaz na stiahnutie súboru</span></a>
+        <li><a href="#ckan-api-distribúcia-media-type"><span class="secno">5.4.2</span> <span class="content">Media type súboru na stiahnutie</span></a>
+        <li><a href="#ckan-api-distribúcia-názov"><span class="secno">5.4.3</span> <span class="content">Názov distribúcie datasetu</span></a>
        </ol>
      </ol>
     <li>
@@ -2152,9 +2152,9 @@ Obsahovo musia byť distribúcie totožné.</p>
 <c- k>@prefix</c-> <c- nn>skos:</c-> <c- g>&lt;http://www.w3.org/2004/02/skos/core#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>xsd:</c-> <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>vcard:</c-> <c- g>&lt;http://www.w3.org/2006/vcard/ns#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>law:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/law/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>leg:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/legislation/></c-> <c- p>.</c->
 </pre>
-   <p>Pre prehľadnosť zápisu budú použité aj následujúce prefixy skracujúce IRI vzorových entít.</p>
+   <p>Pre prehľadnosť zápisu budú použité aj nasledujúce prefixy skracujúce IRI vzorových entít.</p>
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dataset:</c-> <c- g>&lt;https://data.gov.sk/dataset/1></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>katalóg:</c-> <c- g>&lt;https://data.gov.sk/set/catalog/lkod/1></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>distribúcia:</c-> <c- g>&lt;https://data.gov.sk/set/1/resource/1></c-> <c- p>.</c->
@@ -2162,7 +2162,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 @prefix <c- nn>čas</c-><c- p>:</c-> <c- g>&lt;https://data.gov.sk/set/1/temporal></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>kontakt:</c-> <c- g>&lt;https://data.gov.sk/set/1/contact-point></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>podmienky:</c-> <c- g>&lt;https://data.gov.sk/set/1/resource/1/terms-of-use></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>správce:</c-> <c- g>&lt;https://data.gov.sk/catalog/lkod/1/contact-point></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>správca:</c-> <c- g>&lt;https://data.gov.sk/catalog/lkod/1/contact-point></c-> <c- p>.</c->
 </pre>
    <h3 class="heading settled" data-level="2.2" id="trieda-katalóg"><span class="secno">2.2. </span><span class="content">Trieda: Katalóg</span><a class="self-link" href="#trieda-katalóg"></a></h3>
    <dl>
@@ -2674,23 +2674,23 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Distributi
      <p>Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia tejto distribúcie datasetu. Hodnoty se riadia TODO:dokument</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>podmienky_použitia</code>, <code>law:termsOfUse</code></p>
+     <p><code>podmienky_použitia</code>, <code>leg:termsOfUse</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>Entita typu <code>law:TermsOfUse</code> s Vlastnosťmi <code>law:authorsWorkType</code>, <code>law:originalDatabaseType</code>, <code>law:databaseProtectedBySpecialRightsType</code> a <code>law:personalDataContainmentType</code>.
-Volitelně také <code>law:authorName</code> a <code>law:originalDatabaseAuthorName</code>. Viz <a href="https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101811456">Návrh URI pre NKOD</a></p>
+     <p>Entita typu <code>leg:TermsOfUse</code> s Vlastnosťmi <code>leg:authorsWorkType</code>, <code>leg:originalDatabaseType</code>, <code>leg:databaseProtectedBySpecialRightsType</code> a <code>leg:personalDataContainmentType</code>.
+Volitelně také <code>leg:authorName</code> a <code>leg:originalDatabaseAuthorName</code>. Viz <a href="https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101811456">Návrh URI pre NKOD</a></p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribuce</c-><c- p>:</c-> <c- nn>law</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- nn>podmienky</c-><c- p>:</c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>distribuce</c-><c- p>:</c-> <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- nn>podmienky</c-><c- p>:</c-> <c- p>.</c->
 
-<c- nn>podmienky</c-><c- p>:</c-> <c- b>a</c-> <c- nn>law</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
-    <c- nn>law</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://data.gov.sk/def/authors-work-type/3></c-> <c- p>;</c->
-    <c- nn>law</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;https://data.gov.sk/def/original-database-type/3></c-> <c- p>;</c->
-    <c- nn>law</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;https://data.gov.sk/def/codelist/database-creator-special-rights-type/2></c-> <c- p>;</c->
-    <c- nn>law</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>.</c->
+<c- nn>podmienky</c-><c- p>:</c-> <c- b>a</c-> <c- nn>leg</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
+    <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://data.gov.sk/def/authors-work-type/3></c-> <c- p>;</c->
+    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;https://data.gov.sk/def/original-database-type/3></c-> <c- p>;</c->
+    <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;https://data.gov.sk/def/codelist/database-creator-special-rights-type/2></c-> <c- p>;</c->
+    <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="2.4.2" id="distribÚcia-stiahnutie-súboru"><span class="secno">2.4.2. </span><span class="content">Odkaz na stiahnutie súboru</span><a class="self-link" href="#distribÚcia-stiahnutie-súboru"></a></h4>
@@ -2719,7 +2719,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
     <dd data-md>
      <p>Táto Vlastnosť obsahuje URL, pomocou ktorého sa je možné dostať k distribúcii datasetu.
 Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url">dcat:accessURL</a>.
-Pre účely katalógov otvorených dát je hodnota tejto Vlastnosti buď rovnaká ako <a href="#distribuce-stažení-souboru">odkaz na stiahnutie súboru</a> v případě distribuce reprezentující soubor ke stažení, nebo stejná jako <a href="#datová-služba-přístupový-bod">přístupový bod</a> v případě distribuce reprezentující dátovú službu.</p>
+Pre účely katalógov otvorených dát je hodnota tejto Vlastnosti buď rovnaká ako <a href="#distribuce-stažení-súboru">odkaz na stiahnutie súboru</a> v případě distribuce reprezentující súbor ke stažení, nebo stejná jako <a href="#datová-služba-přístupový-bod">přístupový bod</a> v případě distribuce reprezentující dátovú službu.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>přístupové_url</code>, <code>dcat:accessURL</code></p>
@@ -2746,7 +2746,7 @@ Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocab
      <p><code>formát</code>, <code>dct:format</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>IRI položky z <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type">európského číselníka typů souboru</a></p>
+     <p>IRI položky z <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/file-type">európského číselníka typů súboru</a></p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Povinná pre súbor na stiahnutie</p>
@@ -2875,7 +2875,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
 <pre class="language-turtle highlight"><c- nn>distribuce</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>accessService</c-> <c- nn>služba</c-><c- p>:</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h3 class="heading settled" data-level="2.5" id="trieda-datová-služba"><span class="secno">2.5. </span><span class="content">Trieda: Datová služba</span><a class="self-link" href="#trieda-datová-služba"></a></h3>
+   <h3 class="heading settled" data-level="2.5" id="trieda-datová-služba"><span class="secno">2.5. </span><span class="content">Trieda: Dátová služba</span><a class="self-link" href="#trieda-datová-služba"></a></h3>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2920,7 +2920,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://data.cssz.cz/sparql></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://data.gov.sk/sparql></c-> <c- p>.</c->
 </pre>
    </dl>
    <h4 class="heading settled" data-level="2.5.3" id="datová-služba-špecifikácia"><span class="secno">2.5.3. </span><span class="content">Odkaz na špecifikáciu</span><a class="self-link" href="#datová-služba-špecifikácia"></a></h4>
@@ -2961,81 +2961,81 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointDescription</c-> <c- g>&lt;https://data.cssz.cz/sparql></c-> <c- p>.</c->
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointDescription</c-> <c- g>&lt;https://data.gov.sk/sparql></c-> <c- p>.</c->
 </pre>
    </dl>
    <h2 class="heading settled" data-level="3" id="rozhranie-sparql-endpoint"><span class="secno">3. </span><span class="content">Rozhranie DCAT-AP SPARQL Endpoint</span><a class="self-link" href="#rozhranie-sparql-endpoint"></a></h2>
-    Toto rozhranie predpokládá, že metadáta datasetov podľa tejto špecifikácie sú uložené a sprístupnené prostredníctvom SPARQL endpointu <a data-link-type="biblio" href="#biblio-sparql11-protocol">[sparql11-protocol]</a>.
-Po registráci tohto SPARQL endpointu se na ňom NKOD spýta najskôr na zoznam inštancií tried <code>dcat:Dataset</code>, a následne sa po skupinách bude pýtat na povinné, nepovinné i dalšie položky jednotlivých datasetov podľa tejto špecifikácie a špecifikácie <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT-AP 2.1.1</a>.
-Jedná se o nejjednodušší způsob registrace lokálního katalogu otevřených dat. 
-   <p>datasety, distribúcie a dátové služby musia byť identifikovateľné svojimi IRI, nesmie se jednat o <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">RDF prázdne uzly</a> <a data-link-type="biblio" href="#biblio-rdf11-concepts">[rdf11-concepts]</a>.</p>
-   <h2 class="heading settled" data-level="4" id="rozhranie-dcat-ap-dokumenty"><span class="secno">4. </span><span class="content">Rozhraní DCAT-AP Dokumenty</span><a class="self-link" href="#rozhranie-dcat-ap-dokumenty"></a></h2>
-    Táto varianta rozhraní je určena pro instituce, které nechtějí nebo nemohou provozovat pro účely harvestace metadat o datových sadách do NKOD SPARQL endpoint.
-Počítá se serializací metadat o datových sadách do statických souborů umístěných na web.
-Jako indexový soubor pak poslouží soubor obsahující instanci třídy <code>dcat:Catalog</code>, která pomocí Vlastnosťi <code>dcat:dataset</code> ukazuje na URL jednotlivých datových sad.
-Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi dostane kompletní katalogizační záznam pro danou datovou sadu, včetně jejích distribucí a datových služeb. 
-   <p>datasetu, distribuce a datové služby musí byť identifikovány svými IRI, nesmí se jednat o <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">RDF blank nody</a> <a data-link-type="biblio" href="#biblio-rdf11-concepts">[rdf11-concepts]</a>.</p>
-   <h3 class="heading settled" data-level="4.1" id="rozhranie-dcat-ap-dokumenty-katalog"><span class="secno">4.1. </span><span class="content">Soubor katalogu</span><a class="self-link" href="#rozhranie-dcat-ap-dokumenty-katalog"></a></h3>
-    Soubor katalogu je soubor v RDF serializaci Turtle <a data-link-type="biblio" href="#biblio-turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11">[json-ld11]</a>, který obsahuje instanci třídy <code>dcat:Catalog</code> a odkazy na jednotlivé katalogizované datasetu. 
-   <div class="example" id="example-266c2747">
-    <a class="self-link" href="#example-266c2747"></a> 
-<pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c->    <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>dct:</c->     <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
+    Toto rozhranie predpokladá, že metadáta datasetov podľa tejto špecifikácie sú uložené a sprístupnené prostredníctvom SPARQL endpointu <a data-link-type="biblio" href="#biblio-sparql11-protocol">[sparql11-protocol]</a>.
+Po registráci tohto SPARQL endpointu sa ho NKOD spýta najskôr na zoznam inštancií tried <code>dcat:Dataset</code>, a následne sa po skupinách bude pýtat na povinné, nepovinné i dalšie položky jednotlivých datasetov podľa tejto špecifikácie a špecifikácie <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT-AP 2.1.1</a>.
+Jedná se o nejjednoduchší spôsob registrácie lokálneho katalógu otvorených dát. 
+   <p>Datasety, distribúcie a dátové služby musia byť identifikovateľné svojimi IRI, nesmie sa jednať o <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">RDF prázdne uzly</a> <a data-link-type="biblio" href="#biblio-rdf11-concepts">[rdf11-concepts]</a>.</p>
+   <h2 class="heading settled" data-level="4" id="rozhranie-dcat-ap-dokumenty"><span class="secno">4. </span><span class="content">Rozhranie DCAT-AP Dokumenty</span><a class="self-link" href="#rozhranie-dcat-ap-dokumenty"></a></h2>
+    Táto varianta rozhrania je určená pre inštitúcie, ktoré nechcú alebo nemôžu prevádzkovať pre účely harvestácie metadát o datasetoch NKOD SPARQL endpoint.
+Počíta so serializáciou metadát o datasetoch do statických súborov umiestnených na webe.
+Ako indexový súbor následne poslúži súbor obsahujúcu inštanci triedy <code>dcat:Catalog</code>, ktorá pomocou Vlastnosti <code>dcat:dataset</code> ukazuje na URL jednotlivých datasetov.
+Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane kompletný katalogizačný záznam pre danú dátovou sadu, vrátane ich distribucií a dátových služieb. 
+   <p>Datasety, distribúcie a dátové služby musia byť identifikované svojími IRI, nesmie sa jednať o <a href="https://www.w3.org/TR/rdf11-concepts/#section-blank-nodes">RDF prázdne uzly</a> <a data-link-type="biblio" href="#biblio-rdf11-concepts">[rdf11-concepts]</a>.</p>
+   <h3 class="heading settled" data-level="4.1" id="rozhranie-dcat-ap-dokumenty-katalóg"><span class="secno">4.1. </span><span class="content">Súbor katalógu</span><a class="self-link" href="#rozhranie-dcat-ap-dokumenty-katalóg"></a></h3>
+    Súbor katalógu je súbor v RDF serializácii Turtle <a data-link-type="biblio" href="#biblio-turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11">[json-ld11]</a>, ktorý obsahuje inštanciu triedy <code>dcat:Catalog</code> a odkazy na jednotlivé katalogizované datasety. 
+   <div class="example" id="example-c1b17b48">
+    <a class="self-link" href="#example-c1b17b48"></a> 
+<pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>dct:</c->  <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>vcard2006:</c-> <c- g>&lt;http://www.w3.org/2006/vcard/ns#></c-> <c- p>.</c->
 
-<c- g>&lt;https://data.gov.sk/lkod/mdcr/katalog></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Catalog</c-> <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Katalog otevřených dat Ministerstva dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Open Data Catalog of the Ministry of Transport"</c-><c- o>@</c->en <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Otevřená data Ministerstva dopravy. Obsahuje datasetu o jízdních řádech a liniových vedeních veřejné dopravy."</c-><c- o>@</c->sk<c- p>;</c->
+<c- g>&lt;https://data.gov.sk/set/lkod/mdsr/katalog></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Catalog</c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Katalóg otvorených dát Ministerstva dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Open Data Catalog of the Ministry of Transport"</c-><c- o>@</c->en <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy."</c-><c- o>@</c->sk<c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."</c-><c- o>@</c->en <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652></c-> <c- p>;</c->
-    <c- nn>foaf</c-><c- p>:</c-><c- f>homepage</c-> <c- g>&lt;https://data.gov.sk/datové-sady?poskytovateľ=Ministerstvo%20dopravy></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>;</c->
+    <c- nn>foaf</c-><c- p>:</c-><c- f>homepage</c-> <c- g>&lt;https://www.mindop.sk></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>contactPoint</c-> <c- p>[</c->
         <c- b>a</c-> <c- nn>vcard2006</c-><c- p>:</c-><c- f>Organization</c-> <c- p>;</c->
-        <c- nn>vcard2006</c-><c- p>:</c-><c- f>fn</c-> <c- s>"Ministerstvo dopravy, Odbor veřejné dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Ministry of Transport"</c-><c- o>@</c->en <c- p>;</c->
-        <c- nn>vcard2006</c-><c- p>:</c-><c- f>hasEmail</c-> <c- g>&lt;mailto:sekretariat.190@mdcr.cz></c->
+        <c- nn>vcard2006</c-><c- p>:</c-><c- f>fn</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Ministry of Transport"</c-><c- o>@</c->en <c- p>;</c->
+        <c- nn>vcard2006</c-><c- p>:</c-><c- f>hasEmail</c-> <c- g>&lt;mailto:info@mindop.sk></c->
     <c- p>]</c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>dataset</c->  <c- g>&lt;https://data.gov.sk/lkod/mdcr/datové-sady/seznam-zastavky></c-> <c- p>,</c->
-                  <c- g>&lt;https://data.gov.sk/lkod/mdcr/datové-sady/vld></c-> <c- p>,</c->
-                  <c- g>&lt;https://data.gov.sk/lkod/mdcr/datové-sady/seznam-trate></c-> <c- p>.</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>dataset</c->  <c- g>&lt;https://data.gov.sk/set/zoznam-zástavok-2022-10></c-> <c- p>,</c->
+                  <c- g>&lt;https://data.gov.sk/set/líniové-vedenia-2022-10></c-> <c- p>,</c->
+                  <c- g>&lt;https://data.gov.sk/set/zoznam-tratí-2022></c-> <c- p>.</c->
 </pre>
    </div>
-   <div class="example" id="example-9440425c">
-    <a class="self-link" href="#example-9440425c"></a> <a href="Príklady/katalog.jsonld">Príklad v JSON-LD</a>, <a href="schémata/katalog.json">JSON Schéma</a>, <a href="kontexty/rozhraní-katalogů-otevřených-dat.jsonld">JSON-LD kontext</a> 
+   <div class="example" id="example-fed8ff18">
+    <a class="self-link" href="#example-fed8ff18"></a> <a href="Príklady/katalóg.jsonld">Príklad v JSON-LD</a>, <a href="schémy/katalog.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorenych-dát.jsonld">JSON-LD kontext</a> 
 <pre class="language-json highlight"><c- p>{</c->
-    <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/.../kontexty/rozhraní-katalogů-otevřených-dat.jsonld"</c-><c- p>,</c->
-    <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/lkod/mdcr/katalog"</c-><c- p>,</c->
-    <c- f>"typ"</c-><c- p>:</c-> <c- u>"Katalog"</c-><c- p>,</c->
+    <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/.../kontexty/rozhranie-katalógu-otvorených-dát.jsonld"</c-><c- p>,</c->
+    <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/lkod/mdsr/katalog"</c-><c- p>,</c->
+    <c- f>"typ"</c-><c- p>:</c-> <c- u>"Katalóg"</c-><c- p>,</c->
     <c- f>"názov"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Katalog otevřených dat Ministerstva dopravy"</c-><c- p>,</c->
+        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Katalóg otvorených dát Ministerstva dopravy"</c-><c- p>,</c->
         <c- f>"en"</c-><c- p>:</c-> <c- u>"Open Data Catalog of the Ministry of Transport"</c->
     <c- p>},</c->
     <c- f>"popis"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Otevřená data Ministerstva dopravy. Obsahuje datasetu o jízdních řádech a liniových vedeních veřejné dopravy."</c-><c- p>,</c->
+        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy."</c-><c- p>,</c->
         <c- f>"en"</c-><c- p>:</c-> <c- u>"Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."</c->
     <c- p>},</c->
-    <c- f>"kontaktní_bod"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"kontaktný_bod"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"typ"</c-><c- p>:</c-> <c- u>"Organizace"</c-><c- p>,</c->
         <c- f>"meno"</c-><c- p>:</c-> <c- p>{</c->
-          <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c-><c- p>,</c->
+          <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- p>,</c->
           <c- f>"en"</c-><c- p>:</c-> <c- u>"Ministry of Transport"</c->
         <c- p>},</c->
-        <c- f>"e-mail"</c-><c- p>:</c-> <c- u>"mailto:sekretariat.190@mdcr.cz"</c->
+        <c- f>"e-mail"</c-><c- p>:</c-> <c- u>"mailto:info@mindop.sk"</c->
     <c- p>},</c->
-    <c- f>"domovská_stránka"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/datové-sady?poskytovateľ=Ministerstvo%20dopravy"</c-><c- p>,</c->
-    <c- f>"poskytovateľ"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652"</c-><c- p>,</c->
-    <c- f>"datová_sada"</c-><c- p>:</c-> <c- p>[</c->
-         <c- u>"https://data.gov.sk/lkod/mdcr/datové-sady/vld"</c-><c- p>,</c->
-         <c- u>"https://data.gov.sk/lkod/mdcr/datové-sady/seznam-zastavky"</c-><c- p>,</c->
-         <c- u>"https://data.gov.sk/lkod/mdcr/datové-sady/seznam-trate"</c->
+    <c- f>"domovská_stránka"</c-><c- p>:</c-> <c- u>"https://www.mindop.sk"</c-><c- p>,</c->
+    <c- f>"poskytovateľ"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/legal-subject/30416094"</c-><c- p>,</c->
+    <c- f>"dataset"</c-><c- p>:</c-> <c- p>[</c->
+         <c- u>"https://data.gov.sk/set/zoznam-zástavok-2022-10"</c-><c- p>,</c->
+         <c- u>"https://data.gov.sk/set/líniové-vedenia-2022-10"</c-><c- p>,</c->
+         <c- u>"https://data.gov.sk/set/zoznam-tratí-2022"</c->
   <c- p>]</c->
 <c- p>}</c->
 </pre>
    </div>
-   <h3 class="heading settled" data-level="4.2" id="rozhranie-dcat-ap-dataset"><span class="secno">4.2. </span><span class="content">Soubor datasetu</span><a class="self-link" href="#rozhranie-dcat-ap-dataset"></a></h3>
-    Na URL specifikovaných v souboru katalogu pak NKOD očekává soubory v RDF serializaci Turtle <a data-link-type="biblio" href="#biblio-turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11">[json-ld11]</a> obsahující kompletní metadatový záznam datasetu, včetně distribucí. 
-   <div class="example" id="example-56b3383c">
-    <a class="self-link" href="#example-56b3383c"></a> 
+   <h3 class="heading settled" data-level="4.2" id="rozhranie-dcat-ap-dataset"><span class="secno">4.2. </span><span class="content">Súbor datasetu</span><a class="self-link" href="#rozhranie-dcat-ap-dataset"></a></h3>
+    Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF serializácii Turtle <a data-link-type="biblio" href="#biblio-turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11">[json-ld11]</a> obsahujúce kompletný metadatový záznam datasetu, vrátane distribúcií. 
+   <div class="example" id="example-e67bc83f">
+    <a class="self-link" href="#example-e67bc83f"></a> 
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
@@ -3049,17 +3049,17 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
 <c- k>@prefix</c-> <c- nn>continent:</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/continent/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>euroVoc:</c-> <c- g>&lt;http://eurovoc.europa.eu/></c-> <c- p>.</c->
 
-<c- k>@prefix</c-> <c- nn>law:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/law/></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>leg:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/legislation/></c-> <c- p>.</c->
 
 <c- g>&lt;https://data.gov.sk/set/vld></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Jízdní řády veřejné linkové dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Public transport timetables"</c-><c- o>@</c->en<c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Obsahem datasetu sú schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu."</c-><c- o>@</c->sk <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Public transport timetables"</c-><c- o>@</c->en<c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."</c-><c- o>@</c->sk <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."</c-><c- o>@</c->en <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>type</c-> <c- g>&lt;https://data.gov.sk/def/dataset-type/1></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- nn>theme</c-><c- p>:</c-><c- f>TRAN</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- nn>freq</c-><c- p>:</c-><c- f>WEEKLY_3</c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>keyword</c-> <c- s>"autobusy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"jízdní řády"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"veřejná linková doprava"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"timetable"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"bus"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"public transport"</c-><c- o>@</c->en <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>keyword</c-> <c- s>"autobusy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"verejná linková doprava"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"timetable"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"bus"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"public transport"</c-><c- o>@</c->en <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- nn>continent</c-><c- p>:</c-><c- f>EUROPE</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>temporal</c-> <c- p>[</c->
         <c- b>a</c-> <c- nn>dct</c-><c- p>:</c-><c- f>PeriodOfTime</c-> <c- p>;</c->
@@ -3068,11 +3068,11 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
     <c- p>]</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>contactPoint</c-> <c- p>[</c->
         <c- b>a</c-> <c- nn>vcard2006</c-><c- p>:</c-><c- f>Organization</c-> <c- p>;</c->
-        <c- nn>vcard2006</c-><c- p>:</c-><c- f>fn</c-> <c- s>"Ministerstvo dopravy, Odbor veřejné dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Ministry of Transport"</c-><c- o>@</c->en <c- p>;</c->
-        <c- nn>vcard2006</c-><c- p>:</c-><c- f>hasEmail</c-> <c- s>"sekretariat.190@mdcr.cz"</c->
+        <c- nn>vcard2006</c-><c- p>:</c-><c- f>fn</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Ministry of Transport"</c-><c- o>@</c->en <c- p>;</c->
+        <c- nn>vcard2006</c-><c- p>:</c-><c- f>hasEmail</c-> <c- s>"mailto:info@mindop.sk"</c->
     <c- p>]</c-> <c- p>;</c->
-    <c- nn>foaf</c-><c- p>:</c-><c- f>page</c-> <c- g>&lt;https://www.mdcr.cz/Dokumenty/Verejna-doprava/Jizdni-rady,-kalendare-pro-jizdni-rady,-metodi-(1)/Jizdni-rady-verejne-dopravy></c-> <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://ofn.gov.cz/jízdní-řády/2020-05-01/></c-> <c- p>;</c->
+    <c- nn>foaf</c-><c- p>:</c-><c- f>page</c-> <c- g>&lt;https://www.mindop.sk/cestovne-poriadky-info></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://data.gov.sk/def/ontology/transport/></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- nn>euroVoc</c-><c- p>:</c-><c- f>4512</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>spatialResolutionInMeters</c-> <c- mf>12.0</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>temporalResolution</c-> <c- s>"P1D"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>duration</c-> <c- p>;</c->
@@ -3080,63 +3080,63 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
     <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- g>&lt;https://data.gov.sk/set/vld/resource/sparql></c-> <c- p>.</c->
 
 <c- g>&lt;https://data.gov.sk/set/vld/resource/csv></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
-    <c- nn>law</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>[</c-> <c- b>a</c-> <c- nn>law</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
-                    <c- nn>law</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://creativecommons.org/licenses/by/4.0/></c-> <c- p>;</c->
-                    <c- nn>law</c-><c- p>:</c-><c- f>authorName</c-> <c- s>"Ministerstvo dopravy, Odbor veřejné dopravy"</c-><c- o>@</c->sk <c- p>;</c->
-                    <c- nn>law</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;https://creativecommons.org/publicdomain/zero/1.0/></c-> <c- p>;</c->
-                    <c- nn>law</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;https://creativecommons.org/licenses/by/4.0/></c-> <c- p>;</c->
-                    <c- nn>law</c-><c- p>:</c-><c- f>originalDatabaseAuthorName</c-> <c- s>"Ministerstvo dopravy, Odbor veřejné dopravy"</c-><c- o>@</c->sk <c- p>;</c->
-                    <c- nn>law</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>]</c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://portal.cisjr.cz/pub/draha/mestske/JDF.zip></c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- g>&lt;https://portal.cisjr.cz/pub/draha/mestske/JDF.zip></c-> <c- p>;</c->
+    <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>[</c-> <c- b>a</c-> <c- nn>leg</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://creativecommons.org/licenses/by/4.0/></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>authorName</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;https://creativecommons.org/publicdomain/zero/1.0/></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;https://creativecommons.org/licenses/by/4.0/></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseAuthorName</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>]</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://opendata.middop.sk/pub/draha/mestske/JDF.zip></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- g>&lt;https://opendata.middop.sk/pub/draha/mestske/JDF.zip></c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>format</c-> <c- nn>filetype</c-><c- p>:</c-><c- f>ZIP</c-> <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://portal.cisjr.cz/schemata/json-schema.json></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://opendata.middop.sk/schemy/json-schema.json></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>mediaType</c-> <c- nn>application</c-><c- p>:</c-><c- f>json</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>compressFormat</c-> <c- nn>application</c-><c- p>:</c-><c- f>zip</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>packageFormat</c-> <c- nn>application</c-><c- p>:</c-><c- f>zip</c-> <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"JSON distribuce v ZIP soubrou"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"JSON distribution in ZIP file"</c-><c- o>@</c->en <c- p>.</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"JSON distribúcia v ZIP súbore"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"JSON distribution in ZIP file"</c-><c- o>@</c->en <c- p>.</c->
 
 <c- g>&lt;https://data.gov.sk/set/vld/resource/sparql></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
-    <c- nn>law</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>[</c-> <c- b>a</c-> <c- nn>law</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
-                    <c- nn>law</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://data.gov.sk/def/authors-work-type/3></c-> <c- p>;</c->
-                    <c- nn>law</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;https://data.gov.sk/def/codelist/database-creator-special-rights-type/2></c-> <c- p>;</c->
-                    <c- nn>law</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;https://data.gov.sk/def/original-database-type/3></c-> <c- p>;</c->
-                    <c- nn>law</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>]</c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://portal.cisjr.cz/sparql></c-> <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pro jízdní řády"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
+    <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>[</c-> <c- b>a</c-> <c- nn>leg</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://data.gov.sk/def/authors-work-type/3></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;https://data.gov.sk/def/codelist/database-creator-special-rights-type/2></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;https://data.gov.sk/def/original-database-type/3></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>]</c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://opendata.middop.sk/sparql></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pre cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>accessService</c-> <c- g>&lt;https://data.gov.sk/id/egov/app-service/123></c-> <c- p>.</c->
 
 <c- g>&lt;https://data.gov.sk/id/egov/app-service/123></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>DataService</c-> <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pro jízdní řády"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://portal.cisjr.cz/sparql></c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>endpointDescription</c-> <c- g>&lt;https://portal.cisjr.cz/sparql></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pre cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://opendata.middop.sk/sparql></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>endpointDescription</c-> <c- g>&lt;https://opendata.middop.sk/sparql></c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c->
 </pre>
    </div>
-   <div class="example" id="example-3b0c3df2">
-    <a class="self-link" href="#example-3b0c3df2"></a> <a href="Príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémata/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhraní-katalogů-otevřených-dat.jsonld">JSON-LD kontext</a> 
+   <div class="example" id="example-57771606">
+    <a class="self-link" href="#example-57771606"></a> <a href="Príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
 <pre class="language-json highlight"><c- p>{</c->
-    <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/.../kontexty/rozhraní-katalogů-otevřených-dat.jsonld"</c-><c- p>,</c->
+    <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/.../kontexty/rozhranie-katalógu-otvorených-dát.jsonld"</c-><c- p>,</c->
     <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld"</c-><c- p>,</c->
     <c- f>"typ"</c-><c- p>:</c-> <c- u>"dataset"</c-><c- p>,</c->
     <c- f>"názov"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Jízdní řády veřejné linkové dopravy"</c-><c- p>,</c->
+        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Cestovné poriadky"</c-><c- p>,</c->
         <c- f>"en"</c-><c- p>:</c-> <c- u>"Public transport timetables"</c->
     <c- p>},</c->
     <c- f>"popis"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Obsahem datasetu sú schválené a aktuálně platné jízdní řády veřejné linkové dopravy postoupené do Celostátního informačního systému o jízdních řádech ve strojově zpracovatelném formátu."</c-><c- p>,</c->
+        <c- f>"sk"</c-><c- p>:</c-> <c- u>"Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."</c-><c- p>,</c->
         <c- f>"en"</c-><c- p>:</c-> <c- u>"This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."</c->
     <c- p>},</c->
-    <c- f>"poskytovateľ"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652"</c-><c- p>,</c->
+    <c- f>"poskytovateľ"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/legal-subject/30416094"</c-><c- p>,</c->
     <c- f>"typ_datasetu"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/dataset-type/1"</c-><c- p>,</c->
     <c- f>"téma"</c-><c- p>:</c-> <c- p>[</c->
         <c- u>"http://publications.europa.eu/resource/authority/data-theme/TRAN"</c->
     <c- p>],</c->
-    <c- f>"periodicita_aktualizace"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/frequency/WEEKLY_3"</c-><c- p>,</c->
-    <c- f>"klíčové_slovo"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"periodicita_aktualizácie"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/frequency/WEEKLY_3"</c-><c- p>,</c->
+    <c- f>"kľúčové_slovo"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"sk"</c-><c- p>:</c-> <c- p>[</c->
-            <c- u>"jízdní řády"</c-><c- p>,</c->
-            <c- u>"veřejná linková doprava"</c-><c- p>,</c->
+            <c- u>"cestovné poriadky"</c-><c- p>,</c->
+            <c- u>"verejná linková doprava"</c-><c- p>,</c->
             <c- u>"autobus"</c->
         <c- p>],</c->
         <c- f>"en"</c-><c- p>:</c-> <c- p>[</c->
@@ -3145,140 +3145,140 @@ Při přístupu na tato URL datových sad NKOD předpokládá, že v odpovědi d
             <c- u>"bus"</c->
         <c- p>]</c->
     <c- p>},</c->
-    <c- f>"geografické_území"</c-><c- p>:</c-> <c- p>[</c->
+    <c- f>"geografické_územie"</c-><c- p>:</c-> <c- p>[</c->
         <c- u>"http://publications.europa.eu/resource/authority/continent/EUROPE"</c->
     <c- p>],</c->
     <c- f>"prvek_rúian"</c-><c- p>:</c-> <c- p>[</c->
         <c- u>"https://linked.cuzk.cz/resource/ruian/stat/1"</c->
     <c- p>],</c->
-    <c- f>"časové_pokrytí"</c-><c- p>:</c-> <c- p>{</c->
+    <c- f>"časové_pokrytie"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"typ"</c-><c- p>:</c-> <c- u>"Časový interval"</c-><c- p>,</c->
         <c- f>"začiatok"</c-><c- p>:</c-> <c- u>"2009-01-01"</c-><c- p>,</c->
         <c- f>"konec"</c-><c- p>:</c-> <c- u>"2017-12-31"</c->
     <c- p>},</c->
-    <c- f>"kontaktní_bod"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"typ"</c-><c- p>:</c-> <c- u>"Organizace"</c-><c- p>,</c->
+    <c- f>"kontaktný_bod"</c-><c- p>:</c-> <c- p>{</c->
+        <c- f>"typ"</c-><c- p>:</c-> <c- u>"Organizácia"</c-><c- p>,</c->
         <c- f>"meno"</c-><c- p>:</c-> <c- p>{</c->
             <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c-><c- p>,</c->
             <c- f>"en"</c-><c- p>:</c-> <c- u>"Ministry of Transport"</c->
         <c- p>},</c->
-        <c- f>"e-mail"</c-><c- p>:</c-> <c- u>"mailto:sekretariat.190@mdcr.cz"</c->
+        <c- f>"e-mail"</c-><c- p>:</c-> <c- u>"mailto:info@mindop.cz"</c->
     <c- p>},</c->
-    <c- f>"dokumentace"</c-><c- p>:</c-> <c- u>"https://www.mdcr.cz/Dokumenty/Verejna-doprava/Jizdni-rady,-kalendare-pro-jizdni-rady,-metodi-(1)/Jizdni-rady-verejne-dopravy"</c-><c- p>,</c->
-    <c- f>"specifikace"</c-><c- p>:</c-> <c- p>[</c->
-        <c- u>"https://ofn.gov.cz/jízdní-řády/2020-05-01/"</c->
+    <c- f>"dokumentace"</c-><c- p>:</c-> <c- u>"https://www.middop.sk/"</c-><c- p>,</c->
+    <c- f>"špecifikácia"</c-><c- p>:</c-> <c- p>[</c->
+        <c- u>"https://data.gov.sk/def/ontology/transport/"</c->
     <c- p>],</c->
     <c- f>"koncept_euroVoc"</c-><c- p>:</c-> <c- p>[</c->
         <c- u>"http://eurovoc.europa.eu/4512"</c->
     <c- p>],</c->
-    <c- f>"prostorové_rozlišení_v_metrech"</c-><c- p>:</c-> <c- mf>12.0</c-><c- p>,</c->
-    <c- f>"časové_rozlišení"</c-><c- p>:</c-> <c- u>"P1D"</c-><c- p>,</c->
-    <c- f>"distribuce"</c-><c- p>:</c-> <c- p>[{</c->
+    <c- f>"priestorové_rozlíšenie_v_metroch"</c-><c- p>:</c-> <c- mf>12.0</c-><c- p>,</c->
+    <c- f>"časové_rozlišenie"</c-><c- p>:</c-> <c- u>"P1D"</c-><c- p>,</c->
+    <c- f>"distribúcia"</c-><c- p>:</c-> <c- p>[{</c->
             <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld/resource/csv"</c-><c- p>,</c->
             <c- f>"typ"</c-><c- p>:</c-> <c- u>"Distribuce"</c-><c- p>,</c->
-            <c- f>"podmínky_užití"</c-><c- p>:</c-> <c- p>{</c->
-                <c- f>"typ"</c-><c- p>:</c-> <c- u>"Specifikace podmínek užití"</c-><c- p>,</c->
-                <c- f>"autorské_dílo"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/licenses/by/4.0/"</c-><c- p>,</c->
+            <c- f>"podmienky_použitia"</c-><c- p>:</c-> <c- p>{</c->
+                <c- f>"typ"</c-><c- p>:</c-> <c- u>"Špecifikácia podmienok použitia"</c-><c- p>,</c->
+                <c- f>"autorské_dielo"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/licenses/by/4.0/"</c-><c- p>,</c->
                 <c- f>"autor"</c-><c- p>:</c-> <c- p>{</c->
-                    <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c->
+                    <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor verejnej dopravy"</c->
                 <c- p>},</c->
-                <c- f>"databáze_chráněná_zvláštními_právy"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/publicdomain/zero/1.0/"</c-><c- p>,</c->
-                <c- f>"databáze_jako_autorské_dílo"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/licenses/by/4.0/"</c-><c- p>,</c->
-                <c- f>"autor_databáze"</c-><c- p>:</c-> <c- p>{</c->
-                    <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor veřejné dopravy"</c->
+                <c- f>"databáza_chráněná_zvláštnými_právami"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/publicdomain/zero/1.0/"</c-><c- p>,</c->
+                <c- f>"databáza_ako_autorské_dielo"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/licenses/by/4.0/"</c-><c- p>,</c->
+                <c- f>"autor_databázy"</c-><c- p>:</c-> <c- p>{</c->
+                    <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor verejnej dopravy"</c->
                 <c- p>},</c->
-                <c- f>"osobní_údaje"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/personal-data-occurence-type/2"</c->
+                <c- f>"osobné_údaje"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/personal-data-occurence-type/2"</c->
             <c- p>},</c->
-            <c- f>"přístupové_url"</c-><c- p>:</c-> <c- u>"https://portal.cisjr.cz/pub/draha/mestske/JDF.zip"</c-><c- p>,</c->
-            <c- f>"soubor_ke_stažení"</c-><c- p>:</c-> <c- u>"https://portal.cisjr.cz/pub/draha/mestske/JDF.zip"</c-><c- p>,</c->
+            <c- f>"prístupové_url"</c-><c- p>:</c-> <c- u>"https://mindop.sk/pub/draha/mestske/JDF.zip"</c-><c- p>,</c->
+            <c- f>"súbor_na_stiahnutie"</c-><c- p>:</c-> <c- u>"https://mindop.sk/pub/draha/mestske/JDF.zip"</c-><c- p>,</c->
             <c- f>"formát"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/file-type/ZIP"</c-><c- p>,</c->
             <c- f>"typ_média"</c-><c- p>:</c-> <c- u>"http://www.iana.org/assignments/media-types/application/json"</c-><c- p>,</c->
             <c- f>"schéma"</c-><c- p>:</c-> <c- u>"https://portal.cisjr.cz/schemata/json-schema.json"</c-><c- p>,</c->
-            <c- f>"typ_média_komprese"</c-><c- p>:</c-> <c- u>"http://www.iana.org/assignments/media-types/application/zip"</c-><c- p>,</c->
-            <c- f>"typ_média_balíčku"</c-><c- p>:</c-> <c- u>"http://www.iana.org/assignments/media-types/application/zip"</c-><c- p>,</c->
+            <c- f>"typ_média_kompresie"</c-><c- p>:</c-> <c- u>"http://www.iana.org/assignments/media-types/application/zip"</c-><c- p>,</c->
+            <c- f>"typ_média_balíčka"</c-><c- p>:</c-> <c- u>"http://www.iana.org/assignments/media-types/application/zip"</c-><c- p>,</c->
             <c- f>"názov"</c-><c- p>:</c-> <c- p>{</c->
                 <c- f>"en"</c-><c- p>:</c-> <c- u>"JSON distribution in ZIP file"</c-><c- p>,</c->
-                <c- f>"sk"</c-><c- p>:</c-> <c- u>"JSON distribuce v ZIP soubrou"</c->
+                <c- f>"sk"</c-><c- p>:</c-> <c- u>"JSON distribúcia v ZIP soubrou"</c->
             <c- p>}</c->
         <c- p>},</c->
         <c- p>{</c->
             <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld/resource/sparql"</c-><c- p>,</c->
-            <c- f>"typ"</c-><c- p>:</c-> <c- u>"Distribuce"</c-><c- p>,</c->
-            <c- f>"podmínky_užití"</c-><c- p>:</c-> <c- p>{</c->
-                <c- f>"typ"</c-><c- p>:</c-> <c- u>"Specifikace podmínek užití"</c-><c- p>,</c->
-                <c- f>"autorské_dílo"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/authors-work-type/3"</c-><c- p>,</c->
-                <c- f>"databáze_chráněná_zvláštními_právy"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/codelist/database-creator-special-rights-type/2"</c-><c- p>,</c->
-                <c- f>"databáze_jako_autorské_dílo"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/original-database-type/3"</c-><c- p>,</c->
-                <c- f>"osobní_údaje"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/personal-data-occurence-type/2"</c->
+            <c- f>"typ"</c-><c- p>:</c-> <c- u>"Distribúcia"</c-><c- p>,</c->
+            <c- f>"podmienky_použitia"</c-><c- p>:</c-> <c- p>{</c->
+                <c- f>"typ"</c-><c- p>:</c-> <c- u>"Špecifikácia podmienok použitia"</c-><c- p>,</c->
+                <c- f>"autorské_dielo"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/authors-work-type/3"</c-><c- p>,</c->
+                <c- f>"databáza_chránená_zvláštnými_právami"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/codelist/database-creator-special-rights-type/2"</c-><c- p>,</c->
+                <c- f>"databáza_ako_autorské_dielo"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/original-database-type/3"</c-><c- p>,</c->
+                <c- f>"osobné_údaje"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/personal-data-occurence-type/2"</c->
             <c- p>},</c->
-            <c- f>"přístupové_url"</c-><c- p>:</c-> <c- u>"https://portal.cisjr.cz/sparql"</c-><c- p>,</c->
+            <c- f>"prístupové_url"</c-><c- p>:</c-> <c- u>"https://opendata.mindop.sk/sparql"</c-><c- p>,</c->
             <c- f>"názov"</c-><c- p>:</c-> <c- p>{</c->
                 <c- f>"en"</c-><c- p>:</c-> <c- u>"SPARQL endpoint for timetables"</c-><c- p>,</c->
-                <c- f>"sk"</c-><c- p>:</c-> <c- u>"SPARQL endpoint pro jízdní řády"</c->
+                <c- f>"sk"</c-><c- p>:</c-> <c- u>"SPARQL endpoint pre cestovné poriadky"</c->
             <c- p>},</c->
             <c- f>"přístupová_služba"</c-><c- p>:</c-> <c- p>{</c->
                 <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/id/egov/app-service/123"</c-><c- p>,</c->
-                <c- f>"typ"</c-><c- p>:</c-> <c- u>"Datová služba"</c-><c- p>,</c->
+                <c- f>"typ"</c-><c- p>:</c-> <c- u>"Dátová služba"</c-><c- p>,</c->
                 <c- f>"názov"</c-><c- p>:</c-> <c- p>{</c->
-                    <c- f>"sk"</c-><c- p>:</c-> <c- u>"SPARQL endpoint pro jízdní řády"</c-><c- p>,</c->
+                    <c- f>"sk"</c-><c- p>:</c-> <c- u>"SPARQL endpoint pre cestovné poriadky"</c-><c- p>,</c->
                     <c- f>"en"</c-><c- p>:</c-> <c- u>"SPARQL endpoint for timetables"</c->
                 <c- p>},</c->
-                <c- f>"specifikace"</c-><c- p>:</c-> <c- p>[</c->
+                <c- f>"špecifikácia"</c-><c- p>:</c-> <c- p>[</c->
                     <c- u>"https://www.w3.org/TR/sparql11-protocol/"</c->
                 <c- p>],</c->
-                <c- f>"přístupový_bod"</c-><c- p>:</c-> <c- u>"https://portal.cisjr.cz/sparql"</c-><c- p>,</c->
-                <c- f>"popis_přístupového_bodu"</c-><c- p>:</c-> <c- u>"https://portal.cisjr.cz/sparql"</c->
+                <c- f>"prístupový_bod"</c-><c- p>:</c-> <c- u>"https://mindop.sk/sparql"</c-><c- p>,</c->
+                <c- f>"popis_prístupového_bodu"</c-><c- p>:</c-> <c- u>"https://mindop.sk/sparql"</c->
             <c- p>}</c->
         <c- p>}</c->
     <c- p>]</c->
 <c- p>}</c->
 </pre>
    </div>
-   <h2 class="heading settled" data-level="5" id="rozhranie-ckan-api"><span class="secno">5. </span><span class="content">Rozhraní CKAN API</span><a class="self-link" href="#rozhranie-ckan-api"></a></h2>
-    CKAN API je rozhraní implementace datového katalogu <a href="https://ckan.org/">CKAN</a>.
-Je založené na formátu JSON <a data-link-type="biblio" href="#biblio-ecma-404">[ECMA-404]</a>, a obsahuje dvě hlavní funkce, <code>package_list</code> a <code>package_show</code>.
-Toto rozhraní je implemetováno samotným katalogem <a href="https://ckan.org/">CKAN</a> a také katalogem <a href="https://getdkan.org/">DKAN</a>. 
-   <div class="advisement"> Rozhraní CKAN API je podporováno jen z důvodu zpětné kompatibility.
-Nebude se rozšiřovat o nové položky či funkcionality a neumožňuje kvalitně katalogizovat datasety dle standardu <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT Application Profile for data portals in Europe Version 2.1.1 (DCAT-AP 2.1.1)</a>.
-Pokud je to možné, použijte jedno z rozhraní kompatibilních s DCAT-AP. </div>
-   <h3 class="heading settled" data-level="5.1" id="rozhranie-ckan-api-package-list"><span class="secno">5.1. </span><span class="content">Funkce <code>package_list</code></span><a class="self-link" href="#rozhranie-ckan-api-package-list"></a></h3>
-    Táto funkce vrací seznam identifikátorů jednotlivých datových sad registrovaných v LKOD.
-Tyto identifikátory se pak předávají funkci <code>package_show</code> v parametru <code>id</code>.
-Identifikátory mohou obsahovat písmena, čísla, pomlčky a podtržítka.
-Nesmí však obsahovat mezeru. 
-   <div class="example" id="example-e3e8e10e">
-    <a class="self-link" href="#example-e3e8e10e"></a> Pro URL <code>https://organizacia.sk/api/3/action/package_list</code> 
+   <h2 class="heading settled" data-level="5" id="rozhranie-ckan-api"><span class="secno">5. </span><span class="content">Rozhranie CKAN API</span><a class="self-link" href="#rozhranie-ckan-api"></a></h2>
+    CKAN API je rozhranie pre implementáciu dátového katalógu <a href="https://ckan.org/">CKAN</a>.
+Je založené na formáte JSON <a data-link-type="biblio" href="#biblio-ecma-404">[ECMA-404]</a>, a obsahuje dve hlavné funkcie, <code>package_list</code> a <code>package_show</code>.
+Toto rozhranie je implemetované samotným katalógom <a href="https://ckan.org/">CKAN</a> a také katalogem <a href="https://getdkan.org/">DKAN</a>. 
+   <div class="advisement"> Rozhranie CKAN API je podporované iba z dôvodu zpetnej kompatibility.
+Nebude se rozšiřovat o nové položky ale funkcionality a neumožňuje kvalitne katalogizovať datasety podľa štandardu <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT Application Profile for data portals in Europe Version 2.1.1 (DCAT-AP 2.1.1)</a>.
+Rozhranie CKAN API sa prestane úplne podporovať. Pokiaľ je to možné, použite jedno z rozhraní kompatibilných s DCAT-AP. </div>
+   <h3 class="heading settled" data-level="5.1" id="rozhranie-ckan-api-package-list"><span class="secno">5.1. </span><span class="content">Funkcia <code>package_list</code></span><a class="self-link" href="#rozhranie-ckan-api-package-list"></a></h3>
+    Táto funkcia vracia zoznam identifikátorov jednotlivých datasetov registrovaných v LKOD.
+Tieto identifikátory sa následne predávajú funkcii <code>package_show</code> v parametri <code>id</code>.
+Identifikátory môžu obsahovať písmena, čísla, pomlčky a podtržítka.
+Nesmú však obsahovať medzeru. 
+   <div class="example" id="example-6c531bc2">
+    <a class="self-link" href="#example-6c531bc2"></a> Pre URL <code>https://organizacia.sk/api/3/action/package_list</code> 
 <pre class="language-json highlight"><c- p>{</c->
    <c- f>"success"</c-><c- p>:</c-> <c- kc>true</c-><c- p>,</c-> 
    <c- f>"result"</c-><c- p>:</c-> <c- p>[</c->
-      <c- u>"seznam-zastavky"</c-><c- p>,</c-> 
+      <c- u>"zoznam-zástavky"</c-><c- p>,</c-> 
       <c- u>"vld"</c-><c- p>,</c-> 
-      <c- u>"zeleznice"</c->
+      <c- u>"železnice"</c->
    <c- p>]</c->
 <c- p>}</c->
 </pre>
    </div>
-   <h3 class="heading settled" data-level="5.2" id="rozhranie-ckan-api-package-show"><span class="secno">5.2. </span><span class="content">Funkce <code>package_show</code></span><a class="self-link" href="#rozhranie-ckan-api-package-show"></a></h3>
-    Táto funkce vrací metadatový záznam pro datovou sadu, jejíž identifikátor je předán v parametru <code>id</code>. 
-   <div class="example" id="example-cac9cb9d">
-    <a class="self-link" href="#example-cac9cb9d"></a> Pro URL <code>https://organizacia.sk/api/3/action/package_show?id=zeleznice</code> 
+   <h3 class="heading settled" data-level="5.2" id="rozhranie-ckan-api-package-show"><span class="secno">5.2. </span><span class="content">Funkcia <code>package_show</code></span><a class="self-link" href="#rozhranie-ckan-api-package-show"></a></h3>
+    Táto funkcia vracia metadatový záznam pre dataset, ktorej identifikátor je predaný v parametri <code>id</code>. 
+   <div class="example" id="example-f72f8d0a">
+    <a class="self-link" href="#example-f72f8d0a"></a> Pre URL <code>https://organizacia.sk/api/3/action/package_show?id=zeleznice</code> 
 <pre class="language-json highlight"><c- p>{</c->
     <c- f>"success"</c-><c- p>:</c-> <c- kc>true</c-><c- p>,</c->
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"title"</c-><c- p>:</c-> <c- u>"Číselník ČSÚ: Druh voleb (kód 1051)"</c-><c- p>,</c->
-        <c- f>"notes"</c-><c- p>:</c-> <c- u>"Druh voleb"</c-><c- p>,</c->
+        <c- f>"title"</c-><c- p>:</c-> <c- u>"Číselník ŠÚ: Druh volieb (kód 1051)"</c-><c- p>,</c->
+        <c- f>"notes"</c-><c- p>:</c-> <c- u>"Druh volieb"</c-><c- p>,</c->
         <c- f>"license_link"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/licenses/by/4.0/"</c-><c- p>,</c->
-        <c- f>"maintainer_email"</c-><c- p>:</c-> <c- u>"vdb@czso.cz"</c-><c- p>,</c->
-        <c- f>"maintainer"</c-><c- p>:</c-> <c- u>"Český statistický úřad"</c-><c- p>,</c->
+        <c- f>"maintainer_email"</c-><c- p>:</c-> <c- u>"info@statistics.sk"</c-><c- p>,</c->
+        <c- f>"maintainer"</c-><c- p>:</c-> <c- u>"Štatistický úrad SR"</c-><c- p>,</c->
         <c- f>"tags"</c-><c- p>:</c-> <c- p>[{</c->
             <c- f>"name"</c-><c- p>:</c-> <c- u>"VOLBY"</c->
         <c- p>},</c-> <c- p>{</c->
             <c- f>"name"</c-><c- p>:</c-> <c- u>"číselník"</c->
         <c- p>},</c-> <c- p>{</c->
-            <c- f>"name"</c-><c- p>:</c-> <c- u>"ČSÚ"</c->
+            <c- f>"name"</c-><c- p>:</c-> <c- u>"SÚ"</c->
         <c- p>}],</c->
         <c- f>"resources"</c-><c- p>:</c-> <c- p>[{</c->
-            <c- f>"url"</c-><c- p>:</c-> <c- u>"https://apl.czso.cz/iSMS/cisexp.jsp?kodcis=1051&amp;typdat=0&amp;cisjaz=203&amp;format=0"</c-><c- p>,</c->
+            <c- f>"url"</c-><c- p>:</c-> <c- u>"https://statistics.sk/iSMS/cisexp.jsp?kodcis=1051&amp;typdat=0&amp;cisjaz=203&amp;format=0"</c-><c- p>,</c->
             <c- f>"format"</c-><c- p>:</c-> <c- u>"text/xml"</c-><c- p>,</c->
             <c- f>"name"</c-><c- p>:</c-> <c- u>"Číselník v XML"</c->
         <c- p>}]</c->
@@ -3286,8 +3286,8 @@ Nesmí však obsahovat mezeru.
 <c- p>}</c->
 </pre>
    </div>
-   <h3 class="heading settled" data-level="5.3" id="rozhranie-ckan-api-hodnoty"><span class="secno">5.3. </span><span class="content">Podmnožina hodnot pro CKAN API záznam datasetu</span><a class="self-link" href="#rozhranie-ckan-api-hodnoty"></a></h3>
-    V této sekci sú popsány položky týkající se datasetu ve funkci <code>package_show</code>. 
+   <h3 class="heading settled" data-level="5.3" id="rozhranie-ckan-api-hodnoty"><span class="secno">5.3. </span><span class="content">Podmnožina hodnôt pre CKAN API záznam datasetu</span><a class="self-link" href="#rozhranie-ckan-api-hodnoty"></a></h3>
+    V tejto sekci sú popísané položky týkajúce sa datasetu vo funkci <code>package_show</code>. 
    <h4 class="heading settled" data-level="5.3.1" id="ckan-api-názov"><span class="secno">5.3.1. </span><span class="content">Názov datasetu</span><a class="self-link" href="#ckan-api-názov"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
@@ -3304,7 +3304,7 @@ Nesmí však obsahovat mezeru.
 <pre class="language-json highlight"><c- p>{</c->
     <c- f>"success"</c-><c- p>:</c-> <c- kc>true</c-><c- p>,</c->
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"title"</c-><c- p>:</c-> <c- u>"Číselník ČSÚ: Druh voleb (kód 1051)"</c->
+        <c- f>"title"</c-><c- p>:</c-> <c- u>"Číselník ŠÚ: Druh volieb (kód 1051)"</c->
     <c- p>}</c->
 <c- p>}</c->
 </pre>
@@ -3325,16 +3325,16 @@ Nesmí však obsahovat mezeru.
 <pre class="language-json highlight"><c- p>{</c->
     <c- f>"success"</c-><c- p>:</c-> <c- kc>true</c-><c- p>,</c->
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"notes"</c-><c- p>:</c-> <c- u>"Druh voleb"</c->
+        <c- f>"notes"</c-><c- p>:</c-> <c- u>"Druh volieb"</c->
     <c- p>}</c->
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.3.3" id="ckan-api-podmínky-užití"><span class="secno">5.3.3. </span><span class="content">Odkaz na podmínky užití</span><a class="self-link" href="#ckan-api-podmínky-užití"></a></h4>
-   <p>Ve standardu DCAT-AP, na kterém je Národní katalog otevřených dat založen, sú podmínky užití Vlastnosťí distribuce datasetu.
-V rozhraní CKAN API je to však Vlastnosťí celé datasetu.
-Podmínky užití se tedy interpretují jako identické pro všechny distribuce datasetu.
-Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití v souladu s právním řádem, viz <a href="#specifikace-podmínek-užití"></a>.</p>
+   <h4 class="heading settled" data-level="5.3.3" id="ckan-api-podmienky-pužitia"><span class="secno">5.3.3. </span><span class="content">Odkaz na podmienky pužitia</span><a class="self-link" href="#ckan-api-podmienky-pužitia"></a></h4>
+   <p>V štandarde DCAT-AP, na ktorom je Národný katalog otvorených dat založený, sú podmienky pužitia Vlastnosť distribúcie datasetu.
+V rozhraní CKAN API je to však Vlastnosťou celého datasetu.
+Podmienky pužitia sa teda interpretujú ako identické pre všetky distribúce datasetu.
+Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia v súladu s právnými predpismy, viz <a href="#specifikace-podmínek-užití"></a>.</p>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3355,7 +3355,7 @@ Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.3.4" id="ckan-api-e-mail"><span class="secno">5.3.4. </span><span class="content">Email Kurátora dat</span><a class="self-link" href="#ckan-api-e-mail"></a></h4>
+   <h4 class="heading settled" data-level="5.3.4" id="ckan-api-e-mail"><span class="secno">5.3.4. </span><span class="content">Email Kurátora dát</span><a class="self-link" href="#ckan-api-e-mail"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3371,12 +3371,12 @@ Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití
 <pre class="language-json highlight"><c- p>{</c->
     <c- f>"success"</c-><c- p>:</c-> <c- kc>true</c-><c- p>,</c->
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"maintainer_email"</c-><c- p>:</c-> <c- u>"vdb@czso.cz"</c->
+        <c- f>"maintainer_email"</c-><c- p>:</c-> <c- u>"vdb@statistics.sk"</c->
     <c- p>}</c->
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.3.5" id="ckan-api-kurátor"><span class="secno">5.3.5. </span><span class="content">Jméno Kurátora dat</span><a class="self-link" href="#ckan-api-kurátor"></a></h4>
+   <h4 class="heading settled" data-level="5.3.5" id="ckan-api-kurátor"><span class="secno">5.3.5. </span><span class="content">Meno Kurátora dát</span><a class="self-link" href="#ckan-api-kurátor"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3392,19 +3392,19 @@ Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití
 <pre class="language-json highlight"><c- p>{</c->
     <c- f>"success"</c-><c- p>:</c-> <c- kc>true</c-><c- p>,</c->
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
-        <c- f>"maintainer"</c-><c- p>:</c-> <c- u>"Český statistický úřad"</c->
+        <c- f>"maintainer"</c-><c- p>:</c-> <c- u>"Štatistický úrad"</c->
     <c- p>}</c->
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.3.6" id="ckan-api-klíčová-slova"><span class="secno">5.3.6. </span><span class="content">Klíčová slova</span><a class="self-link" href="#ckan-api-klíčová-slova"></a></h4>
+   <h4 class="heading settled" data-level="5.3.6" id="ckan-api-kľúčová-slová"><span class="secno">5.3.6. </span><span class="content">Kľúčové slová</span><a class="self-link" href="#ckan-api-kľúčová-slová"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>tags</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>Pole objektů s Vlastnosťí <code>name</code></p>
+     <p>Pole objektov s Vlastnosťou <code>name</code></p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Povinná</p>
@@ -3424,14 +3424,14 @@ Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.3.7" id="ckan-api-resources"><span class="secno">5.3.7. </span><span class="content">Distribuce datasetu</span><a class="self-link" href="#ckan-api-resources"></a></h4>
+   <h4 class="heading settled" data-level="5.3.7" id="ckan-api-resources"><span class="secno">5.3.7. </span><span class="content">Distribúcia datasetu</span><a class="self-link" href="#ckan-api-resources"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>resources</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>Pole objektů, viz <a href="#ckan-api-distribuce">Distribuce v CKAN API</a>.</p>
+     <p>Pole objektov, viď <a href="#ckan-api-distribúcia">Distribúcia v CKAN API</a>.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Povinná</p>
@@ -3441,7 +3441,7 @@ Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití
     <c- f>"success"</c-><c- p>:</c-> <c- kc>true</c-><c- p>,</c->
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"resources"</c-><c- p>:</c-> <c- p>[{</c->
-            <c- f>"url"</c-><c- p>:</c-> <c- u>"https://apl.czso.cz/iSMS/cisexp.jsp?kodcis=1051&amp;typdat=0&amp;cisjaz=203&amp;format=0"</c-><c- p>,</c->
+            <c- f>"url"</c-><c- p>:</c-> <c- u>"https://statistics.sk/iSMS/cisexp.jsp?kodcis=1051&amp;typdat=0&amp;cisjaz=203&amp;format=0"</c-><c- p>,</c->
             <c- f>"format"</c-><c- p>:</c-> <c- u>"text/xml"</c-><c- p>,</c->
             <c- f>"name"</c-><c- p>:</c-> <c- u>"Číselník v XML"</c->
         <c- p>}]</c->
@@ -3449,9 +3449,9 @@ Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití
 <c- p>}</c->
 </pre>
    </dl>
-   <h3 class="heading settled" data-level="5.4" id="ckan-api-distribuce"><span class="secno">5.4. </span><span class="content">Podmnožina hodnot pro CKAN API distribuci datasetu</span><a class="self-link" href="#ckan-api-distribuce"></a></h3>
-    V této sekci sú popsány položky týkající se distribuce datasetu, tj. pole <code>resources</code> ve funkci <code>package_show</code>. 
-   <h4 class="heading settled" data-level="5.4.1" id="ckan-api-distribuce-stažení-souboru"><span class="secno">5.4.1. </span><span class="content">Odkaz na stažení souboru</span><a class="self-link" href="#ckan-api-distribuce-stažení-souboru"></a></h4>
+   <h3 class="heading settled" data-level="5.4" id="ckan-api-distribúcia"><span class="secno">5.4. </span><span class="content">Podmnožina hodnôt pre CKAN API distribúciu datasetu</span><a class="self-link" href="#ckan-api-distribúcia"></a></h3>
+    V tejto sekcii sú popísáné položky týkajúce sa distribúcie datasetu, tj. pole <code>resources</code> vo funkcii <code>package_show</code>. 
+   <h4 class="heading settled" data-level="5.4.1" id="ckan-api-distribúcia-stiahnutia-súboru"><span class="secno">5.4.1. </span><span class="content">Odkaz na stiahnutie súboru</span><a class="self-link" href="#ckan-api-distribúcia-stiahnutia-súboru"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
@@ -3468,20 +3468,20 @@ Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití
     <c- f>"success"</c-><c- p>:</c-> <c- kc>true</c-><c- p>,</c->
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"resources"</c-><c- p>:</c-> <c- p>[{</c->
-            <c- f>"url"</c-><c- p>:</c-> <c- u>"https://apl.czso.cz/iSMS/cisexp.jsp?kodcis=1051&amp;typdat=0&amp;cisjaz=203&amp;format=0"</c->
+            <c- f>"url"</c-><c- p>:</c-> <c- u>"https://statistics.sk/iSMS/cisexp.jsp?kodcis=1051&amp;typdat=0&amp;cisjaz=203&amp;format=0"</c->
         <c- p>}]</c->
     <c- p>}</c->
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.4.2" id="ckan-api-distribuce-media-type"><span class="secno">5.4.2. </span><span class="content">Media type souboru ke stažení</span><a class="self-link" href="#ckan-api-distribuce-media-type"></a></h4>
+   <h4 class="heading settled" data-level="5.4.2" id="ckan-api-distribúcia-media-type"><span class="secno">5.4.2. </span><span class="content">Media type súboru na stiahnutie</span><a class="self-link" href="#ckan-api-distribúcia-media-type"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>format</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>Reťazec obsahující <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">Media type</a> dle IANA <a data-link-type="biblio" href="#biblio-iana-media-types">[IANA-MEDIA-TYPES]</a>.</p>
+     <p>Reťazec obsahujúcí <a href="https://www.iana.org/assignments/media-types/media-types.xhtml">Media type</a> podľa IANA <a data-link-type="biblio" href="#biblio-iana-media-types">[IANA-MEDIA-TYPES]</a>.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Povinná</p>
@@ -3497,7 +3497,7 @@ Je také třeba říct, že CKAN API neumožňuje specifikovat podmínky užití
 <c- p>}</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="5.4.3" id="ckan-api-distribuce-názov"><span class="secno">5.4.3. </span><span class="content">Názov distribuce datasetu</span><a class="self-link" href="#ckan-api-distribuce-názov"></a></h4>
+   <h4 class="heading settled" data-level="5.4.3" id="ckan-api-distribúcia-názov"><span class="secno">5.4.3. </span><span class="content">Názov distribúcie datasetu</span><a class="self-link" href="#ckan-api-distribúcia-názov"></a></h4>
    <dl>
     <dt data-md>Vlastnosť
     <dd data-md>
