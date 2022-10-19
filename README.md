@@ -1,5 +1,5 @@
 # Rozhranie katalógu otvorených dát DCAT-AP-SK 2.0
-Metadatový štandard založený na [Data Catalog Vocabulary (DCAT) - Version 2][DCAT2] a jeho aplikačnom profile [DCAT-AP 2.1.1][DCAT-AP-2.1.1] pre popis datasetov a pro rozhranie lokálných katalógov otvorených dát.
+Metadátový štandard založený na [Data Catalog Vocabulary (DCAT) - Version 2][DCAT2] a jeho aplikačnom profile [DCAT-AP 2.1.1][DCAT-AP-2.1.1] pre popis datasetov a pre rozhranie Národného (NKOD) a lokálných katalógov otvorených dát (LKOD).
 
 [Zobrazenie štandardu][PREVIEW]
 
