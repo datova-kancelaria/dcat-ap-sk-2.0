@@ -506,7 +506,7 @@ distribúcia: a dcat:Distribution .
 ### Špecifikácia podmienok použitia ### {#špecifikácia-podmienok-použitia}
 
 : Popis
-:: Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia tejto distribúcie datasetu. Hodnoty se riadia TODO:dokument
+:: Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia tejto distribúcie datasetu. Hodnoty se riadia [Podmienkami použitia](https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101822628)
 : Vlastnosť
 :: `podmienky_použitia`, `leg:termsOfUse`
 : Typ
