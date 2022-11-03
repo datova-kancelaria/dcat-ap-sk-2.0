@@ -10,7 +10,7 @@
 		"location": "http://www.w3.org/ns/locn#",
 		"odrl": "http://www.w3.org/ns/odrl/2/",
 		"prov": "http://www.w3.org/ns/prov#",
-		"pu": "https://data.gov.cz/slovník/podmínky-užití/",
+		"leg": "https://data.gov.sk/def/ontology/legislation/",
 		"rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
 		"rdfs": "http://www.w3.org/2000/01/rdf-schema#",
 		"skos": "http://www.w3.org/2004/02/skos/core#",
@@ -65,7 +65,7 @@
 			"@id": "dcterms:spatial",
 			"@type": "@id"
 		},
-		"prvek_registra_adries": {
+		"prvok_registra_adries": {
 			"@id": "dcterms:spatial",
 			"@type": "@id"
 		},
@@ -117,11 +117,11 @@
 			"@id": "dcat:theme",
 			"@type": "@id"
 		},
-		"priestorové_rozlišenie_v_metroch": {
+		"priestorové_rozlíšenie_v_metroch": {
 			"@id": "dcat:spatialResolutionInMeters",
 			"@type": "xsd:double"
 		},
-		"časové_rozlišenie": {
+		"časové_rozlíšenie": {
 			"@id": "dcat:temporalResolution",
 			"@type": "xsd:duration"
 		},
@@ -129,36 +129,33 @@
 			"@id": "dcat:distribution",
 			"@type": "@id"
 		},
-
 		"Distribúcia": "dcat:Distribution",
 		"podmienky_použitia": {
-			"@id": "pu:specifikace",
 			"@type": "@id"
 		},
-		
-		"Špecifikácia podmienok použitia": "pu:Specifikace",
+		"Špecifikácia podmienok použitia": "leg:authorsWorkType",
 		"autorské_dielo": {
-			"@id": "pu:autorské-dílo",
+			"@id": "leg:authorsWorkType",
 			"@type": "@id"
 		},
 		"autor": {
-			"@id": "pu:autor",
+			"@id": "leg:authorName",
 			"@container": "@language"
 		},
 		"databáza_ako_autorské_dielo": {
-			"@id": "pu:databáze-jako-autorské-dílo",
+			"@id": "leg:originalDatabaseType",
 			"@type": "@id"
 		},
 		"autor_databázy": {
-			"@id": "pu:autor-databáze",
+			"@id": "leg:originalDatabaseAuthorName",
 			"@container": "@language"
 		},
 		"databáza_chránená_zvláštnými_právami": {
-			"@id": "pu:databáze-chráněná-zvláštními-právy",
+			"@id": "leg:databaseProtectedBySpecialRightsType",
 			"@type": "@id"
 		},
 		"osobné_údaje": {
-			"@id": "pu:osobní-údaje",
+			"@id": "leg:personalDataContainmentType",
 			"@type": "@id"
 		},
 

@@ -805,7 +805,7 @@ Súbor katalógu je súbor v RDF serializácii Turtle [[!turtle]] či JSON-LD [[
 </div>
 
 <div class='example'>
-<a href="Príklady/katalóg.jsonld">Príklad v JSON-LD</a>, <a href="schémy/katalog.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorenych-dát.jsonld">JSON-LD kontext</a>
+<a href="príklady/katalóg.jsonld">Príklad v JSON-LD</a>, <a href="schémy/katalog.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorenych-dát.jsonld">JSON-LD kontext</a>
 ```json
 {
     "@context": "https://data.gov.sk/.../kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
@@ -923,7 +923,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
 </div>
 
 <div class='example'>
-<a href="Príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
+<a href="príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
 ```json
 {
     "@context": "https://data.gov.sk/.../kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
