@@ -1,5 +1,5 @@
 {
-    "@context": "https://data.gov.sk/.../kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
+    "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
     "iri": "https://data.gov.sk/set/lkod/mdsr/katalog",
     "typ": "Katalóg",
     "názov": {

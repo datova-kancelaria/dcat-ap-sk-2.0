@@ -1,8 +1,8 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://data.gov.sk/.../schémata/katalog.json",
+	"$id": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/schémy/katalóg.json",
 	"type": "object",
-	"title": "Katalog",
+	"title": "Katalóg",
 	"$defs": {
         "text": {
             "name": "Text",
@@ -125,15 +125,15 @@
             }
         }
     },
-	"required": ["typ", "iri", "název", "popis", "poskytovatel", "datová_sada"],
+	"required": ["typ", "iri", "názov", "popis", "poskytovateľ", "dataset"],
 	"properties": {
 		"typ": {
 			"oneOf": [{
-				"const": "Katalog"
+				"const": "Katalóg"
 				},{
 				"type": "array",
 				"contains": {
-					"const": "Katalog"
+					"const": "Katalóg"
 				},
 				"items": {
 					"type": "string"
@@ -150,13 +150,13 @@
 				"https://www.trebic.cz/zdroj/aktualita/2020/dopadení-lupiče-na-francouzské-ulici"
 			]
 		},
-		"název": {
+		"názov": {
 			"$ref": "#/$defs/text"
 		},
 		"popis": {
 			"$ref": "#/$defs/text"
 		},
-		"poskytovatel": {
+		"poskytovateľ": {
 			"type": "string",
 			"format": "iri",
 			"title": "Poskytovatel",
@@ -164,7 +164,7 @@
 				"https://data.gov.sk/organization/3553318c-c815-4b28-8087-1f99540b3652"
 			]
 		},
-		"kontaktní_bod": {
+		"kontaktný_bod": {
 			"type": "object",
 			"required": [ "typ" ],
 			"properties": {
@@ -172,7 +172,7 @@
 					"type": "string",
 					"examples": [ "Organizace" ]
 				},
-				"jméno": {
+				"meno": {
 					"$ref": "#/$defs/text"
 				},
 				"e-mail": {
@@ -195,14 +195,14 @@
 				"https://data.gov.cz/"
 			]
 		},
-		"datová_sada": {
+		"dataset": {
 			"type": "array",
 			"items": {
 				"type": "string",
 				"format": "iri",
 				"minLength": 8,
 				"pattern": "^https://",					
-				"title": "Datová sada"
+				"title": "Dataset"
 			}
 		}
 	}

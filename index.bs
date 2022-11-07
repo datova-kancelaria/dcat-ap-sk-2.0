@@ -526,7 +526,7 @@ podmienky: a leg:TermsOfUse ;
     leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> .
     ```
 
-### Odkaz na stiahnutie súboru ### {#distribÚcia-stiahnutie-súboru}
+### Odkaz na stiahnutie súboru ### {#distribúcia-stiahnutie-súboru}
 
 : Popis
 :: Táto Vlastnosť obsahuje URL, ktoré je priamym odkazom na stiahnuteľný súbor v danom formáte.
@@ -548,7 +548,7 @@ distribúcia: dcat:downloadURL <https://mindop.sk/dump/kontroly-plneni-Povinnos�
 : Popis
 :: Táto Vlastnosť obsahuje URL, pomocou ktorého sa je možné dostať k distribúcii datasetu.
     Je definovaná ako [dcat:accessURL](https://www.w3.org/TR/vocab-dcat-2/#Property:distribution_access_url).
-    Pre účely katalógov otvorených dát je hodnota tejto Vlastnosti buď rovnaká ako [odkaz na stiahnutie súboru](#distribuce-stažení-súboru) v pripadě distribúcie reprezentujúcej súbor na stiahnutie, alebo rovnaká ako [prístupový bod](#datová-služba-prístupový-bod) v prípadě distribúcie reprezentujúcej dátovú službu.
+    Pre účely katalógov otvorených dát je hodnota tejto Vlastnosti buď rovnaká ako [odkaz na stiahnutie súboru](#distribúcia-stiahnutie-súboru) v pripadě distribúcie reprezentujúcej súbor na stiahnutie, alebo rovnaká ako [prístupový bod](#dátová-služba-prístupový-bod) v prípadě distribúcie reprezentujúcej dátovú službu.
 : Vlastnosť
 :: `přístupové_url`, `dcat:accessURL`
 : Typ
@@ -805,10 +805,10 @@ Súbor katalógu je súbor v RDF serializácii Turtle [[!turtle]] či JSON-LD [[
 </div>
 
 <div class='example'>
-<a href="príklady/katalóg.jsonld">Príklad v JSON-LD</a>, <a href="schémy/katalog.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
+<a href="príklady/katalóg.jsonld">Príklad v JSON-LD</a>, <a href="schémy/katalóg.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
 ```json
 {
-    "@context": "https://data.gov.sk/.../kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
+    "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
     "iri": "https://data.gov.sk/set/lkod/mdsr/katalog",
     "typ": "Katalóg",
     "názov": {
@@ -926,7 +926,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
 <a href="príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a>
 ```json
 {
-    "@context": "https://data.gov.sk/.../kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
+    "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
     "iri": "https://data.gov.sk/set/vld",
     "typ": "dataset",
     "názov": {
@@ -974,7 +974,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
         },
         "e-mail": "mailto:info@mindop.cz"
     },
-    "dokumentace": "https://www.middop.sk/",
+    "dokumentácia": "https://www.middop.sk/",
     "špecifikácia": [
         "https://data.gov.sk/def/ontology/transport/"
     ],
@@ -1157,7 +1157,7 @@ V tejto sekci sú popísané položky týkajúce sa datasetu vo funkci `package_
 V štandarde DCAT-AP, na ktorom je Národný katalog otvorených dat založený, sú podmienky použitia Vlastnosťou distribúcie datasetu.
 V rozhraní CKAN API je to však Vlastnosťou celého datasetu.
 Podmienky použitia sa teda interpretujú ako identické pre všetky distribúce datasetu.
-Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia v súladu s právnými predpismy, viď [[#specifikace-podmínek-užití]].
+Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia v súladu s právnými predpismy, viď [[#špecifikácia-podmienok-použitia]].
 
 : Vlastnosť
 :: `license_link`

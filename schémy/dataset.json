@@ -1,6 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "$id": "https://data.gov.sk/.../schémata/dataset.json",
+    "$id": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/schémy/dataset.json",
     "$defs": {
         "text": {
             "name": "Text",
@@ -124,27 +124,27 @@
         }
     },
     "type": "object",
-    "title": "Datová sada",
+    "title": "Dataset",
     "required": [
         "typ",
         "iri",
-        "název",
+        "názov",
         "popis",
-        "poskytovatel",
+        "poskytovateľ",
         "téma",
-        "periodicita_aktualizace",
-        "klíčové_slovo"
+        "periodicita_aktualizácie",
+        "kľúčové_slovo"
     ],
     "properties": {
         "typ": {
             "oneOf": [
                 {
-                    "const": "Datová sada"
+                    "const": "Dataset"
                 },
                 {
                     "type": "array",
                     "contains": {
-                        "const": "Datová sada"
+                        "const": "Dataset"
                     },
                     "items": {
                         "type": "string"
@@ -162,13 +162,13 @@
                 "https://www.trebic.cz/zdroj/aktualita/2020/dopadení-lupiče-na-francouzské-ulici"
             ]
         },
-        "název": {
+        "názov": {
             "$ref": "#/$defs/text"
         },
         "popis": {
             "$ref": "#/$defs/text"
         },
-        "poskytovatel": {
+        "poskytovateľ": {
             "type": "string",
             "format": "iri",
             "title": "Poskytovatel",
@@ -195,7 +195,7 @@
                 ]
             }
         },
-        "periodicita_aktualizace": {
+        "periodicita_aktualizácie": {
             "type": "string",
             "format": "iri",
             "title": "Periodicita aktualizace",
@@ -204,10 +204,10 @@
                 "http://publications.europa.eu/resource/authority/frequency/MONTHLY"
             ]
         },
-        "klíčové_slovo": {
+        "kľúčové_slovo": {
             "$ref": "#/$defs/více-textů"
         },
-        "geografické_území": {
+        "geografické_územie": {
             "type": "array",
             "items": {
                 "type": "string",
@@ -218,7 +218,7 @@
                 ]
             }
         },
-        "časové_pokrytí": {
+        "časové_pokrytie": {
             "type": "object",
             "required": [
                 "typ"
@@ -258,7 +258,7 @@
                 }
             }
         },
-        "kontaktní_bod": {
+        "kontaktný_bod": {
             "type": "object",
             "required": [
                 "typ"
@@ -283,10 +283,10 @@
                 }
             }
         },
-        "dokumentace": {
+        "dokumentácia": {
             "type": "string",
             "format": "iri",
-            "title": "Dokumentace",
+            "title": "dokumentácia",
             "examples": [
                 "https://www.mdcr.cz/Dokumenty/Verejna-doprava/Jizdni-rady,-kalendare-pro-jizdni-rady,-metodi-(1)/Jizdni-rady-verejne-dopravy"
             ]
@@ -314,48 +314,48 @@
                 ]
             }
         },
-        "prostorové_rozlišení_v_metrech": {
+        "priestorové_rozlíšenie_v_metroch": {
             "type": "number",
             "title": "Prostorové rozlišení v metrech",
             "examples": [
                 0.5
             ]
         },
-        "časové_rozlišení": {
+        "časové_rozlíšenie": {
             "type": "string",
             "title": "Časové rozlišení",
             "examples": [
                 "P1D"
             ]
         },
-        "je_součástí": {
+        "je_súčásťou": {
             "type": "string",
             "format": "iri",
-            "title": "Je součástí",
+            "title": "Je súčásťou",
             "examples": [
                 "https://lkod.mvcr.cz/zdroj/datové-sady/12345"
             ]
         },
-        "distribuce": {
+        "distribúcia": {
             "type": "array",
             "items": {
                 "type": "object",
                 "required": [
                     "typ",
                     "iri",
-                    "podmínky_užití",
-                    "přístupové_url"
+                    "podmienky_použitia",
+                    "prístupové_url"
                 ],
                 "properties": {
                     "typ": {
                         "oneOf": [
                             {
-                                "const": "Distribuce"
+                                "const": "Distribúcia"
                             },
                             {
                                 "type": "array",
                                 "contains": {
-                                    "const": "Distribuce"
+                                    "const": "Distribúcia"
                                 },
                                 "items": {
                                     "type": "string"
@@ -373,26 +373,26 @@
                             "https://www.trebic.cz/zdroj/aktualita/2020/dopadení-lupiče-na-francouzské-ulici"
                         ]
                     },
-                    "podmínky_užití": {
+                    "podmienky_použitia": {
                         "type": "object",
-                        "title": "Specifikace podmínek užití",
+                        "title": "Špecifikácia podmienok použitia",
                         "required": [
                             "typ",
-                            "autorské_dílo",
-                            "databáze_jako_autorské_dílo",
-                            "databáze_chráněná_zvláštními_právy",
-                            "osobní_údaje"
+                            "autorské_dielo",
+                            "databáza_ako_autorské_dielo",
+                            "databáza_chránená_zvláštnými_právami",
+                            "osobné_údaje"
                         ],
                         "properties": {
                             "typ": {
                                 "oneOf": [
                                     {
-                                        "const": "Specifikace podmínek užití"
+                                        "const": "Špecifikácia podmienok použitia"
                                     },
                                     {
                                         "type": "array",
                                         "contains": {
-                                            "const": "Specifikace podmínek užití"
+                                            "const": "Špecifikácia podmienok použitia"
                                         },
                                         "items": {
                                             "type": "string"
@@ -400,7 +400,7 @@
                                     }
                                 ]
                             },
-                            "autorské_dílo": {
+                            "autorské_dielo": {
                                 "type": "string",
                                 "title": "Autorská práva",
                                 "format": "iri",
@@ -412,7 +412,7 @@
                             "autor": {
                                 "$ref": "#/$defs/text"
                             },
-                            "databáze_jako_autorské_dílo": {
+                            "databáza_ako_autorské_dielo": {
                                 "type": "string",
                                 "title": "Autorskoprávní ochrana databáze jako díla",
                                 "format": "iri",
@@ -424,7 +424,7 @@
                             "autor_databáze": {
                                 "$ref": "#/$defs/text"
                             },
-                            "databáze_chráněná_zvláštními_právy": {
+                            "databáza_chránená_zvláštnými_právami": {
                                 "type": "string",
                                 "title": "Zvláštní práva pořizovatele databáze",
                                 "format": "iri",
@@ -433,19 +433,19 @@
                                     "https://creativecommons.org/publicdomain/zero/1.0/"
                                 ]
                             },
-                            "osobní_údaje": {
+                            "osobné_údaje": {
                                 "oneOf": [
                                     {
-                                        "const": "https://data.gov.cz/podmínky-užití/neobsahuje-osobní-údaje/"
+                                        "const": "https://data.gov.sk/def/personal-data-occurence-type/2"
                                     },
                                     {
-                                        "const": "https://data.gov.cz/podmínky-užití/obsahuje-osobní-údaje/"
+                                        "const": "https://data.gov.sk/def/personal-data-occurence-type/1"
                                     }
                                 ]
                             }
                         }
                     },
-                    "přístupové_url": {
+                    "prístupové_url": {
                         "type": "string",
                         "format": "iri",
                         "title": "Přístupové URL",
@@ -481,7 +481,7 @@
                             "https://data.cssz.cz/dump/kontroly-plneni-povinnosti-zamestnavatelu-v-oblasti-socialniho-zabezpeceni-schema.json"
                         ]
                     },
-                    "typ_média_komprese": {
+                    "typ_média_kompresie": {
                         "type": "string",
                         "format": "iri",
                         "pattern": "^http\\://www\\.iana\\.org/assignments/media-types/.*$",
@@ -490,7 +490,7 @@
                             "http://www.iana.org/assignments/media-types/image/tiff"
                         ]
                     },
-                    "typ_média_balíčku": {
+                    "typ_média_balíčka": {
                         "type": "string",
                         "format": "iri",
                         "pattern": "^http\\://www\\.iana\\.org/assignments/media-types/.*$",
@@ -499,26 +499,26 @@
                             "http://www.iana.org/assignments/media-types/image/tiff"
                         ]
                     },
-                    "název": {
+                    "názov": {
                         "$ref": "#/$defs/text"
                     },
-                    "přístupová_služba": {
+                    "prístupová_služba": {
                         "type": "object",
                         "required": [
                             "typ",
-                            "název",
+                            "názov",
                             "iri"
                         ],
                         "properties": {
                             "typ": {
                                 "oneOf": [
                                     {
-                                        "const": "Datová služba"
+                                        "const": "Dátová služba"
                                     },
                                     {
                                         "type": "array",
                                         "contains": {
-                                            "const": "Datová služba"
+                                            "const": "Dátová služba"
                                         },
                                         "items": {
                                             "type": "string"
@@ -533,10 +533,10 @@
                                 "minLength": 8,
                                 "pattern": "^https?://"
                             },
-                            "název": {
+                            "názov": {
                                 "$ref": "#/$defs/text"
                             },
-                            "přístupový_bod": {
+                            "prístupový_bod": {
                                 "type": "string",
                                 "format": "iri",
                                 "title": "Přístupový bod",
@@ -546,7 +546,7 @@
                                     "http://www.iana.org/assignments/media-types/image/tiff"
                                 ]
                             },
-                            "specifikace": {
+                            "špecifikácia": {
                                 "type": "array",
                                 "items": {
                                     "type": "string",
@@ -559,15 +559,12 @@
                                     ]
                                 }
                             },
-                            "popis_přístupového_bodu": {
+                            "popis_prístupového_bodu": {
                                 "type": "string",
                                 "format": "iri",
                                 "title": "Popis přístupového bodu",
                                 "minLength": 8,
-                                "pattern": "^https://",
-                                "examples": [
-                                    "http://www.iana.org/assignments/media-types/image/tiff"
-                                ]
+                                "pattern": "^https://"
                             }
                         }
                     }
