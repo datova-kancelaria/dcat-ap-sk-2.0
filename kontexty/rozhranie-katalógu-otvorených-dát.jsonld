@@ -131,6 +131,7 @@
 		},
 		"Distribúcia": "dcat:Distribution",
 		"podmienky_použitia": {
+			"@id": "leg:termsOfUse",
 			"@type": "@id"
 		},
 		"Špecifikácia podmienok použitia": "leg:authorsWorkType",
