@@ -119,7 +119,7 @@
 		},
 		"priestorové_rozlíšenie_v_metroch": {
 			"@id": "dcat:spatialResolutionInMeters",
-			"@type": "xsd:double"
+			"@type": "xsd:decimal"
 		},
 		"časové_rozlíšenie": {
 			"@id": "dcat:temporalResolution",

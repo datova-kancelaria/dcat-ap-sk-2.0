@@ -54,7 +54,7 @@
     "koncept_euroVoc": [
         "http://eurovoc.europa.eu/4512"
     ],
-    "priestorové_rozlíšenie_v_metroch": 12.0,
+    "priestorové_rozlíšenie_v_metroch": "12.0",
     "časové_rozlíšenie": "P1D",
     "distribúcia": [{
             "iri": "https://data.gov.sk/set/vld/resource/csv",

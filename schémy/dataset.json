@@ -315,10 +315,12 @@
             }
         },
         "priestorové_rozlíšenie_v_metroch": {
-            "type": "number",
+            "type": "string",
             "title": "Prostorové rozlišení v metrech",
+            "pattern": "[0-9]+(\\.[0-9]+)?",
+            "description": "Musí být text kvůli kompatibilitě s datovým typem xsd:decimal",
             "examples": [
-                0.5
+                "0.5"
             ]
         },
         "časové_rozlíšenie": {
