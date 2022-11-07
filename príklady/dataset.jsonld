@@ -1,7 +1,7 @@
 {
     "@context": "https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld",
     "iri": "https://data.gov.sk/set/vld",
-    "typ": "dataset",
+    "typ": "Dataset",
     "názov": {
         "sk": "Cestovné poriadky",
         "en": "Public transport timetables"
@@ -58,7 +58,7 @@
     "časové_rozlíšenie": "P1D",
     "distribúcia": [{
             "iri": "https://data.gov.sk/set/vld/resource/csv",
-            "typ": "Distribuce",
+            "typ": "Distribúcia",
             "podmienky_použitia": {
                 "typ": "Špecifikácia podmienok použitia",
                 "autorské_dielo": "https://creativecommons.org/licenses/by/4.0/",
