@@ -248,7 +248,7 @@
                         "2019-01-01+01:00"
                     ]
                 },
-                "konec": {
+                "koniec": {
                     "type": "string",
                     "format": "date",
                     "title": "Datum konce",

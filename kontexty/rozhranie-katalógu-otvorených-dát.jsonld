@@ -57,7 +57,7 @@
 			"@id": "dcterms:accrualPeriodicity",
 			"@type": "@id"
 		},
-		"klúčové_slovo": {
+		"kľúčové_slovo": {
 			"@id": "dcat:keyword",
 			"@container": "@language"
 		},

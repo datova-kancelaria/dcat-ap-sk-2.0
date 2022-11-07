@@ -37,7 +37,7 @@
     "časové_pokrytie": {
         "typ": "Časový interval",
         "začiatok": "2009-01-01",
-        "konec": "2017-12-31"
+        "koniec": "2017-12-31"
     },
     "kontaktný_bod": {
         "typ": "Organizácia",
