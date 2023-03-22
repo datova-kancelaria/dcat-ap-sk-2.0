@@ -177,11 +177,11 @@ katalog: foaf:homepage <https://opendata.mindop.sk/> .
 katalog: dcat:dataset dataset: .
     ```
 
-Trieda: dataset {#trieda-dataset}
+Trieda: Dataset {#trieda-dataset}
 --------------
 
 : Popis
-:: Kľúčová trieda reprezentujúca poskytovanú informáciu. Je definovaná ako [dcat:Dataset](https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset).
+:: Kolekcia dát poskytovaná či riadená jedným zdrojom, ktorá je k dispozícii pre prístup či stiahnutie v jednom či viacerých formátoch. Je definovaná ako [dcat:Dataset](https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset).
 : Príklad
 ::  
     ```turtle
