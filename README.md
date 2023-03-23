@@ -7,3 +7,7 @@ Metadátový štandard založený na [Data Catalog Vocabulary (DCAT) - Version 2
 [DCAT-AP-2.1.1]: https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211 "DCAT Application Profile for data portals in Europe (DCAT-AP) 2.1.1"
 [PREVIEW]: https://htmlpreview.github.io/?https://github.com/datova-kancelaria/dcat-ap-sk-2.0/blob/main/index.html
 
+Vygenerovanie HTML z BS súboru
+
+	
+curl https://api.csswg.org/bikeshed/ -F file=@index.bs -F force=1 > index.html
