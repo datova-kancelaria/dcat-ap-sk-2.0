@@ -70,7 +70,7 @@ Trieda: Katalóg {#trieda-katalóg}
 --------------
 
 : Popis
-:: Trieda reprezentujúca dátový katalóg. Je definovaná ako [dcat:Catalog](https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog).
+:: Trieda reprezentujúca dátový katalóg. Je definovaná ako [dcat:Catalog](https://www.w3.org/TR/vocab&#45;dcat&#45;2/#Class:Catalog).
 : Príklad
 ::  
     ```turtle
