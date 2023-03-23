@@ -21,7 +21,7 @@ Prevádzkovanie lokálneho katalógu otvorených dát (LKOD) je jeden zo spôsob
 Položky metadátového záznamu {#položky-metadátového-záznamu}
 ============================================================
 
-V tejto sekcii sú popísané položky, ktoré môžu byť evidované v Národnom katalógu otvorených dát (NKOD) pre každý dataset a jeho distribúciu. [dcat:Catalog](https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog).
+V tejto sekcii sú popísané položky, ktoré môžu byť evidované v Národnom katalógu otvorených dát (NKOD) pre každý dataset a jeho distribúciu.
 Položky sa riadia štandardom [DCAT Application Profile for data portals in Europe Version 2.1.1 (DCAT-AP 2.1.1)](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211).
 
 <figure>
