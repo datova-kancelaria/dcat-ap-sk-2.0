@@ -164,7 +164,7 @@
 			"@id": "dcat:accessURL",
 			"@type": "@id"
 		},
-		"subor_na_stiahnutie": {
+		"súbor_na_stiahnutie": {
 			"@id": "dcat:downloadURL",
 			"@type": "@id"
 		},
