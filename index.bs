@@ -1,5 +1,5 @@
 <pre class='metadata'>
-Title: Rozhranie katalógu otvorených dát DCAT-AP-SK 2.0
+Title: Rozhranie katalógu otvorených dát DCAT-AP-SK 2.0.1
 Shortname: dcat-ap-sk-2.0
 Boilerplate: conformance no, copyright no
 Logo: 
@@ -236,6 +236,38 @@ dataset: dct:description "Štatistika kontrol plnenia Povinností zamestnávate�
 dataset: dct:publisher <https://data.gov.sk/legal-subject/30416094> .
     ```
 
+### Dátum publikácie ### {#dataset-dátum-publikácie}
+
+: Popis
+:: Táto Vlastnosť obsahuje dátum publikácie (prvé vytvorenie) datasetu. Je definovaná ako [dct:issued](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date).
+: Vlastnosť
+:: `dátum_publikácie`, `dct:issued`
+: Typ
+:: Dátum a čas
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:issued "2024-01-21T12:00:00"^^xsd:dateTime .
+    ```
+
+### Dátum modifikácie ### {#dataset-dátum-modifikácie}
+
+: Popis
+:: Táto Vlastnosť obsahuje dátum modifikácie datasetu. Je definovaná ako [dct:modified](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date).
+: Vlastnosť
+:: `dátum_modifikácie`, `dct:modified`
+: Typ
+:: Dátum a čas
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:modified "2024-01-22T16:23:00"^^xsd:dateTime .
+    ```
+
 ### Téma ### {#dataset-téma}
 
 : Popis
@@ -315,11 +347,16 @@ dataset: dct:type <https://data.gov.sk/def/dataset-type/1> .
 : Vlastnosť
 :: `geografické_územie`, `dct:spatial`
 : Typ
-:: IRI položiek z európských číselníkov [krajín](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/country), [kontinentov](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/continent), [miest](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/place) alebo IRI objektu z [Geonames](https://www.geonames.org/).
+:: IRI položiek pre územné entity Slovenskej Republiky primárne z taxonómie [NUTS-SK](https://github.com/slovak-egov/centralny-model-udajov/blob/main/cbox/national/nuts2004.ttl), európských číselníkov [krajín](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/country), [kontinentov](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/continent), [miest](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/place) alebo IRI objektu z [Geonames](https://www.geonames.org/).
 : Povinnosť
 :: Nepovinná
 : Príklady
 :: 
+    ```turtle
+dataset: dct:spatial <https://data.gov.sk/id/nuts1/SK0> .
+    ```
+::
+
     ```turtle
 dataset: dct:spatial <http://publications.europa.eu/resource/authority/continent/EUROPE> .
     ```
@@ -369,21 +406,38 @@ kontakt: a vcard:Individual ;
          vcard:hasEmail <mailto:jan.novak@mindop.sk> .
     ```
 
-### Odkaz na dokumentáciu ### {#dataset-dokumentácia}
+### Webová stránka ### {#dataset-webová-stránka}
 
 : Popis
-:: Táto Vlastnosť odkazuje na stránku alebo dokument o datasete.
-    Je definovaná ako [foaf:page](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page).
+:: Táto Vlastnosť odkazuje na domovskú WWW stránku datasetu, kde dataset vznikol. Môže to byť stránka na centrálnom portáli otvorených údajov, alebo stránka v lokálnom opendatovom portáli.
+    Je definovaná ako [dcat:landingPage](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page).
 : Vlastnosť
-:: `dokumentácia`, `foaf:page`
+:: `webová_stránka_datasetu`, `dcat:landingPage`
 : Typ
-:: URL webovej stránky dokumentácie.
+:: URL webovej stránky datasetu.
 : Povinnosť
 :: Nepovinná
 : Príklad
 :: 
     ```turtle
-dataset: foaf:page <https://mindop.sk/documentation/kontroly-plnenia-Povinnosťi-zamestnavatelov-v-oblasti-socialneho-zabezpecenia> .
+dataset: dcat:landingPage <https://data.gov.sk/set/kontroly-plnenia-Povinnosťi-zamestnavatelov-v-oblasti-socialneho-zabezpecenia> .
+    ```
+
+### Súvisiaci zdroj ### {#dataset-súvisiaci-zdroj}
+
+: Popis
+:: Táto Vlastnosť odkazuje na ľubovoľný súvisiaci zdroj datasetu.
+    Je definovaná ako [dct:relation](https://www.w3.org/TR/vocab-dcat-2/#Property:resource_relation).
+: Vlastnosť
+:: `súvisiaci_zdroj_datasetu`, `dct:relation`
+: Typ
+:: URL súvisiaceho zdroja datasetu.
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: dct:relation <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html> .
     ```
 
 ### Odkaz na špecifikáciu ### {#dataset-špecifikácia}
@@ -864,11 +918,13 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
     dct:description "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."@sk ;
     dct:description "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."@en ;
     dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
+    dct:issued "2024-01-01T12:00:34"^^xsd:dateTime ;
+    dct:modified "2024-01-01T14:23:16"^^xsd:dateTime ;
     dct:type <https://data.gov.sk/def/dataset-type/1> ;
     dcat:theme theme:TRAN ;
     dct:accrualPeriodicity freq:WEEKLY_3 ;
     dcat:keyword "autobusy"@sk, "cestovné poriadky"@sk, "verejná linková doprava"@sk, "timetable"@en, "bus"@en, "public transport"@en ;
-    dct:spatial continent:EUROPE ;
+    dct:spatial <https://data.gov.sk/id/nuts1/SK0> ;
     dct:temporal [
         a dct:PeriodOfTime ;
         dcat:startDate "2009-01-01"^^xsd:date ;
@@ -879,13 +935,14 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
         vcard2006:fn "Ministerstvo dopravy, Odbor verejnej dopravy"@sk, "Ministry of Transport"@en ;
         vcard2006:hasEmail "mailto:info@mindop.sk"
     ] ;
-    foaf:page <https://www.mindop.sk/cestovne-poriadky-info> ;
+    dcat:landingPage <https://opendata.mindop.sk/show/vld> ;
+    dct:relation <https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7> ;
     dct:conformsTo <https://data.gov.sk/def/ontology/transport/> ;
     dcat:theme euroVoc:4512 ;
     dcat:spatialResolutionInMeters 12.0 ;
     dcat:temporalResolution "P1D"^^xsd:duration ;
-    dcat:distribution <https://data.gov.sk/set/vld/resource/csv> ;
-    dcat:distribution <https://data.gov.sk/set/vld/resource/sparql> .
+    dcat:distribution <https://data.gov.sk/set/vld/resource/csv> ,
+                      <https://data.gov.sk/set/vld/resource/sparql> .
 
 <https://data.gov.sk/set/vld/resource/csv> a dcat:Distribution ;
     leg:termsOfUse [ a leg:TermsOfUse ;
@@ -938,6 +995,8 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
         "en": "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."
     },
     "poskytovateľ": "https://data.gov.sk/legal-subject/30416094",
+    "dátum_publikácie": "2024-01-01T12:00:34",
+    "dátum_modifikácie": "2024-01-01T14:23:16",
     "typ_datasetu": "https://data.gov.sk/def/dataset-type/1",
     "téma": [
         "http://publications.europa.eu/resource/authority/data-theme/TRAN"
@@ -956,7 +1015,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
         ]
     },
     "geografické_územie": [
-        "http://publications.europa.eu/resource/authority/continent/EUROPE"
+        "https://data.gov.sk/id/nuts1/SK0"
     ],
     "prvek_rúian": [
         "https://linked.cuzk.cz/resource/ruian/stat/1"
@@ -974,6 +1033,10 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
         },
         "e-mail": "mailto:info@mindop.cz"
     },
+    "webová_stránka_datasetu": "https://opendata.mindop.sk/show/vld",
+    "súvisiaci_zdroj_datasetu": [
+        "https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7"
+    ],
     "dokumentácia": "https://www.middop.sk/",
     "špecifikácia": [
         "https://data.gov.sk/def/ontology/transport/"

@@ -1,7 +1,7 @@
 <!doctype html><html lang="en">
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-  <title>Rozhranie katalógu otvorených dát DCAT-AP-SK 2.0</title>
+  <title>Rozhranie katalógu otvorených dát DCAT-AP-SK 2.0.1</title>
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
 <style data-fill-with="stylesheet">/******************************************************************************
  *                   Style sheet for the W3C specifications                   *
@@ -1238,14 +1238,15 @@ Possible extra rowspan handling
 			grid-column: 2;
 			width: auto;
 			margin-right: 1rem;
+			border-bottom: 3px solid transparent;
+			margin-bottom: -3px;
 		}
 		#toc .content:hover,
 		#toc .content:focus {
 			background: rgba(75%, 75%, 75%, .25);
 			background: var(--a-hover-bg);
-			border-bottom: 3px solid #054572;
-			border-bottom: 3px solid var(--toclink-underline);
-			margin-bottom: -3px;
+			border-bottom-color: #054572;
+			border-bottom-color: var(--toclink-underline);
 		}
 		#toc li li li .content {
 			margin-left: 1rem;
@@ -1487,9 +1488,9 @@ Possible extra rowspan handling
 		}
 	}
 </style>
-  <meta content="Bikeshed version 74068a90b, updated Wed Mar 22 17:34:51 2023 -0700" name="generator">
+  <meta content="Bikeshed version 82ce88815, updated Thu Sep 7 16:33:55 2023 -0700" name="generator">
   <link href="https://datova-kancelaria.github.io/dcat-ap-sk-2.0/" rel="canonical">
-<style>/* style-autolinks */
+<style>/* Boilerplate: style-autolinks */
 .css.css, .property.property, .descriptor.descriptor {
     color: var(--a-normal-text);
     font-size: inherit;
@@ -1550,8 +1551,16 @@ pre .property::before, pre .property::after {
 [data-link-type=biblio] {
     white-space: pre;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --selflink-text: black;
+        --selflink-bg: silver;
+        --selflink-hover-text: white;
+    }
+}
 </style>
-<style>/* style-colors */
+<style>/* Boilerplate: style-colors */
 
 /* Any --*-text not paired with a --*-bg is assumed to have a transparent bg */
 :root {
@@ -1660,175 +1669,6 @@ pre .property::before, pre .property::after {
 
     --editedrec-bg: darkorange;
 }
-</style>
-<style>/* style-counters */
-body {
-    counter-reset: example figure issue;
-}
-.issue {
-    counter-increment: issue;
-}
-.issue:not(.no-marker)::before {
-    content: "Issue " counter(issue);
-}
-
-.example {
-    counter-increment: example;
-}
-.example:not(.no-marker)::before {
-    content: "Example " counter(example);
-}
-.invalid.example:not(.no-marker)::before,
-.illegal.example:not(.no-marker)::before {
-    content: "Invalid Example" counter(example);
-}
-
-figcaption {
-    counter-increment: figure;
-}
-figcaption:not(.no-marker)::before {
-    content: "Figure " counter(figure) " ";
-}
-</style>
-<style>/* style-issues */
-a[href].issue-return {
-    float: right;
-    float: inline-end;
-    color: var(--issueheading-text);
-    font-weight: bold;
-    text-decoration: none;
-}
-</style>
-<style>/* style-md-lists */
-/* This is a weird hack for me not yet following the commonmark spec
-   regarding paragraph and lists. */
-[data-md] > :first-child {
-    margin-top: 0;
-}
-[data-md] > :last-child {
-    margin-bottom: 0;
-}
-</style>
-<style>/* style-selflinks */
-
-:root {
-    --selflink-text: white;
-    --selflink-bg: gray;
-    --selflink-hover-text: black;
-}
-.heading, .issue, .note, .example, li, dt {
-    position: relative;
-}
-a.self-link {
-    position: absolute;
-    top: 0;
-    left: calc(-1 * (3.5rem - 26px));
-    width: calc(3.5rem - 26px);
-    height: 2em;
-    text-align: center;
-    border: none;
-    transition: opacity .2s;
-    opacity: .5;
-}
-a.self-link:hover {
-    opacity: 1;
-}
-.heading > a.self-link {
-    font-size: 83%;
-}
-.example > a.self-link,
-.note > a.self-link,
-.issue > a.self-link {
-    /* These blocks are overflow:auto, so positioning outside
-       doesn't work. */
-    left: auto;
-    right: 0;
-}
-li > a.self-link {
-    left: calc(-1 * (3.5rem - 26px) - 2em);
-}
-dfn > a.self-link {
-    top: auto;
-    left: auto;
-    opacity: 0;
-    width: 1.5em;
-    height: 1.5em;
-    background: var(--selflink-bg);
-    color: var(--selflink-text);
-    font-style: normal;
-    transition: opacity .2s, background-color .2s, color .2s;
-}
-dfn:hover > a.self-link {
-    opacity: 1;
-}
-dfn > a.self-link:hover {
-    color: var(--selflink-hover-text);
-}
-
-a.self-link::before            { content: "¶"; }
-.heading > a.self-link::before { content: "§"; }
-dfn > a.self-link::before      { content: "#"; }
-</style>
-<style>/* style-syntax-highlighting */
-
-code.highlight { padding: .1em; border-radius: .3em; }
-pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
-
-.highlight:not(.idl) { background: rgba(0, 0, 0, .03); }
-c-[a] { color: #990055 } /* Keyword.Declaration */
-c-[b] { color: #990055 } /* Keyword.Type */
-c-[c] { color: #708090 } /* Comment */
-c-[d] { color: #708090 } /* Comment.Multiline */
-c-[e] { color: #0077aa } /* Name.Attribute */
-c-[f] { color: #669900 } /* Name.Tag */
-c-[g] { color: #222222 } /* Name.Variable */
-c-[k] { color: #990055 } /* Keyword */
-c-[l] { color: #000000 } /* Literal */
-c-[m] { color: #000000 } /* Literal.Number */
-c-[n] { color: #0077aa } /* Name */
-c-[o] { color: #999999 } /* Operator */
-c-[p] { color: #999999 } /* Punctuation */
-c-[s] { color: #a67f59 } /* Literal.String */
-c-[t] { color: #a67f59 } /* Literal.String.Single */
-c-[u] { color: #a67f59 } /* Literal.String.Double */
-c-[cp] { color: #708090 } /* Comment.Preproc */
-c-[c1] { color: #708090 } /* Comment.Single */
-c-[cs] { color: #708090 } /* Comment.Special */
-c-[kc] { color: #990055 } /* Keyword.Constant */
-c-[kn] { color: #990055 } /* Keyword.Namespace */
-c-[kp] { color: #990055 } /* Keyword.Pseudo */
-c-[kr] { color: #990055 } /* Keyword.Reserved */
-c-[ld] { color: #000000 } /* Literal.Date */
-c-[nc] { color: #0077aa } /* Name.Class */
-c-[no] { color: #0077aa } /* Name.Constant */
-c-[nd] { color: #0077aa } /* Name.Decorator */
-c-[ni] { color: #0077aa } /* Name.Entity */
-c-[ne] { color: #0077aa } /* Name.Exception */
-c-[nf] { color: #0077aa } /* Name.Function */
-c-[nl] { color: #0077aa } /* Name.Label */
-c-[nn] { color: #0077aa } /* Name.Namespace */
-c-[py] { color: #0077aa } /* Name.Property */
-c-[ow] { color: #999999 } /* Operator.Word */
-c-[mb] { color: #000000 } /* Literal.Number.Bin */
-c-[mf] { color: #000000 } /* Literal.Number.Float */
-c-[mh] { color: #000000 } /* Literal.Number.Hex */
-c-[mi] { color: #000000 } /* Literal.Number.Integer */
-c-[mo] { color: #000000 } /* Literal.Number.Oct */
-c-[sb] { color: #a67f59 } /* Literal.String.Backtick */
-c-[sc] { color: #a67f59 } /* Literal.String.Char */
-c-[sd] { color: #a67f59 } /* Literal.String.Doc */
-c-[se] { color: #a67f59 } /* Literal.String.Escape */
-c-[sh] { color: #a67f59 } /* Literal.String.Heredoc */
-c-[si] { color: #a67f59 } /* Literal.String.Interpol */
-c-[sx] { color: #a67f59 } /* Literal.String.Other */
-c-[sr] { color: #a67f59 } /* Literal.String.Regex */
-c-[ss] { color: #a67f59 } /* Literal.String.Symbol */
-c-[vc] { color: #0077aa } /* Name.Variable.Class */
-c-[vg] { color: #0077aa } /* Name.Variable.Global */
-c-[vi] { color: #0077aa } /* Name.Variable.Instance */
-c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
-</style>
-<style>/* style-darkmode */
 
 @media (prefers-color-scheme: dark) {
     :root {
@@ -1941,14 +1781,174 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
        which is quite common in practice... */
     img { background: white; }
 }
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --selflink-text: black;
-        --selflink-bg: silver;
-        --selflink-hover-text: white;
-    }
+</style>
+<style>/* Boilerplate: style-counters */
+body {
+    counter-reset: example figure issue;
 }
+.issue {
+    counter-increment: issue;
+}
+.issue:not(.no-marker)::before {
+    content: "Issue " counter(issue);
+}
+
+.example {
+    counter-increment: example;
+}
+.example:not(.no-marker)::before {
+    content: "Example " counter(example);
+}
+.invalid.example:not(.no-marker)::before,
+.illegal.example:not(.no-marker)::before {
+    content: "Invalid Example" counter(example);
+}
+
+figcaption {
+    counter-increment: figure;
+}
+figcaption:not(.no-marker)::before {
+    content: "Figure " counter(figure) " ";
+}
+</style>
+<style>/* Boilerplate: style-issues */
+a[href].issue-return {
+    float: right;
+    float: inline-end;
+    color: var(--issueheading-text);
+    font-weight: bold;
+    text-decoration: none;
+}
+</style>
+<style>/* Boilerplate: style-md-lists */
+/* This is a weird hack for me not yet following the commonmark spec
+   regarding paragraph and lists. */
+[data-md] > :first-child {
+    margin-top: 0;
+}
+[data-md] > :last-child {
+    margin-bottom: 0;
+}
+</style>
+<style>/* Boilerplate: style-selflinks */
+
+:root {
+    --selflink-text: white;
+    --selflink-bg: gray;
+    --selflink-hover-text: black;
+}
+.heading, .issue, .note, .example, li, dt {
+    position: relative;
+}
+a.self-link {
+    position: absolute;
+    top: 0;
+    left: calc(-1 * (3.5rem - 26px));
+    width: calc(3.5rem - 26px);
+    height: 2em;
+    text-align: center;
+    border: none;
+    transition: opacity .2s;
+    opacity: .5;
+}
+a.self-link:hover {
+    opacity: 1;
+}
+.heading > a.self-link {
+    font-size: 83%;
+}
+.example > a.self-link,
+.note > a.self-link,
+.issue > a.self-link {
+    /* These blocks are overflow:auto, so positioning outside
+       doesn't work. */
+    left: auto;
+    right: 0;
+}
+li > a.self-link {
+    left: calc(-1 * (3.5rem - 26px) - 2em);
+}
+dfn > a.self-link {
+    top: auto;
+    left: auto;
+    opacity: 0;
+    width: 1.5em;
+    height: 1.5em;
+    background: var(--selflink-bg);
+    color: var(--selflink-text);
+    font-style: normal;
+    transition: opacity .2s, background-color .2s, color .2s;
+}
+dfn:hover > a.self-link {
+    opacity: 1;
+}
+dfn > a.self-link:hover {
+    color: var(--selflink-hover-text);
+}
+
+a.self-link::before            { content: "¶"; }
+.heading > a.self-link::before { content: "§"; }
+dfn > a.self-link::before      { content: "#"; }
+</style>
+<style>/* Boilerplate: style-syntax-highlighting */
+
+code.highlight { padding: .1em; border-radius: .3em; }
+pre.highlight, pre > code.highlight { display: block; padding: 1em; margin: .5em 0; overflow: auto; border-radius: 0; }
+
+.highlight:not(.idl) { background: rgba(0, 0, 0, .03); }
+c-[a] { color: #990055 } /* Keyword.Declaration */
+c-[b] { color: #990055 } /* Keyword.Type */
+c-[c] { color: #708090 } /* Comment */
+c-[d] { color: #708090 } /* Comment.Multiline */
+c-[e] { color: #0077aa } /* Name.Attribute */
+c-[f] { color: #669900 } /* Name.Tag */
+c-[g] { color: #222222 } /* Name.Variable */
+c-[k] { color: #990055 } /* Keyword */
+c-[l] { color: #000000 } /* Literal */
+c-[m] { color: #000000 } /* Literal.Number */
+c-[n] { color: #0077aa } /* Name */
+c-[o] { color: #999999 } /* Operator */
+c-[p] { color: #999999 } /* Punctuation */
+c-[s] { color: #a67f59 } /* Literal.String */
+c-[t] { color: #a67f59 } /* Literal.String.Single */
+c-[u] { color: #a67f59 } /* Literal.String.Double */
+c-[cp] { color: #708090 } /* Comment.Preproc */
+c-[c1] { color: #708090 } /* Comment.Single */
+c-[cs] { color: #708090 } /* Comment.Special */
+c-[kc] { color: #990055 } /* Keyword.Constant */
+c-[kn] { color: #990055 } /* Keyword.Namespace */
+c-[kp] { color: #990055 } /* Keyword.Pseudo */
+c-[kr] { color: #990055 } /* Keyword.Reserved */
+c-[ld] { color: #000000 } /* Literal.Date */
+c-[nc] { color: #0077aa } /* Name.Class */
+c-[no] { color: #0077aa } /* Name.Constant */
+c-[nd] { color: #0077aa } /* Name.Decorator */
+c-[ni] { color: #0077aa } /* Name.Entity */
+c-[ne] { color: #0077aa } /* Name.Exception */
+c-[nf] { color: #0077aa } /* Name.Function */
+c-[nl] { color: #0077aa } /* Name.Label */
+c-[nn] { color: #0077aa } /* Name.Namespace */
+c-[py] { color: #0077aa } /* Name.Property */
+c-[ow] { color: #999999 } /* Operator.Word */
+c-[mb] { color: #000000 } /* Literal.Number.Bin */
+c-[mf] { color: #000000 } /* Literal.Number.Float */
+c-[mh] { color: #000000 } /* Literal.Number.Hex */
+c-[mi] { color: #000000 } /* Literal.Number.Integer */
+c-[mo] { color: #000000 } /* Literal.Number.Oct */
+c-[sb] { color: #a67f59 } /* Literal.String.Backtick */
+c-[sc] { color: #a67f59 } /* Literal.String.Char */
+c-[sd] { color: #a67f59 } /* Literal.String.Doc */
+c-[se] { color: #a67f59 } /* Literal.String.Escape */
+c-[sh] { color: #a67f59 } /* Literal.String.Heredoc */
+c-[si] { color: #a67f59 } /* Literal.String.Interpol */
+c-[sx] { color: #a67f59 } /* Literal.String.Other */
+c-[sr] { color: #a67f59 } /* Literal.String.Regex */
+c-[ss] { color: #a67f59 } /* Literal.String.Symbol */
+c-[vc] { color: #0077aa } /* Name.Variable.Class */
+c-[vg] { color: #0077aa } /* Name.Variable.Global */
+c-[vi] { color: #0077aa } /* Name.Variable.Instance */
+c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
+
 
 @media (prefers-color-scheme: dark) {
     .highlight:not(.idl) { background: rgba(255, 255, 255, .05); }
@@ -2016,8 +2016,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
  <body class="h-entry">
   <div class="head">
    <p data-fill-with="logo"></p>
-   <h1 class="p-name no-ref" id="title">Rozhranie katalógu otvorených dát DCAT-AP-SK 2.0</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2023-03-23">23 March 2023</time></span></h2>
+   <h1 class="p-name no-ref" id="title">Rozhranie katalógu otvorených dát DCAT-AP-SK 2.0.1</h1>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2024-01-22">22 January 2024</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2059,20 +2059,23 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#dataset-názov"><span class="secno">2.3.1</span> <span class="content">Názov</span></a>
         <li><a href="#dataset-popis"><span class="secno">2.3.2</span> <span class="content">Popis</span></a>
         <li><a href="#dataset-poskytovateľ"><span class="secno">2.3.3</span> <span class="content">Poskytovateľ</span></a>
-        <li><a href="#dataset-téma"><span class="secno">2.3.4</span> <span class="content">Téma</span></a>
-        <li><a href="#dataset-periodicita-aktualizácie"><span class="secno">2.3.5</span> <span class="content">Periodicita aktualizácie</span></a>
-        <li><a href="#dataset-kľúčové-slová"><span class="secno">2.3.6</span> <span class="content">Klúčové slová</span></a>
-        <li><a href="#dataset-typ"><span class="secno">2.3.7</span> <span class="content">Typ datasetu</span></a>
-        <li><a href="#dataset-geografické-územia"><span class="secno">2.3.8</span> <span class="content">Súvisiace geografické územie</span></a>
-        <li><a href="#dataset-časové-pokrytie"><span class="secno">2.3.9</span> <span class="content">Časové pokrytie</span></a>
-        <li><a href="#dataset-kontaktní-bod"><span class="secno">2.3.10</span> <span class="content">Kontaktný bod - meno a email</span></a>
-        <li><a href="#dataset-dokumentácia"><span class="secno">2.3.11</span> <span class="content">Odkaz na dokumentáciu</span></a>
-        <li><a href="#dataset-špecifikácia"><span class="secno">2.3.12</span> <span class="content">Odkaz na špecifikáciu</span></a>
-        <li><a href="#dataset-eurovoc"><span class="secno">2.3.13</span> <span class="content">Klasifikácia podľa EuroVoc</span></a>
-        <li><a href="#dataset-priestorové-rozlišenie"><span class="secno">2.3.14</span> <span class="content">Priestorové rozlíšenie v metroch</span></a>
-        <li><a href="#dataset-časové-rozlíšenie"><span class="secno">2.3.15</span> <span class="content">Časové rozlíšenie</span></a>
-        <li><a href="#dataset-je-súčasťou"><span class="secno">2.3.16</span> <span class="content">Väzba: Je súčásťou</span></a>
-        <li><a href="#dataset-distribúcia"><span class="secno">2.3.17</span> <span class="content">Väzba: Distribúcia datasetu</span></a>
+        <li><a href="#dataset-dátum-publikácie"><span class="secno">2.3.4</span> <span class="content">Dátum publikácie</span></a>
+        <li><a href="#dataset-dátum-modifikácie"><span class="secno">2.3.5</span> <span class="content">Dátum modifikácie</span></a>
+        <li><a href="#dataset-téma"><span class="secno">2.3.6</span> <span class="content">Téma</span></a>
+        <li><a href="#dataset-periodicita-aktualizácie"><span class="secno">2.3.7</span> <span class="content">Periodicita aktualizácie</span></a>
+        <li><a href="#dataset-kľúčové-slová"><span class="secno">2.3.8</span> <span class="content">Klúčové slová</span></a>
+        <li><a href="#dataset-typ"><span class="secno">2.3.9</span> <span class="content">Typ datasetu</span></a>
+        <li><a href="#dataset-geografické-územia"><span class="secno">2.3.10</span> <span class="content">Súvisiace geografické územie</span></a>
+        <li><a href="#dataset-časové-pokrytie"><span class="secno">2.3.11</span> <span class="content">Časové pokrytie</span></a>
+        <li><a href="#dataset-kontaktní-bod"><span class="secno">2.3.12</span> <span class="content">Kontaktný bod - meno a email</span></a>
+        <li><a href="#dataset-webová-stránka"><span class="secno">2.3.13</span> <span class="content">Webová stránka</span></a>
+        <li><a href="#dataset-súvisiaci-zdroj"><span class="secno">2.3.14</span> <span class="content">Súvisiaci zdroj</span></a>
+        <li><a href="#dataset-špecifikácia"><span class="secno">2.3.15</span> <span class="content">Odkaz na špecifikáciu</span></a>
+        <li><a href="#dataset-eurovoc"><span class="secno">2.3.16</span> <span class="content">Klasifikácia podľa EuroVoc</span></a>
+        <li><a href="#dataset-priestorové-rozlišenie"><span class="secno">2.3.17</span> <span class="content">Priestorové rozlíšenie v metroch</span></a>
+        <li><a href="#dataset-časové-rozlíšenie"><span class="secno">2.3.18</span> <span class="content">Časové rozlíšenie</span></a>
+        <li><a href="#dataset-je-súčasťou"><span class="secno">2.3.19</span> <span class="content">Väzba: Je súčásťou</span></a>
+        <li><a href="#dataset-distribúcia"><span class="secno">2.3.20</span> <span class="content">Väzba: Distribúcia datasetu</span></a>
        </ol>
       <li>
        <a href="#trieda-distribúcia"><span class="secno">2.4</span> <span class="content">Trieda: Distribúcia datasetu</span></a>
@@ -2160,7 +2163,8 @@ Obsahovo musia byť distribúcie totožné.</p>
 <c- k>@prefix</c-> <c- nn>skos:</c-> <c- g>&lt;http://www.w3.org/2004/02/skos/core#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>xsd:</c-> <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>vcard:</c-> <c- g>&lt;http://www.w3.org/2006/vcard/ns#></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>leg:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/legislation/></c-> <c- p>.</c-></pre>
+<c- k>@prefix</c-> <c- nn>leg:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/legislation/></c-> <c- p>.</c->
+</pre>
    <p>Pre prehľadnosť zápisu budú použité aj nasledujúce prefixy skracujúce IRI vzorových entít.</p>
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dataset:</c-> <c- g>&lt;https://data.gov.sk/dataset/1></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>katalóg:</c-> <c- g>&lt;https://data.gov.sk/set/catalog/lkod/1></c-> <c- p>.</c->
@@ -2169,7 +2173,8 @@ Obsahovo musia byť distribúcie totožné.</p>
 @prefix <c- nn>čas</c-><c- p>:</c-> <c- g>&lt;https://data.gov.sk/set/1/temporal></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>kontakt:</c-> <c- g>&lt;https://data.gov.sk/set/1/contact-point></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>podmienky:</c-> <c- g>&lt;https://data.gov.sk/set/1/resource/1/terms-of-use></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>správca:</c-> <c- g>&lt;https://data.gov.sk/catalog/lkod/1/contact-point></c-> <c- p>.</c-></pre>
+<c- k>@prefix</c-> <c- nn>správca:</c-> <c- g>&lt;https://data.gov.sk/catalog/lkod/1/contact-point></c-> <c- p>.</c->
+</pre>
    <h3 class="heading settled" data-level="2.2" id="trieda-katalóg"><span class="secno">2.2. </span><span class="content">Trieda: Katalóg</span><a class="self-link" href="#trieda-katalóg"></a></h3>
    <dl>
     <dt data-md>Popis
@@ -2177,7 +2182,8 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Trieda reprezentujúca dátový katalóg. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Catalog">dcat:Catalog</a>.</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Catalog</c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Catalog</c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.2.1" id="katalóg-názov"><span class="secno">2.2.1. </span><span class="content">Názov</span><a class="self-link" href="#katalóg-názov"></a></h4>
    <dl>
@@ -2195,7 +2201,8 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Katalóg otvorených dát Ministerstva dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Open Data Catalog of the Ministry of Transport"</c-><c- o>@</c->en <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Katalóg otvorených dát Ministerstva dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Open Data Catalog of the Ministry of Transport"</c-><c- o>@</c->en <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.2.2" id="katalóg-popis"><span class="secno">2.2.2. </span><span class="content">Popis</span><a class="self-link" href="#katalóg-popis"></a></h4>
    <dl>
@@ -2213,7 +2220,8 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy."</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."</c-><c- o>@</c->en <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy."</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."</c-><c- o>@</c->en <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.2.3" id="katalóg-poskytovateľ"><span class="secno">2.2.3. </span><span class="content">Poskytovateľ</span><a class="self-link" href="#katalóg-poskytovateľ"></a></h4>
    <dl>
@@ -2231,7 +2239,8 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.2.4" id="katalóg-kontaktný-bod"><span class="secno">2.2.4. </span><span class="content">Kontaktný bod - meno a email</span><a class="self-link" href="#katalóg-kontaktný-bod"></a></h4>
    <dl>
@@ -2253,7 +2262,8 @@ Obsahovo musia byť distribúcie totožné.</p>
 
 <c- nn>správca</c-><c- p>:</c-> <c- b>a</c-> <c- nn>vcard</c-><c- p>:</c-><c- f>Individual</c-> <c- p>;</c->
          <c- nn>vcard</c-><c- p>:</c-><c- f>fn</c-> <c- s>"Jan Novák"</c-><c- o>@</c->sk <c- p>;</c->
-         <c- nn>vcard</c-><c- p>:</c-><c- f>hasEmail</c-> <c- g>&lt;mailto:jan.novak@mindop.sk></c-> <c- p>.</c-></pre>
+         <c- nn>vcard</c-><c- p>:</c-><c- f>hasEmail</c-> <c- g>&lt;mailto:jan.novak@mindop.sk></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.2.5" id="katalóg-domovská-stránka"><span class="secno">2.2.5. </span><span class="content">Domovská stránka</span><a class="self-link" href="#katalóg-domovská-stránka"></a></h4>
    <dl>
@@ -2271,7 +2281,8 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>foaf</c-><c- p>:</c-><c- f>homepage</c-> <c- g>&lt;https://opendata.mindop.sk/></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>foaf</c-><c- p>:</c-><c- f>homepage</c-> <c- g>&lt;https://opendata.mindop.sk/></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.2.6" id="katalóg-dataset"><span class="secno">2.2.6. </span><span class="content">Väzba: dataset</span><a class="self-link" href="#katalóg-dataset"></a></h4>
    <dl>
@@ -2289,7 +2300,8 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>dataset</c-> <c- nn>dataset</c-><c- p>:</c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>katalog</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>dataset</c-> <c- nn>dataset</c-><c- p>:</c-> <c- p>.</c->
+</pre>
    </dl>
    <h3 class="heading settled" data-level="2.3" id="trieda-dataset"><span class="secno">2.3. </span><span class="content">Trieda: Dataset</span><a class="self-link" href="#trieda-dataset"></a></h3>
    <dl>
@@ -2298,7 +2310,8 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Kolekcia dát poskytovaná či riadená jedným zdrojom, ktorá je k dispozícii pre prístup či stiahnutie v jednom či viacerých formátoch. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Dataset">dcat:Dataset</a>.</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Dataset</c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.3.1" id="dataset-názov"><span class="secno">2.3.1. </span><span class="content">Názov</span><a class="self-link" href="#dataset-názov"></a></h4>
    <dl>
@@ -2316,7 +2329,8 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Kontroly plnenia Povinnosti zamestnávateľov v oblasti sociálneho zabezpečenia"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Duty fulfillment inspections in the area of social security"</c-><c- o>@</c->en <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Kontroly plnenia Povinnosti zamestnávateľov v oblasti sociálneho zabezpečenia"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Duty fulfillment inspections in the area of social security"</c-><c- o>@</c->en <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.3.2" id="dataset-popis"><span class="secno">2.3.2. </span><span class="content">Popis</span><a class="self-link" href="#dataset-popis"></a></h4>
    <dl>
@@ -2334,7 +2348,8 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Štatistika kontrol plnenia Povinností zamestnávateľov v oblasti sociálneho zabezpečenia od roku 2009"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Social security statistics for 2009"</c-><c- o>@</c->en <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Štatistika kontrol plnenia Povinností zamestnávateľov v oblasti sociálneho zabezpečenia od roku 2009"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Social security statistics for 2009"</c-><c- o>@</c->en <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.3.3" id="dataset-poskytovateľ"><span class="secno">2.3.3. </span><span class="content">Poskytovateľ</span><a class="self-link" href="#dataset-poskytovateľ"></a></h4>
    <dl>
@@ -2352,9 +2367,48 @@ Obsahovo musia byť distribúcie totožné.</p>
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.4" id="dataset-téma"><span class="secno">2.3.4. </span><span class="content">Téma</span><a class="self-link" href="#dataset-téma"></a></h4>
+   <h4 class="heading settled" data-level="2.3.4" id="dataset-dátum-publikácie"><span class="secno">2.3.4. </span><span class="content">Dátum publikácie</span><a class="self-link" href="#dataset-dátum-publikácie"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto Vlastnosť obsahuje dátum publikácie (prvé vytvorenie) datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_release_date">dct:issued</a>.</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>dátum_publikácie</code>, <code>dct:issued</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>Dátum a čas</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Nepovinná</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>issued</c-> <c- s>"2024-01-21T12:00:00"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>dateTime</c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="2.3.5" id="dataset-dátum-modifikácie"><span class="secno">2.3.5. </span><span class="content">Dátum modifikácie</span><a class="self-link" href="#dataset-dátum-modifikácie"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto Vlastnosť obsahuje dátum modifikácie datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_update_date">dct:modified</a>.</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>dátum_modifikácie</code>, <code>dct:modified</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>Dátum a čas</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Nepovinná</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>modified</c-> <c- s>"2024-01-22T16:23:00"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>dateTime</c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="2.3.6" id="dataset-téma"><span class="secno">2.3.6. </span><span class="content">Téma</span><a class="self-link" href="#dataset-téma"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2373,9 +2427,10 @@ Podľa DCAT-AP 2.1.1 musí byť aspoň jedna téma z <a href="https://op.europa.
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/data-theme/TRAN></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/data-theme/TRAN></c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.5" id="dataset-periodicita-aktualizácie"><span class="secno">2.3.5. </span><span class="content">Periodicita aktualizácie</span><a class="self-link" href="#dataset-periodicita-aktualizácie"></a></h4>
+   <h4 class="heading settled" data-level="2.3.7" id="dataset-periodicita-aktualizácie"><span class="secno">2.3.7. </span><span class="content">Periodicita aktualizácie</span><a class="self-link" href="#dataset-periodicita-aktualizácie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2393,9 +2448,10 @@ Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocab
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/frequency/MONTHLY></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/frequency/MONTHLY></c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.6" id="dataset-kľúčové-slová"><span class="secno">2.3.6. </span><span class="content">Klúčové slová</span><a class="self-link" href="#dataset-kľúčové-slová"></a></h4>
+   <h4 class="heading settled" data-level="2.3.8" id="dataset-kľúčové-slová"><span class="secno">2.3.8. </span><span class="content">Klúčové slová</span><a class="self-link" href="#dataset-kľúčové-slová"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2411,9 +2467,10 @@ Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocab
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>keyword</c-> <c- s>"kontrola"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"štatistika"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"inspection"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"statistics"</c-><c- o>@</c->en <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>keyword</c-> <c- s>"kontrola"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"štatistika"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"inspection"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"statistics"</c-><c- o>@</c->en <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.7" id="dataset-typ"><span class="secno">2.3.7. </span><span class="content">Typ datasetu</span><a class="self-link" href="#dataset-typ"></a></h4>
+   <h4 class="heading settled" data-level="2.3.9" id="dataset-typ"><span class="secno">2.3.9. </span><span class="content">Typ datasetu</span><a class="self-link" href="#dataset-typ"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2430,9 +2487,10 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
      <p>Nepovinná</p>
     <dt data-md>Príklady
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>type</c-> <c- g>&lt;https://data.gov.sk/def/dataset-type/1></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>type</c-> <c- g>&lt;https://data.gov.sk/def/dataset-type/1></c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.8" id="dataset-geografické-územia"><span class="secno">2.3.8. </span><span class="content">Súvisiace geografické územie</span><a class="self-link" href="#dataset-geografické-územia"></a></h4>
+   <h4 class="heading settled" data-level="2.3.10" id="dataset-geografické-územia"><span class="secno">2.3.10. </span><span class="content">Súvisiace geografické územie</span><a class="self-link" href="#dataset-geografické-územia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2444,17 +2502,22 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
      <p><code>geografické_územie</code>, <code>dct:spatial</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>IRI položiek z európských číselníkov <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/country">krajín</a>, <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/continent">kontinentov</a>, <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/place">miest</a> alebo IRI objektu z <a href="https://www.geonames.org/">Geonames</a>.</p>
+     <p>IRI položiek pre územné entity Slovenskej Republiky primárne z taxonómie <a href="https://github.com/slovak-egov/centralny-model-udajov/blob/main/cbox/national/nuts2004.ttl">NUTS-SK</a>, európských číselníkov <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/country">krajín</a>, <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/continent">kontinentov</a>, <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/place">miest</a> alebo IRI objektu z <a href="https://www.geonames.org/">Geonames</a>.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Nepovinná</p>
     <dt data-md>Príklady
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/continent/EUROPE></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;https://data.gov.sk/id/nuts1/SK0></c-> <c- p>.</c->
+</pre>
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;https://sws.geonames.org/6290257/></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/continent/EUROPE></c-> <c- p>.</c->
+</pre>
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;https://sws.geonames.org/6290257/></c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.9" id="dataset-časové-pokrytie"><span class="secno">2.3.9. </span><span class="content">Časové pokrytie</span><a class="self-link" href="#dataset-časové-pokrytie"></a></h4>
+   <h4 class="heading settled" data-level="2.3.11" id="dataset-časové-pokrytie"><span class="secno">2.3.11. </span><span class="content">Časové pokrytie</span><a class="self-link" href="#dataset-časové-pokrytie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2474,9 +2537,10 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>temporal</c-> <c- nn>čas</c-><c- p>:</c-> <c- p>.</c->
 
 <c- nn>čas</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>startDate</c-> <c- s>"2009-01-01"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>date</c-> <c- p>;</c->
-     <c- nn>dcat</c-><c- p>:</c-><c- f>endDate</c-> <c- s>"2017-12-31"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>date</c-> <c- p>.</c-></pre>
+     <c- nn>dcat</c-><c- p>:</c-><c- f>endDate</c-> <c- s>"2017-12-31"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>date</c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.10" id="dataset-kontaktní-bod"><span class="secno">2.3.10. </span><span class="content">Kontaktný bod - meno a email</span><a class="self-link" href="#dataset-kontaktní-bod"></a></h4>
+   <h4 class="heading settled" data-level="2.3.12" id="dataset-kontaktní-bod"><span class="secno">2.3.12. </span><span class="content">Kontaktný bod - meno a email</span><a class="self-link" href="#dataset-kontaktní-bod"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2497,28 +2561,50 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
 
 <c- nn>kontakt</c-><c- p>:</c-> <c- b>a</c-> <c- nn>vcard</c-><c- p>:</c-><c- f>Individual</c-> <c- p>;</c->
          <c- nn>vcard</c-><c- p>:</c-><c- f>fn</c-> <c- s>"Jan Novák"</c-><c- o>@</c->sk <c- p>;</c->
-         <c- nn>vcard</c-><c- p>:</c-><c- f>hasEmail</c-> <c- g>&lt;mailto:jan.novak@mindop.sk></c-> <c- p>.</c-></pre>
+         <c- nn>vcard</c-><c- p>:</c-><c- f>hasEmail</c-> <c- g>&lt;mailto:jan.novak@mindop.sk></c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.11" id="dataset-dokumentácia"><span class="secno">2.3.11. </span><span class="content">Odkaz na dokumentáciu</span><a class="self-link" href="#dataset-dokumentácia"></a></h4>
+   <h4 class="heading settled" data-level="2.3.13" id="dataset-webová-stránka"><span class="secno">2.3.13. </span><span class="content">Webová stránka</span><a class="self-link" href="#dataset-webová-stránka"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje na stránku alebo dokument o datasete.
-Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page">foaf:page</a>.</p>
+     <p>Táto Vlastnosť odkazuje na domovskú WWW stránku datasetu, kde dataset vznikol. Môže to byť stránka na centrálnom portáli otvorených údajov, alebo stránka v lokálnom opendatovom portáli.
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_landing_page">dcat:landingPage</a>.</p>
     <dt data-md>Vlastnosť
     <dd data-md>
-     <p><code>dokumentácia</code>, <code>foaf:page</code></p>
+     <p><code>webová_stránka_datasetu</code>, <code>dcat:landingPage</code></p>
     <dt data-md>Typ
     <dd data-md>
-     <p>URL webovej stránky dokumentácie.</p>
+     <p>URL webovej stránky datasetu.</p>
     <dt data-md>Povinnosť
     <dd data-md>
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>foaf</c-><c- p>:</c-><c- f>page</c-> <c- g>&lt;https://mindop.sk/documentation/kontroly-plnenia-Povinnosťi-zamestnavatelov-v-oblasti-socialneho-zabezpecenia></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>landingPage</c-> <c- g>&lt;https://data.gov.sk/set/kontroly-plnenia-Povinnosťi-zamestnavatelov-v-oblasti-socialneho-zabezpecenia></c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.12" id="dataset-špecifikácia"><span class="secno">2.3.12. </span><span class="content">Odkaz na špecifikáciu</span><a class="self-link" href="#dataset-špecifikácia"></a></h4>
+   <h4 class="heading settled" data-level="2.3.14" id="dataset-súvisiaci-zdroj"><span class="secno">2.3.14. </span><span class="content">Súvisiaci zdroj</span><a class="self-link" href="#dataset-súvisiaci-zdroj"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto Vlastnosť odkazuje na ľubovoľný súvisiaci zdroj datasetu.
+Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resource_relation">dct:relation</a>.</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>súvisiaci_zdroj_datasetu</code>, <code>dct:relation</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>URL súvisiaceho zdroja datasetu.</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Nepovinná</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>relation</c-> <c- g>&lt;https://www.employment.gov.sk/sk/praca-zamestnanost/vztah-zamestnanca-zamestnavatela/zakonnik-prace/zamestnavatel/povinnosti-zamestnavatela.html></c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="2.3.15" id="dataset-špecifikácia"><span class="secno">2.3.15. </span><span class="content">Odkaz na špecifikáciu</span><a class="self-link" href="#dataset-špecifikácia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2535,9 +2621,10 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://data.gov.sk/def/ontology/finance/></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://data.gov.sk/def/ontology/finance/></c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.13" id="dataset-eurovoc"><span class="secno">2.3.13. </span><span class="content">Klasifikácia podľa EuroVoc</span><a class="self-link" href="#dataset-eurovoc"></a></h4>
+   <h4 class="heading settled" data-level="2.3.16" id="dataset-eurovoc"><span class="secno">2.3.16. </span><span class="content">Klasifikácia podľa EuroVoc</span><a class="self-link" href="#dataset-eurovoc"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2555,9 +2642,10 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- g>&lt;http://eurovoc.europa.eu/1001></c-><c- p>,</c-> <c- g>&lt;http://eurovoc.europa.eu/4050></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- g>&lt;http://eurovoc.europa.eu/1001></c-><c- p>,</c-> <c- g>&lt;http://eurovoc.europa.eu/4050></c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.14" id="dataset-priestorové-rozlišenie"><span class="secno">2.3.14. </span><span class="content">Priestorové rozlíšenie v metroch</span><a class="self-link" href="#dataset-priestorové-rozlišenie"></a></h4>
+   <h4 class="heading settled" data-level="2.3.17" id="dataset-priestorové-rozlišenie"><span class="secno">2.3.17. </span><span class="content">Priestorové rozlíšenie v metroch</span><a class="self-link" href="#dataset-priestorové-rozlišenie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2575,9 +2663,10 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>spatialResolutionInMeters</c-> <c- mf>0.5</c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>spatialResolutionInMeters</c-> <c- mf>0.5</c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.15" id="dataset-časové-rozlíšenie"><span class="secno">2.3.15. </span><span class="content">Časové rozlíšenie</span><a class="self-link" href="#dataset-časové-rozlíšenie"></a></h4>
+   <h4 class="heading settled" data-level="2.3.18" id="dataset-časové-rozlíšenie"><span class="secno">2.3.18. </span><span class="content">Časové rozlíšenie</span><a class="self-link" href="#dataset-časové-rozlíšenie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2595,9 +2684,10 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>temporalResolution</c-> <c- s>"P1D"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>duration</c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>temporalResolution</c-> <c- s>"P1D"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>duration</c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.16" id="dataset-je-súčasťou"><span class="secno">2.3.16. </span><span class="content">Väzba: Je súčásťou</span><a class="self-link" href="#dataset-je-súčasťou"></a></h4>
+   <h4 class="heading settled" data-level="2.3.19" id="dataset-je-súčasťou"><span class="secno">2.3.19. </span><span class="content">Väzba: Je súčásťou</span><a class="self-link" href="#dataset-je-súčasťou"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2614,9 +2704,10 @@ Je definovaná ako <a href="https://dublincore.org/specifications/dublin-core/dc
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>isPartOf</c-> <c- g>&lt;https://data.gov.sk/set/pohladavky-mindop></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>isPartOf</c-> <c- g>&lt;https://data.gov.sk/set/pohladavky-mindop></c-> <c- p>.</c->
+</pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.17" id="dataset-distribúcia"><span class="secno">2.3.17. </span><span class="content">Väzba: Distribúcia datasetu</span><a class="self-link" href="#dataset-distribúcia"></a></h4>
+   <h4 class="heading settled" data-level="2.3.20" id="dataset-distribúcia"><span class="secno">2.3.20. </span><span class="content">Väzba: Distribúcia datasetu</span><a class="self-link" href="#dataset-distribúcia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2633,7 +2724,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
      <p>Povinná, pokiaľ nejde o zastrešujúci dataset dátovej série.</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- nn>distribúcia</c-><c- p>:</c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- nn>distribúcia</c-><c- p>:</c-> <c- p>.</c->
+</pre>
    </dl>
    <h3 class="heading settled" data-level="2.4" id="trieda-distribúcia"><span class="secno">2.4. </span><span class="content">Trieda: Distribúcia datasetu</span><a class="self-link" href="#trieda-distribúcia"></a></h3>
    <dl>
@@ -2643,7 +2735,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
 Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Distribution">dcat:Distribution</a>.</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.4.1" id="špecifikácia-podmienok-použitia"><span class="secno">2.4.1. </span><span class="content">Špecifikácia podmienok použitia</span><a class="self-link" href="#špecifikácia-podmienok-použitia"></a></h4>
    <dl>
@@ -2668,7 +2761,8 @@ Voliteľne tiež <code>leg:authorName</code> a <code>leg:originalDatabaseAuthorN
     <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://data.gov.sk/def/authors-work-type/3></c-> <c- p>;</c->
     <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;https://data.gov.sk/def/original-database-type/3></c-> <c- p>;</c->
     <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;https://data.gov.sk/def/codelist/database-creator-special-rights-type/2></c-> <c- p>;</c->
-    <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>.</c-></pre>
+    <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.4.2" id="distribúcia-stiahnutie-súboru"><span class="secno">2.4.2. </span><span class="content">Odkaz na stiahnutie súboru</span><a class="self-link" href="#distribúcia-stiahnutie-súboru"></a></h4>
    <dl>
@@ -2687,7 +2781,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
      <p>Povinná pre súbor na stiahnutie</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- g>&lt;https://mindop.sk/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>downloadURL</c-> <c- g>&lt;https://mindop.sk/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.4.3" id="distribúcia-prístupové-url"><span class="secno">2.4.3. </span><span class="content">Prístupové URL</span><a class="self-link" href="#distribúcia-prístupové-url"></a></h4>
    <dl>
@@ -2707,7 +2802,8 @@ Pre účely katalógov otvorených dát je hodnota tejto Vlastnosti buď rovnak�
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://data.cssz.cz/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://data.cssz.cz/dump/kontroly-plneni-Povinnosťi-zamestnavatelu-v-oblasti-socialniho-zabezpeceni.csv></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.4.4" id="distribúcia-formát-súboru"><span class="secno">2.4.4. </span><span class="content">Formát súboru na stiahnutie</span><a class="self-link" href="#distribúcia-formát-súboru"></a></h4>
    <dl>
@@ -2727,7 +2823,8 @@ Podľa DCAT-AP 2.1.1 sú hodnoty z <a href="https://op.europa.eu/cs/web/eu-vocab
      <p>Povinná pre súbor na stiahnutie</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>format</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/file-type/CSV></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>format</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/file-type/CSV></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.4.5" id="distribúcia-media-type"><span class="secno">2.4.5. </span><span class="content">Typ média súboru na stiahnutie</span><a class="self-link" href="#distribúcia-media-type"></a></h4>
    <dl>
@@ -2746,7 +2843,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
      <p>Povinná pre súbor na stiahnutie</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>mediaType</c-> <c- g>&lt;http://www.iana.org/assignments/media-types/text/csv></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>mediaType</c-> <c- g>&lt;http://www.iana.org/assignments/media-types/text/csv></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.4.6" id="distribuce-schéma"><span class="secno">2.4.6. </span><span class="content">Odkaz na strojovo-čitateľnú schému súboru na stiahnutie</span><a class="self-link" href="#distribuce-schéma"></a></h4>
    <dl>
@@ -2765,7 +2863,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://data.cssz.cz/dump/kontroly-plnenia-Povinnosti-zamestnavateľov-v-oblasti-sociálneho-zabezpečenia-schema.json></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://data.cssz.cz/dump/kontroly-plnenia-Povinnosti-zamestnavateľov-v-oblasti-sociálneho-zabezpečenia-schema.json></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.4.7" id="distribúcia-media-type-kompresia"><span class="secno">2.4.7. </span><span class="content">Typ média kompresného formátu</span><a class="self-link" href="#distribúcia-media-type-kompresia"></a></h4>
    <dl>
@@ -2785,7 +2884,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>compressFormat</c-> <c- g>&lt;http://www.iana.org/assignments/media-types/application/zip></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>compressFormat</c-> <c- g>&lt;http://www.iana.org/assignments/media-types/application/zip></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.4.8" id="distribúcia-media-type-balíčka"><span class="secno">2.4.8. </span><span class="content">Typ média balíčkovacieho formátu</span><a class="self-link" href="#distribúcia-media-type-balíčka"></a></h4>
    <dl>
@@ -2805,7 +2905,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>packageFormat</c-> <c- g>&lt;http://www.iana.org/assignments/media-types/application/zip></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>packageFormat</c-> <c- g>&lt;http://www.iana.org/assignments/media-types/application/zip></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.4.9" id="distribúcia-názov"><span class="secno">2.4.9. </span><span class="content">Názov distribúcie datasetu</span><a class="self-link" href="#distribúcia-názov"></a></h4>
    <dl>
@@ -2823,7 +2924,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Kontroly plnění Povinnosťí zaměstnavatelů v oblasti sociálního zabezpečení v CSV."</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"CSV representation of inspections in the area of social security."</c-><c- o>@</c->en <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"Kontroly plnění Povinnosťí zaměstnavatelů v oblasti sociálního zabezpečení v CSV."</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"CSV representation of inspections in the area of social security."</c-><c- o>@</c->en <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.4.10" id="distribúcia-služba"><span class="secno">2.4.10. </span><span class="content">Väzba: prístupová služba</span><a class="self-link" href="#distribúcia-služba"></a></h4>
    <dl>
@@ -2841,7 +2943,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
      <p>Povinná pre dátovú službu</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>accessService</c-> <c- nn>služba</c-><c- p>:</c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>accessService</c-> <c- nn>služba</c-><c- p>:</c-> <c- p>.</c->
+</pre>
    </dl>
    <h3 class="heading settled" data-level="2.5" id="trieda-datová-služba"><span class="secno">2.5. </span><span class="content">Trieda: Dátová služba</span><a class="self-link" href="#trieda-datová-služba"></a></h3>
    <dl>
@@ -2850,7 +2953,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
      <p>Trieda reprezentujúca dátovú službu sprístupňujúcu dáta datasetu. Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Data_Service">dcat:DataService</a>.</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>DataService</c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>DataService</c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.5.1" id="dátová-služba-názov"><span class="secno">2.5.1. </span><span class="content">Názov</span><a class="self-link" href="#dátová-služba-názov"></a></h4>
    <dl>
@@ -2868,7 +2972,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint Slovenskej správy sociálného zabezpečenia"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Czech Social Security Administration SPARQL endpoint"</c-><c- o>@</c->en <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint Slovenskej správy sociálného zabezpečenia"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Czech Social Security Administration SPARQL endpoint"</c-><c- o>@</c->en <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.5.2" id="dátová-služba-prístupový-bod"><span class="secno">2.5.2. </span><span class="content">Prístupový bod</span><a class="self-link" href="#dátová-služba-prístupový-bod"></a></h4>
    <dl>
@@ -2886,7 +2991,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:distrib
      <p>Povinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://data.gov.sk/sparql></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://data.gov.sk/sparql></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.5.3" id="datová-služba-špecifikácia"><span class="secno">2.5.3. </span><span class="content">Odkaz na špecifikáciu</span><a class="self-link" href="#datová-služba-špecifikácia"></a></h4>
    <dl>
@@ -2907,7 +3013,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="2.5.4" id="dátová-služba-prístupový-bod-popis"><span class="secno">2.5.4. </span><span class="content">Popis prístupového bodu</span><a class="self-link" href="#dátová-služba-prístupový-bod-popis"></a></h4>
    <dl>
@@ -2925,7 +3032,8 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
      <p>Nepovinná</p>
     <dt data-md>Príklad
     <dd data-md>
-<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointDescription</c-> <c- g>&lt;https://data.gov.sk/sparql></c-> <c- p>.</c-></pre>
+<pre class="language-turtle highlight"><c- nn>služba</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>endpointDescription</c-> <c- g>&lt;https://data.gov.sk/sparql></c-> <c- p>.</c->
+</pre>
    </dl>
    <h2 class="heading settled" data-level="3" id="rozhranie-sparql-endpoint"><span class="secno">3. </span><span class="content">Rozhranie DCAT-AP SPARQL Endpoint</span><a class="self-link" href="#rozhranie-sparql-endpoint"></a></h2>
     Toto rozhranie predpokladá, že metadáta datasetov podľa tejto špecifikácie sú uložené a sprístupnené prostredníctvom SPARQL endpointu <a data-link-type="biblio" href="#biblio-sparql11-protocol" title="SPARQL 1.1 Protocol">[sparql11-protocol]</a>.
@@ -2960,7 +3068,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
     <c- p>]</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>dataset</c->  <c- g>&lt;https://data.gov.sk/set/zoznam-zástavok-2022-10></c-> <c- p>,</c->
                   <c- g>&lt;https://data.gov.sk/set/líniové-vedenia-2022-10></c-> <c- p>,</c->
-                  <c- g>&lt;https://data.gov.sk/set/zoznam-tratí-2022></c-> <c- p>.</c-></pre>
+                  <c- g>&lt;https://data.gov.sk/set/zoznam-tratí-2022></c-> <c- p>.</c->
+</pre>
    </div>
    <div class="example" id="example-c6b69654">
     <a class="self-link" href="#example-c6b69654"></a> <a href="príklady/katalóg.jsonld">Príklad v JSON-LD</a>, <a href="schémy/katalóg.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
@@ -2991,12 +3100,13 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
          <c- u>"https://data.gov.sk/set/líniové-vedenia-2022-10"</c-><c- p>,</c->
          <c- u>"https://data.gov.sk/set/zoznam-tratí-2022"</c->
   <c- p>]</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </div>
    <h3 class="heading settled" data-level="4.2" id="rozhranie-dcat-ap-dataset"><span class="secno">4.2. </span><span class="content">Súbor datasetu</span><a class="self-link" href="#rozhranie-dcat-ap-dataset"></a></h3>
     Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF serializácii Turtle <a data-link-type="biblio" href="#biblio-turtle" title="RDF 1.1 Turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11" title="JSON-LD 1.1">[json-ld11]</a> obsahujúce kompletný metadatový záznam datasetu, vrátane distribúcií. 
-   <div class="example" id="example-e67bc83f">
-    <a class="self-link" href="#example-e67bc83f"></a> 
+   <div class="example" id="example-36eb90b3">
+    <a class="self-link" href="#example-36eb90b3"></a> 
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
@@ -3017,11 +3127,13 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
     <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."</c-><c- o>@</c->sk <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>description</c-> <c- s>"This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."</c-><c- o>@</c->en <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>publisher</c-> <c- g>&lt;https://data.gov.sk/legal-subject/30416094></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>issued</c-> <c- s>"2024-01-01T12:00:34"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>dateTime</c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>modified</c-> <c- s>"2024-01-01T14:23:16"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>dateTime</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>type</c-> <c- g>&lt;https://data.gov.sk/def/dataset-type/1></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- nn>theme</c-><c- p>:</c-><c- f>TRAN</c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>accrualPeriodicity</c-> <c- nn>freq</c-><c- p>:</c-><c- f>WEEKLY_3</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>keyword</c-> <c- s>"autobusy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"verejná linková doprava"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"timetable"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"bus"</c-><c- o>@</c->en<c- p>,</c-> <c- s>"public transport"</c-><c- o>@</c->en <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- nn>continent</c-><c- p>:</c-><c- f>EUROPE</c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>spatial</c-> <c- g>&lt;https://data.gov.sk/id/nuts1/SK0></c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>temporal</c-> <c- p>[</c->
         <c- b>a</c-> <c- nn>dct</c-><c- p>:</c-><c- f>PeriodOfTime</c-> <c- p>;</c->
         <c- nn>dcat</c-><c- p>:</c-><c- f>startDate</c-> <c- s>"2009-01-01"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>date</c-> <c- p>;</c->
@@ -3032,13 +3144,14 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
         <c- nn>vcard2006</c-><c- p>:</c-><c- f>fn</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"Ministry of Transport"</c-><c- o>@</c->en <c- p>;</c->
         <c- nn>vcard2006</c-><c- p>:</c-><c- f>hasEmail</c-> <c- s>"mailto:info@mindop.sk"</c->
     <c- p>]</c-> <c- p>;</c->
-    <c- nn>foaf</c-><c- p>:</c-><c- f>page</c-> <c- g>&lt;https://www.mindop.sk/cestovne-poriadky-info></c-> <c- p>;</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>landingPage</c-> <c- g>&lt;https://opendata.mindop.sk/show/vld></c-> <c- p>;</c->
+    <c- nn>dct</c-><c- p>:</c-><c- f>relation</c-> <c- g>&lt;https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7></c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://data.gov.sk/def/ontology/transport/></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- nn>euroVoc</c-><c- p>:</c-><c- f>4512</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>spatialResolutionInMeters</c-> <c- mf>12.0</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>temporalResolution</c-> <c- s>"P1D"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>duration</c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- g>&lt;https://data.gov.sk/set/vld/resource/csv></c-> <c- p>;</c->
-    <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- g>&lt;https://data.gov.sk/set/vld/resource/sparql></c-> <c- p>.</c->
+    <c- nn>dcat</c-><c- p>:</c-><c- f>distribution</c-> <c- g>&lt;https://data.gov.sk/set/vld/resource/csv></c-> <c- p>,</c->
+                      <c- g>&lt;https://data.gov.sk/set/vld/resource/sparql></c-> <c- p>.</c->
 
 <c- g>&lt;https://data.gov.sk/set/vld/resource/csv></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
     <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>[</c-> <c- b>a</c-> <c- nn>leg</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
@@ -3071,10 +3184,11 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
     <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pre cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>endpointURL</c-> <c- g>&lt;https://opendata.middop.sk/sparql></c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>endpointDescription</c-> <c- g>&lt;https://opendata.middop.sk/sparql></c-> <c- p>;</c->
-    <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c-></pre>
+    <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c->
+</pre>
    </div>
-   <div class="example" id="example-91cffb29">
-    <a class="self-link" href="#example-91cffb29"></a> <a href="príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
+   <div class="example" id="example-67fc8ae1">
+    <a class="self-link" href="#example-67fc8ae1"></a> <a href="príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
 <pre class="language-json highlight"><c- p>{</c->
     <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld"</c-><c- p>,</c->
     <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld"</c-><c- p>,</c->
@@ -3088,6 +3202,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
         <c- f>"en"</c-><c- p>:</c-> <c- u>"This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."</c->
     <c- p>},</c->
     <c- f>"poskytovateľ"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/legal-subject/30416094"</c-><c- p>,</c->
+    <c- f>"dátum_publikácie"</c-><c- p>:</c-> <c- u>"2024-01-01T12:00:34"</c-><c- p>,</c->
+    <c- f>"dátum_modifikácie"</c-><c- p>:</c-> <c- u>"2024-01-01T14:23:16"</c-><c- p>,</c->
     <c- f>"typ_datasetu"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/dataset-type/1"</c-><c- p>,</c->
     <c- f>"téma"</c-><c- p>:</c-> <c- p>[</c->
         <c- u>"http://publications.europa.eu/resource/authority/data-theme/TRAN"</c->
@@ -3106,7 +3222,7 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
         <c- p>]</c->
     <c- p>},</c->
     <c- f>"geografické_územie"</c-><c- p>:</c-> <c- p>[</c->
-        <c- u>"http://publications.europa.eu/resource/authority/continent/EUROPE"</c->
+        <c- u>"https://data.gov.sk/id/nuts1/SK0"</c->
     <c- p>],</c->
     <c- f>"prvek_rúian"</c-><c- p>:</c-> <c- p>[</c->
         <c- u>"https://linked.cuzk.cz/resource/ruian/stat/1"</c->
@@ -3124,6 +3240,10 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
         <c- p>},</c->
         <c- f>"e-mail"</c-><c- p>:</c-> <c- u>"mailto:info@mindop.cz"</c->
     <c- p>},</c->
+    <c- f>"webová_stránka_datasetu"</c-><c- p>:</c-> <c- u>"https://opendata.mindop.sk/show/vld"</c-><c- p>,</c->
+    <c- f>"súvisiaci_zdroj_datasetu"</c-><c- p>:</c-> <c- p>[</c->
+        <c- u>"https://www.mindop.sk/ministerstvo-1/cestovny-ruch-7"</c->
+    <c- p>],</c->
     <c- f>"dokumentácia"</c-><c- p>:</c-> <c- u>"https://www.middop.sk/"</c-><c- p>,</c->
     <c- f>"špecifikácia"</c-><c- p>:</c-> <c- p>[</c->
         <c- u>"https://data.gov.sk/def/ontology/transport/"</c->
@@ -3191,7 +3311,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
             <c- p>}</c->
         <c- p>}</c->
     <c- p>]</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </div>
    <h2 class="heading settled" data-level="5" id="rozhranie-ckan-api"><span class="secno">5. </span><span class="content">Rozhranie CKAN API</span><a class="self-link" href="#rozhranie-ckan-api"></a></h2>
     CKAN API je rozhranie pre implementáciu dátového katalógu <a href="https://ckan.org/">CKAN</a>.
@@ -3214,7 +3335,8 @@ Nesmú však obsahovať medzeru.
       <c- u>"vld"</c-><c- p>,</c-> 
       <c- u>"železnice"</c->
    <c- p>]</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </div>
    <h3 class="heading settled" data-level="5.2" id="rozhranie-ckan-api-package-show"><span class="secno">5.2. </span><span class="content">Funkcia <code>package_show</code></span><a class="self-link" href="#rozhranie-ckan-api-package-show"></a></h3>
     Táto funkcia vracia metadátový záznam pre dataset, ktorej identifikátor je predaný v parametri <code>id</code>. 
@@ -3241,7 +3363,8 @@ Nesmú však obsahovať medzeru.
             <c- f>"name"</c-><c- p>:</c-> <c- u>"Číselník v XML"</c->
         <c- p>}]</c->
     <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </div>
    <h3 class="heading settled" data-level="5.3" id="rozhranie-ckan-api-hodnoty"><span class="secno">5.3. </span><span class="content">Podmnožina hodnôt pre CKAN API záznam datasetu</span><a class="self-link" href="#rozhranie-ckan-api-hodnoty"></a></h3>
     V tejto sekci sú popísané položky týkajúce sa datasetu vo funkci <code>package_show</code>. 
@@ -3263,7 +3386,8 @@ Nesmú však obsahovať medzeru.
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"title"</c-><c- p>:</c-> <c- u>"Číselník ŠÚ: Druh volieb (kód 1051)"</c->
     <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="5.3.2" id="ckan-api-popis"><span class="secno">5.3.2. </span><span class="content">Popis datasetu</span><a class="self-link" href="#ckan-api-popis"></a></h4>
    <dl>
@@ -3283,7 +3407,8 @@ Nesmú však obsahovať medzeru.
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"notes"</c-><c- p>:</c-> <c- u>"Druh volieb"</c->
     <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="5.3.3" id="ckan-api-podmienky-pužitia"><span class="secno">5.3.3. </span><span class="content">Odkaz na podmienky použitia</span><a class="self-link" href="#ckan-api-podmienky-pužitia"></a></h4>
    <p>V štandarde DCAT-AP, na ktorom je Národný katalog otvorených dat založený, sú podmienky použitia Vlastnosťou distribúcie datasetu.
@@ -3307,7 +3432,8 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"license_link"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/licenses/by/4.0/"</c->
     <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="5.3.4" id="ckan-api-e-mail"><span class="secno">5.3.4. </span><span class="content">Email Kurátora dát</span><a class="self-link" href="#ckan-api-e-mail"></a></h4>
    <dl>
@@ -3327,7 +3453,8 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"maintainer_email"</c-><c- p>:</c-> <c- u>"vdb@statistics.sk"</c->
     <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="5.3.5" id="ckan-api-kurátor"><span class="secno">5.3.5. </span><span class="content">Meno Kurátora dát</span><a class="self-link" href="#ckan-api-kurátor"></a></h4>
    <dl>
@@ -3347,7 +3474,8 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
     <c- f>"result"</c-><c- p>:</c-> <c- p>{</c->
         <c- f>"maintainer"</c-><c- p>:</c-> <c- u>"Štatistický úrad"</c->
     <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="5.3.6" id="ckan-api-kľúčová-slová"><span class="secno">5.3.6. </span><span class="content">Kľúčové slová</span><a class="self-link" href="#ckan-api-kľúčová-slová"></a></h4>
    <dl>
@@ -3373,7 +3501,8 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
             <c- f>"name"</c-><c- p>:</c-> <c- u>"ČSÚ"</c->
         <c- p>}]</c->
     <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="5.3.7" id="ckan-api-resources"><span class="secno">5.3.7. </span><span class="content">Distribúcia datasetu</span><a class="self-link" href="#ckan-api-resources"></a></h4>
    <dl>
@@ -3397,7 +3526,8 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
             <c- f>"name"</c-><c- p>:</c-> <c- u>"Číselník v XML"</c->
         <c- p>}]</c->
     <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </dl>
    <h3 class="heading settled" data-level="5.4" id="ckan-api-distribúcia"><span class="secno">5.4. </span><span class="content">Podmnožina hodnôt pre CKAN API distribúciu datasetu</span><a class="self-link" href="#ckan-api-distribúcia"></a></h3>
     V tejto sekcii sú popísáné položky týkajúce sa distribúcie datasetu, tj. pole <code>resources</code> vo funkcii <code>package_show</code>. 
@@ -3421,7 +3551,8 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
             <c- f>"url"</c-><c- p>:</c-> <c- u>"https://statistics.sk/iSMS/cisexp.jsp?kodcis=1051&amp;typdat=0&amp;cisjaz=203&amp;format=0"</c->
         <c- p>}]</c->
     <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="5.4.2" id="ckan-api-distribúcia-media-type"><span class="secno">5.4.2. </span><span class="content">Media type súboru na stiahnutie</span><a class="self-link" href="#ckan-api-distribúcia-media-type"></a></h4>
    <dl>
@@ -3443,7 +3574,8 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
             <c- f>"format"</c-><c- p>:</c-> <c- u>"text/xml"</c->
         <c- p>}]</c->
     <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </dl>
    <h4 class="heading settled" data-level="5.4.3" id="ckan-api-distribúcia-názov"><span class="secno">5.4.3. </span><span class="content">Názov distribúcie datasetu</span><a class="self-link" href="#ckan-api-distribúcia-názov"></a></h4>
    <dl>
@@ -3465,7 +3597,8 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
             <c- f>"name"</c-><c- p>:</c-> <c- u>"Číselník v XML"</c->
         <c- p>}]</c->
     <c- p>}</c->
-<c- p>}</c-></pre>
+<c- p>}</c->
+</pre>
    </dl>
   </main>
 <script>
@@ -3607,11 +3740,11 @@ Je treba povedať, že CKAN API neumožňuje špecifikovať podmienky použitia 
    <dt id="biblio-json-ld11">[JSON-LD11]
    <dd>Gregg Kellogg; Pierre-Antoine Champin; Dave Longley. <a href="https://w3c.github.io/json-ld-syntax/"><cite>JSON-LD 1.1</cite></a>. URL: <a href="https://w3c.github.io/json-ld-syntax/">https://w3c.github.io/json-ld-syntax/</a>
    <dt id="biblio-rdf11-concepts">[RDF11-CONCEPTS]
-   <dd>Richard Cyganiak; David Wood; Markus Lanthaler. <a href="https://www.w3.org/TR/rdf11-concepts/"><cite>RDF 1.1 Concepts and Abstract Syntax</cite></a>. 25 February 2014. REC. URL: <a href="https://www.w3.org/TR/rdf11-concepts/">https://www.w3.org/TR/rdf11-concepts/</a>
+   <dd>Richard Cyganiak; David Wood; Markus Lanthaler. <a href="https://w3c.github.io/rdf-concepts/spec/"><cite>RDF 1.1 Concepts and Abstract Syntax</cite></a>. URL: <a href="https://w3c.github.io/rdf-concepts/spec/">https://w3c.github.io/rdf-concepts/spec/</a>
    <dt id="biblio-sparql11-protocol">[SPARQL11-PROTOCOL]
-   <dd>Lee Feigenbaum; et al. <a href="https://www.w3.org/TR/sparql11-protocol/"><cite>SPARQL 1.1 Protocol</cite></a>. 21 March 2013. REC. URL: <a href="https://www.w3.org/TR/sparql11-protocol/">https://www.w3.org/TR/sparql11-protocol/</a>
+   <dd>Lee Feigenbaum; et al. <a href="https://w3c.github.io/sparql-protocol/spec/"><cite>SPARQL 1.1 Protocol</cite></a>. URL: <a href="https://w3c.github.io/sparql-protocol/spec/">https://w3c.github.io/sparql-protocol/spec/</a>
    <dt id="biblio-turtle">[TURTLE]
-   <dd>Eric Prud'hommeaux; Gavin Carothers. <a href="https://www.w3.org/TR/turtle/"><cite>RDF 1.1 Turtle</cite></a>. 25 February 2014. REC. URL: <a href="https://www.w3.org/TR/turtle/">https://www.w3.org/TR/turtle/</a>
+   <dd>Eric Prud'hommeaux; Gavin Carothers. <a href="https://w3c.github.io/rdf-turtle/spec/"><cite>RDF 1.1 Turtle</cite></a>. URL: <a href="https://w3c.github.io/rdf-turtle/spec/">https://w3c.github.io/rdf-turtle/spec/</a>
    <dt id="biblio-url">[URL]
    <dd>Anne van Kesteren. <a href="https://url.spec.whatwg.org/"><cite>URL Standard</cite></a>. Living Standard. URL: <a href="https://url.spec.whatwg.org/">https://url.spec.whatwg.org/</a>
   </dl>
