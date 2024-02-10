@@ -51,6 +51,7 @@ V popisu položiek a rozhraní budú použité následujúce prefixy slovníkov.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix leg: <https://data.gov.sk/def/ontology/legislation/> .
+@prefix qb: <http://purl.org/linked-data/cube##> .
 ```
 
 Pre prehľadnosť zápisu budú použité aj nasledujúce prefixy skracujúce IRI vzorových entít.
