@@ -3123,8 +3123,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
    </div>
    <h3 class="heading settled" data-level="4.2" id="rozhranie-dcat-ap-dataset"><span class="secno">4.2. </span><span class="content">Súbor datasetu</span><a class="self-link" href="#rozhranie-dcat-ap-dataset"></a></h3>
     Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF serializácii Turtle <a data-link-type="biblio" href="#biblio-turtle" title="RDF 1.1 Turtle">[turtle]</a> či JSON-LD <a data-link-type="biblio" href="#biblio-json-ld11" title="JSON-LD 1.1">[json-ld11]</a> obsahujúce kompletný metadatový záznam datasetu, vrátane distribúcií. 
-   <div class="example" id="example-36eb90b3">
-    <a class="self-link" href="#example-36eb90b3"></a> 
+   <div class="example" id="example-5f0f1b89">
+    <a class="self-link" href="#example-5f0f1b89"></a> 
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dcat:</c-> <c- g>&lt;http://www.w3.org/ns/dcat#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>dct:</c-> <c- g>&lt;http://purl.org/dc/terms/></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>foaf:</c-> <c- g>&lt;http://xmlns.com/foaf/0.1/></c-> <c- p>.</c->
@@ -3173,10 +3173,10 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
 
 <c- g>&lt;https://data.gov.sk/set/vld/resource/csv></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
     <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>[</c-> <c- b>a</c-> <c- nn>leg</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
-                    <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://creativecommons.org/licenses/by/4.0/></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
                     <c- nn>leg</c-><c- p>:</c-><c- f>authorName</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk <c- p>;</c->
-                    <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;https://creativecommons.org/publicdomain/zero/1.0/></c-> <c- p>;</c->
-                    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;https://creativecommons.org/licenses/by/4.0/></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
                     <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseAuthorName</c-> <c- s>"Ministerstvo dopravy, Odbor verejnej dopravy"</c-><c- o>@</c->sk <c- p>;</c->
                     <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>]</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://opendata.middop.sk/pub/draha/mestske/JDF.zip></c-> <c- p>;</c->
@@ -3190,9 +3190,9 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
 
 <c- g>&lt;https://data.gov.sk/set/vld/resource/sparql></c-> <c- b>a</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>Distribution</c-> <c- p>;</c->
     <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- p>[</c-> <c- b>a</c-> <c- nn>leg</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
-                    <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://data.gov.sk/def/authors-work-type/3></c-> <c- p>;</c->
-                    <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;https://data.gov.sk/def/codelist/database-creator-special-rights-type/2></c-> <c- p>;</c->
-                    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;https://data.gov.sk/def/original-database-type/3></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
+                    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
                     <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>]</c-> <c- p>;</c->
     <c- nn>dcat</c-><c- p>:</c-><c- f>accessURL</c-> <c- g>&lt;https://opendata.middop.sk/sparql></c-> <c- p>;</c->
     <c- nn>dct</c-><c- p>:</c-><c- f>title</c-> <c- s>"SPARQL endpoint pre cestovné poriadky"</c-><c- o>@</c->sk<c- p>,</c-> <c- s>"SPARQL endpoint for timetables"</c-><c- o>@</c->en <c- p>;</c->
@@ -3205,8 +3205,8 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
     <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://www.w3.org/TR/sparql11-protocol/></c-> <c- p>.</c->
 </pre>
    </div>
-   <div class="example" id="example-67fc8ae1">
-    <a class="self-link" href="#example-67fc8ae1"></a> <a href="príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
+   <div class="example" id="example-053b4503">
+    <a class="self-link" href="#example-053b4503"></a> <a href="príklady/dataset.jsonld">Príklad v JSON-LD</a>, <a href="schémy/dataset.json">JSON Schéma</a>, <a href="kontexty/rozhranie-katalógu-otvorených-dát.jsonld">JSON-LD kontext</a> 
 <pre class="language-json highlight"><c- p>{</c->
     <c- f>"@context"</c-><c- p>:</c-> <c- u>"https://datova-kancelaria.github.io/dcat-ap-sk-2.0/kontexty/rozhranie-katalógu-otvorených-dát.jsonld"</c-><c- p>,</c->
     <c- f>"iri"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/set/vld"</c-><c- p>,</c->
@@ -3276,12 +3276,12 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
             <c- f>"typ"</c-><c- p>:</c-> <c- u>"Distribúcia"</c-><c- p>,</c->
             <c- f>"podmienky_použitia"</c-><c- p>:</c-> <c- p>{</c->
                 <c- f>"typ"</c-><c- p>:</c-> <c- u>"Špecifikácia podmienok použitia"</c-><c- p>,</c->
-                <c- f>"autorské_dielo"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/licenses/by/4.0/"</c-><c- p>,</c->
+                <c- f>"autorské_dielo"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
                 <c- f>"autor"</c-><c- p>:</c-> <c- p>{</c->
                     <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor verejnej dopravy"</c->
                 <c- p>},</c->
-                <c- f>"databáza_chránená_zvláštnými_právami"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/publicdomain/zero/1.0/"</c-><c- p>,</c->
-                <c- f>"databáza_ako_autorské_dielo"</c-><c- p>:</c-> <c- u>"https://creativecommons.org/licenses/by/4.0/"</c-><c- p>,</c->
+                <c- f>"databáza_chránená_zvláštnými_právami"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
+                <c- f>"databáza_ako_autorské_dielo"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
                 <c- f>"autor_databázy"</c-><c- p>:</c-> <c- p>{</c->
                     <c- f>"sk"</c-><c- p>:</c-> <c- u>"Ministerstvo dopravy, Odbor verejnej dopravy"</c->
                 <c- p>},</c->
@@ -3304,9 +3304,9 @@ Pri prístupe na toto URL datasetov NKOD predpokladá, že v odpovedi dostane ko
             <c- f>"typ"</c-><c- p>:</c-> <c- u>"Distribúcia"</c-><c- p>,</c->
             <c- f>"podmienky_použitia"</c-><c- p>:</c-> <c- p>{</c->
                 <c- f>"typ"</c-><c- p>:</c-> <c- u>"Špecifikácia podmienok použitia"</c-><c- p>,</c->
-                <c- f>"autorské_dielo"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/authors-work-type/3"</c-><c- p>,</c->
-                <c- f>"databáza_chránená_zvláštnými_právami"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/codelist/database-creator-special-rights-type/2"</c-><c- p>,</c->
-                <c- f>"databáza_ako_autorské_dielo"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/original-database-type/3"</c-><c- p>,</c->
+                <c- f>"autorské_dielo"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
+                <c- f>"databáza_chránená_zvláštnými_právami"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
+                <c- f>"databáza_ako_autorské_dielo"</c-><c- p>:</c-> <c- u>"http://publications.europa.eu/resource/authority/licence/CC_BY_4_0"</c-><c- p>,</c->
                 <c- f>"osobné_údaje"</c-><c- p>:</c-> <c- u>"https://data.gov.sk/def/personal-data-occurence-type/2"</c->
             <c- p>},</c->
             <c- f>"prístupové_url"</c-><c- p>:</c-> <c- u>"https://opendata.mindop.sk/sparql"</c-><c- p>,</c->

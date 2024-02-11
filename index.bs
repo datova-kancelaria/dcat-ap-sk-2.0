@@ -981,9 +981,9 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
 
 <https://data.gov.sk/set/vld/resource/sparql> a dcat:Distribution ;
     leg:termsOfUse [ a leg:TermsOfUse ;
-                    leg:authorsWorkType <https://data.gov.sk/def/authors-work-type/3> ;
-                    leg:databaseProtectedBySpecialRightsType <https://data.gov.sk/def/codelist/database-creator-special-rights-type/2> ;
-                    leg:originalDatabaseType <https://data.gov.sk/def/original-database-type/3> ;
+                    leg:authorsWorkType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:databaseProtectedBySpecialRightsType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                     leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
     dcat:accessURL <https://opendata.middop.sk/sparql> ;
     dct:title "SPARQL endpoint pre cestovné poriadky"@sk, "SPARQL endpoint for timetables"@en ;
