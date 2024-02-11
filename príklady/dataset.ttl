@@ -46,10 +46,10 @@
 
 <https://data.gov.sk/set/vld/resource/csv> a dcat:Distribution ;
     leg:termsOfUse [ a leg:TermsOfUse ;
-                    leg:authorsWorkType <https://creativecommons.org/licenses/by/4.0/> ;
+                    leg:authorsWorkType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                     leg:authorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
-                    leg:databaseProtectedBySpecialRightsType <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                    leg:originalDatabaseType <https://creativecommons.org/licenses/by/4.0/> ;
+                    leg:databaseProtectedBySpecialRightsType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                     leg:originalDatabaseAuthorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
                     leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
     dcat:accessURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;

@@ -964,10 +964,10 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
 
 <https://data.gov.sk/set/vld/resource/csv> a dcat:Distribution ;
     leg:termsOfUse [ a leg:TermsOfUse ;
-                    leg:authorsWorkType <https://creativecommons.org/licenses/by/4.0/> ;
+                    leg:authorsWorkType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                     leg:authorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
-                    leg:databaseProtectedBySpecialRightsType <https://creativecommons.org/publicdomain/zero/1.0/> ;
-                    leg:originalDatabaseType <https://creativecommons.org/licenses/by/4.0/> ;
+                    leg:databaseProtectedBySpecialRightsType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+                    leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
                     leg:originalDatabaseAuthorName "Ministerstvo dopravy, Odbor verejnej dopravy"@sk ;
                     leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> ] ;
     dcat:accessURL <https://opendata.middop.sk/pub/draha/mestske/JDF.zip> ;
@@ -1069,12 +1069,12 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
             "typ": "Distribúcia",
             "podmienky_použitia": {
                 "typ": "Špecifikácia podmienok použitia",
-                "autorské_dielo": "https://creativecommons.org/licenses/by/4.0/",
+                "autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
                 "autor": {
                     "sk": "Ministerstvo dopravy, Odbor verejnej dopravy"
                 },
-                "databáza_chránená_zvláštnými_právami": "https://creativecommons.org/publicdomain/zero/1.0/",
-                "databáza_ako_autorské_dielo": "https://creativecommons.org/licenses/by/4.0/",
+                "databáza_chránená_zvláštnými_právami": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+                "databáza_ako_autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
                 "autor_databázy": {
                     "sk": "Ministerstvo dopravy, Odbor verejnej dopravy"
                 },
@@ -1097,9 +1097,9 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
             "typ": "Distribúcia",
             "podmienky_použitia": {
                 "typ": "Špecifikácia podmienok použitia",
-                "autorské_dielo": "https://data.gov.sk/def/authors-work-type/3",
-                "databáza_chránená_zvláštnými_právami": "https://data.gov.sk/def/codelist/database-creator-special-rights-type/2",
-                "databáza_ako_autorské_dielo": "https://data.gov.sk/def/original-database-type/3",
+                "autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+                "databáza_chránená_zvláštnými_právami": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
+                "databáza_ako_autorské_dielo": "http://publications.europa.eu/resource/authority/licence/CC_BY_4_0",
                 "osobné_údaje": "https://data.gov.sk/def/personal-data-occurence-type/2"
             },
             "prístupové_url": "https://opendata.mindop.sk/sparql",
