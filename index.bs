@@ -25,8 +25,8 @@ V tejto sekcii sú popísané položky, ktoré môžu byť evidované v Národno
 Položky sa riadia štandardom [DCAT Application Profile for data portals in Europe Version 2.1.1 (DCAT-AP 2.1.1)](https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211).
 
 <figure>
-    <img alt="Konceptuálný model DCAT-AP-SK 2.0" src="dcat-ap-sk-2.0.svg">
-    <figcaption>Diagram dátového modelu DCAT-AP-SK 2.0. Šedou zafarabené časti sú špecifikované číselníkmi.</figcaption>
+    <img alt="Konceptuálný model DCAT-AP-SK 2.0.1" src="dcat-ap-sk-2.0.1.svg">
+    <figcaption>Diagram dátového modelu DCAT-AP-SK 2.0.1 Šedou zafarabené časti sú špecifikované číselníkmi.</figcaption>
 </figure>
 
 
@@ -51,7 +51,7 @@ V popisu položiek a rozhraní budú použité následujúce prefixy slovníkov.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix leg: <https://data.gov.sk/def/ontology/legislation/> .
-@prefix qb: <http://purl.org/linked-data/cube##> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
 ```
 
 Pre prehľadnosť zápisu budú použité aj nasledujúce prefixy skracujúce IRI vzorových entít.
@@ -458,6 +458,23 @@ dataset: dct:relation <https://www.employment.gov.sk/sk/praca-zamestnanost/vztah
 dataset: dct:conformsTo <https://data.gov.sk/def/ontology/finance/> .
     ```
 
+### Odkaz na štruktúru ### {#dataset-štruktúra}
+
+: Popis
+:: Táto Vlastnosť odkazuje na definíciu štruktúry datasetu, ktorou sa riadi dataset, pričom štruktúra je definovaná prostredníctvom ontológie [RDF Data Cube Vocabulary](https://www.w3.org/TR/vocab-data-cube/).
+    Je definovaná ako [qb:structure](http://purl.org/linked-data/cube#structure).
+: Vlastnosť
+:: `štruktúra`, `qb:structure`
+: Typ
+:: URL štruktúry dátovej kocky.
+: Povinnosť
+:: Nepovinná
+: Príklad
+:: 
+    ```turtle
+dataset: qb:structure <https://datacube.statistics.sk/set/cube/sp0207ts/structure> .
+    ```
+
 ### Klasifikácia podľa EuroVoc ### {#dataset-eurovoc}
 
 : Popis
@@ -561,7 +578,7 @@ distribúcia: a dcat:Distribution .
 ### Špecifikácia podmienok použitia ### {#špecifikácia-podmienok-použitia}
 
 : Popis
-:: Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia tejto distribúcie datasetu. Hodnoty se riadia [Podmienkami použitia](https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101822628)
+:: Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia distribúcie datasetu. Špecifikácia podmienok použitia je spojená s troma rozlišnými licenciami a to: licencia autorského diela, licencia databázy ako autorského diela a licencia chránenej databázy špeciálnymi právami. Hodnoty sú definované v [európskom číselníku licencií](https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/licence). [Viac informácií](https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101822628)
 : Vlastnosť
 :: `podmienky_použitia`, `leg:termsOfUse`
 : Typ
@@ -575,9 +592,9 @@ distribúcia: a dcat:Distribution .
 distribúcia: leg:termsOfUse podmienky: .
 
 podmienky: a leg:TermsOfUse ;
-    leg:authorsWorkType <https://data.gov.sk/def/authors-work-type/3> ;
-    leg:originalDatabaseType <https://data.gov.sk/def/original-database-type/3> ;
-    leg:databaseProtectedBySpecialRightsType <https://data.gov.sk/def/codelist/database-creator-special-rights-type/2> ;
+    leg:authorsWorkType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+    leg:originalDatabaseType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+    leg:databaseProtectedBySpecialRightsType <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
     leg:personalDataContainmentType <https://data.gov.sk/def/personal-data-occurence-type/2> .
     ```
 

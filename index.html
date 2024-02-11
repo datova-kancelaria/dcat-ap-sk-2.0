@@ -2013,7 +2013,7 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
   <div class="head">
    <p data-fill-with="logo"></p>
    <h1 class="p-name no-ref" id="title">Rozhranie katalógu otvorených dát DCAT-AP-SK 2.0.1</h1>
-   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2024-02-10">10 February 2024</time></span></h2>
+   <h2 class="no-num no-toc no-ref heading settled" id="profile-and-date"><span class="content">Living Standard, <time class="dt-updated" datetime="2024-02-11">11 February 2024</time></span></h2>
    <div data-fill-with="spec-metadata">
     <dl>
      <dt>This version:
@@ -2067,11 +2067,12 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
         <li><a href="#dataset-webová-stránka"><span class="secno">2.3.13</span> <span class="content">Webová stránka</span></a>
         <li><a href="#dataset-súvisiaci-zdroj"><span class="secno">2.3.14</span> <span class="content">Súvisiaci zdroj</span></a>
         <li><a href="#dataset-špecifikácia"><span class="secno">2.3.15</span> <span class="content">Odkaz na špecifikáciu</span></a>
-        <li><a href="#dataset-eurovoc"><span class="secno">2.3.16</span> <span class="content">Klasifikácia podľa EuroVoc</span></a>
-        <li><a href="#dataset-priestorové-rozlišenie"><span class="secno">2.3.17</span> <span class="content">Priestorové rozlíšenie v metroch</span></a>
-        <li><a href="#dataset-časové-rozlíšenie"><span class="secno">2.3.18</span> <span class="content">Časové rozlíšenie</span></a>
-        <li><a href="#dataset-je-súčasťou"><span class="secno">2.3.19</span> <span class="content">Väzba: Je súčásťou</span></a>
-        <li><a href="#dataset-distribúcia"><span class="secno">2.3.20</span> <span class="content">Väzba: Distribúcia datasetu</span></a>
+        <li><a href="#dataset-štruktúra"><span class="secno">2.3.16</span> <span class="content">Odkaz na štruktúru</span></a>
+        <li><a href="#dataset-eurovoc"><span class="secno">2.3.17</span> <span class="content">Klasifikácia podľa EuroVoc</span></a>
+        <li><a href="#dataset-priestorové-rozlišenie"><span class="secno">2.3.18</span> <span class="content">Priestorové rozlíšenie v metroch</span></a>
+        <li><a href="#dataset-časové-rozlíšenie"><span class="secno">2.3.19</span> <span class="content">Časové rozlíšenie</span></a>
+        <li><a href="#dataset-je-súčasťou"><span class="secno">2.3.20</span> <span class="content">Väzba: Je súčásťou</span></a>
+        <li><a href="#dataset-distribúcia"><span class="secno">2.3.21</span> <span class="content">Väzba: Distribúcia datasetu</span></a>
        </ol>
       <li>
        <a href="#trieda-distribúcia"><span class="secno">2.4</span> <span class="content">Trieda: Distribúcia datasetu</span></a>
@@ -2141,8 +2142,8 @@ c-[il] { color: #000000 } /* Literal.Number.Integer.Long */
    <p>V tejto sekcii sú popísané položky, ktoré môžu byť evidované v Národnom katalógu otvorených dát (NKOD) pre každý dataset a jeho distribúciu.
 Položky sa riadia štandardom <a href="https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/dcat-application-profile-data-portals-europe/release/211">DCAT Application Profile for data portals in Europe Version 2.1.1 (DCAT-AP 2.1.1)</a>.</p>
    <figure>
-     <img alt="Konceptuálný model DCAT-AP-SK 2.0" src="dcat-ap-sk-2.0.svg"> 
-    <figcaption>Diagram dátového modelu DCAT-AP-SK 2.0. Šedou zafarabené časti sú špecifikované číselníkmi.</figcaption>
+     <img alt="Konceptuálný model DCAT-AP-SK 2.0.1" src="dcat-ap-sk-2.0.1.svg"> 
+    <figcaption>Diagram dátového modelu DCAT-AP-SK 2.0.1 Šedou zafarabené časti sú špecifikované číselníkmi.</figcaption>
    </figure>
    <p>DCAT-AP 2.1.1 rozlišuje štyri základné typy entít. Katalóg, jeho datasety, distribúcie datasetov a dátovú službu.
 Metadáta datasetu popisujú otvorené údaje bez ohľadu na konkrétnú reprezentáciu dát.
@@ -2160,7 +2161,7 @@ Obsahovo musia byť distribúcie totožné.</p>
 <c- k>@prefix</c-> <c- nn>xsd:</c-> <c- g>&lt;http://www.w3.org/2001/XMLSchema#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>vcard:</c-> <c- g>&lt;http://www.w3.org/2006/vcard/ns#></c-> <c- p>.</c->
 <c- k>@prefix</c-> <c- nn>leg:</c-> <c- g>&lt;https://data.gov.sk/def/ontology/legislation/></c-> <c- p>.</c->
-<c- k>@prefix</c-> <c- nn>qb:</c-> <c- g>&lt;http://purl.org/linked-data/cube##></c-> <c- p>.</c->
+<c- k>@prefix</c-> <c- nn>qb:</c-> <c- g>&lt;http://purl.org/linked-data/cube#></c-> <c- p>.</c->
 </pre>
    <p>Pre prehľadnosť zápisu budú použité aj nasledujúce prefixy skracujúce IRI vzorových entít.</p>
 <pre class="language-turtle highlight"><c- k>@prefix</c-> <c- nn>dataset:</c-> <c- g>&lt;https://data.gov.sk/dataset/1></c-> <c- p>.</c->
@@ -2621,7 +2622,27 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>conformsTo</c-> <c- g>&lt;https://data.gov.sk/def/ontology/finance/></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.16" id="dataset-eurovoc"><span class="secno">2.3.16. </span><span class="content">Klasifikácia podľa EuroVoc</span><a class="self-link" href="#dataset-eurovoc"></a></h4>
+   <h4 class="heading settled" data-level="2.3.16" id="dataset-štruktúra"><span class="secno">2.3.16. </span><span class="content">Odkaz na štruktúru</span><a class="self-link" href="#dataset-štruktúra"></a></h4>
+   <dl>
+    <dt data-md>Popis
+    <dd data-md>
+     <p>Táto Vlastnosť odkazuje na definíciu štruktúry datasetu, ktorou sa riadi dataset, pričom štruktúra je definovaná prostredníctvom ontológie <a href="https://www.w3.org/TR/vocab-data-cube/">RDF Data Cube Vocabulary</a>.
+Je definovaná ako <a href="http://purl.org/linked-data/cube#structure">qb:structure</a>.</p>
+    <dt data-md>Vlastnosť
+    <dd data-md>
+     <p><code>štruktúra</code>, <code>qb:structure</code></p>
+    <dt data-md>Typ
+    <dd data-md>
+     <p>URL štruktúry dátovej kocky.</p>
+    <dt data-md>Povinnosť
+    <dd data-md>
+     <p>Nepovinná</p>
+    <dt data-md>Príklad
+    <dd data-md>
+<pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>qb</c-><c- p>:</c-><c- f>structure</c-> <c- g>&lt;https://datacube.statistics.sk/set/cube/sp0207ts/structure></c-> <c- p>.</c->
+</pre>
+   </dl>
+   <h4 class="heading settled" data-level="2.3.17" id="dataset-eurovoc"><span class="secno">2.3.17. </span><span class="content">Klasifikácia podľa EuroVoc</span><a class="self-link" href="#dataset-eurovoc"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2642,7 +2663,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:resourc
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>theme</c-> <c- g>&lt;http://eurovoc.europa.eu/1001></c-><c- p>,</c-> <c- g>&lt;http://eurovoc.europa.eu/4050></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.17" id="dataset-priestorové-rozlišenie"><span class="secno">2.3.17. </span><span class="content">Priestorové rozlíšenie v metroch</span><a class="self-link" href="#dataset-priestorové-rozlišenie"></a></h4>
+   <h4 class="heading settled" data-level="2.3.18" id="dataset-priestorové-rozlišenie"><span class="secno">2.3.18. </span><span class="content">Priestorové rozlíšenie v metroch</span><a class="self-link" href="#dataset-priestorové-rozlišenie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2663,7 +2684,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>spatialResolutionInMeters</c-> <c- mf>0.5</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.18" id="dataset-časové-rozlíšenie"><span class="secno">2.3.18. </span><span class="content">Časové rozlíšenie</span><a class="self-link" href="#dataset-časové-rozlíšenie"></a></h4>
+   <h4 class="heading settled" data-level="2.3.19" id="dataset-časové-rozlíšenie"><span class="secno">2.3.19. </span><span class="content">Časové rozlíšenie</span><a class="self-link" href="#dataset-časové-rozlíšenie"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2684,7 +2705,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Property:dataset
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dcat</c-><c- p>:</c-><c- f>temporalResolution</c-> <c- s>"P1D"</c-><c- p>^^</c-><c- nn>xsd</c-><c- p>:</c-><c- f>duration</c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.19" id="dataset-je-súčasťou"><span class="secno">2.3.19. </span><span class="content">Väzba: Je súčásťou</span><a class="self-link" href="#dataset-je-súčasťou"></a></h4>
+   <h4 class="heading settled" data-level="2.3.20" id="dataset-je-súčasťou"><span class="secno">2.3.20. </span><span class="content">Väzba: Je súčásťou</span><a class="self-link" href="#dataset-je-súčasťou"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2704,7 +2725,7 @@ Je definovaná ako <a href="https://dublincore.org/specifications/dublin-core/dc
 <pre class="language-turtle highlight"><c- nn>dataset</c-><c- p>:</c-> <c- nn>dct</c-><c- p>:</c-><c- f>isPartOf</c-> <c- g>&lt;https://data.gov.sk/set/pohladavky-mindop></c-> <c- p>.</c->
 </pre>
    </dl>
-   <h4 class="heading settled" data-level="2.3.20" id="dataset-distribúcia"><span class="secno">2.3.20. </span><span class="content">Väzba: Distribúcia datasetu</span><a class="self-link" href="#dataset-distribúcia"></a></h4>
+   <h4 class="heading settled" data-level="2.3.21" id="dataset-distribúcia"><span class="secno">2.3.21. </span><span class="content">Väzba: Distribúcia datasetu</span><a class="self-link" href="#dataset-distribúcia"></a></h4>
    <dl>
     <dt data-md>Popis
     <dd data-md>
@@ -2739,7 +2760,7 @@ Je definovaná ako <a href="https://www.w3.org/TR/vocab-dcat-2/#Class:Distributi
    <dl>
     <dt data-md>Popis
     <dd data-md>
-     <p>Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia tejto distribúcie datasetu. Hodnoty se riadia <a href="https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101822628">Podmienkami použitia</a></p>
+     <p>Táto Vlastnosť odkazuje na štruktúrovaný popis podmnienok použitia distribúcie datasetu. Špecifikácia podmienok použitia je spojená s troma rozlišnými licenciami a to: licencia autorského diela, licencia databázy ako autorského diela a licencia chránenej databázy špeciálnymi právami. Hodnoty sú definované v <a href="https://op.europa.eu/cs/web/eu-vocabularies/at-dataset/-/resource/dataset/licence">európskom číselníku licencií</a>. <a href="https://wiki.vicepremier.gov.sk/pages/viewpage.action?pageId=101822628">Viac informácií</a></p>
     <dt data-md>Vlastnosť
     <dd data-md>
      <p><code>podmienky_použitia</code>, <code>leg:termsOfUse</code></p>
@@ -2755,9 +2776,9 @@ Voliteľne tiež <code>leg:authorName</code> a <code>leg:originalDatabaseAuthorN
 <pre class="language-turtle highlight"><c- nn>distribúcia</c-><c- p>:</c-> <c- nn>leg</c-><c- p>:</c-><c- f>termsOfUse</c-> <c- nn>podmienky</c-><c- p>:</c-> <c- p>.</c->
 
 <c- nn>podmienky</c-><c- p>:</c-> <c- b>a</c-> <c- nn>leg</c-><c- p>:</c-><c- f>TermsOfUse</c-> <c- p>;</c->
-    <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;https://data.gov.sk/def/authors-work-type/3></c-> <c- p>;</c->
-    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;https://data.gov.sk/def/original-database-type/3></c-> <c- p>;</c->
-    <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;https://data.gov.sk/def/codelist/database-creator-special-rights-type/2></c-> <c- p>;</c->
+    <c- nn>leg</c-><c- p>:</c-><c- f>authorsWorkType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
+    <c- nn>leg</c-><c- p>:</c-><c- f>originalDatabaseType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
+    <c- nn>leg</c-><c- p>:</c-><c- f>databaseProtectedBySpecialRightsType</c-> <c- g>&lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0></c-> <c- p>;</c->
     <c- nn>leg</c-><c- p>:</c-><c- f>personalDataContainmentType</c-> <c- g>&lt;https://data.gov.sk/def/personal-data-occurence-type/2></c-> <c- p>.</c->
 </pre>
    </dl>
