@@ -1,3 +1,5 @@
+:warning: Tento repozitár bol uzavretý. Štandard DCAT-AP-SK je súčasťou Centrálneho modelu údajov, dostupný tu: https://github.com/slovak-egov/centralny-model-udajov/tree/main/tbox/national/dcat-ap-sk 
+
 # Rozhranie katalógu otvorených dát DCAT-AP-SK 2.0.1
 Metadátový štandard založený na [Data Catalog Vocabulary (DCAT) - Version 2][DCAT2] a jeho aplikačnom profile [DCAT-AP 2.1.1][DCAT-AP-2.1.1] pre popis datasetov a pre rozhranie Národného (NKOD) a lokálných katalógov otvorených dát (LKOD).
 
