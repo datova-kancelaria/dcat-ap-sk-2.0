@@ -122,7 +122,7 @@ katalog: dct:description "Otvorené dáta Ministerstva dopravy. Obsahuje dataset
 : Príklad
 :: 
     ```turtle
-katalog: dct:publisher <https://data.gov.sk/legal-subject/30416094> .
+katalog: dct:publisher <https://data.gov.sk/id/legal-subject/30416094> .
     ```
 
 ### Kontaktný bod - meno a email ### {#katalóg-kontaktný-bod}
@@ -233,7 +233,7 @@ dataset: dct:description "Štatistika kontrol plnenia Povinností zamestnávate�
 : Príklad
 :: 
     ```turtle
-dataset: dct:publisher <https://data.gov.sk/legal-subject/30416094> .
+dataset: dct:publisher <https://data.gov.sk/id/legal-subject/30416094> .
     ```
 
 ### Dátum publikácie ### {#dataset-dátum-publikácie}
@@ -845,7 +845,7 @@ Súbor katalógu je súbor v RDF serializácii Turtle [[!turtle]] či JSON-LD [[
     dct:title "Katalóg otvorených dát Ministerstva dopravy"@sk, "Open Data Catalog of the Ministry of Transport"@en ;
     dct:description "Otvorené dáta Ministerstva dopravy. Obsahuje datasety o cestovných poriadkoch a liniových vedeniach verejnej dopravy."@sk;
     dct:description "Open data of the Ministry of Transport. It contains datasets regarding timetables of public transport."@en ;
-    dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
+    dct:publisher <https://data.gov.sk/id/legal-subject/30416094> ;
     foaf:homepage <https://www.mindop.sk> ;
     dcat:contactPoint [
         a vcard2006:Organization ;
@@ -882,7 +882,7 @@ Súbor katalógu je súbor v RDF serializácii Turtle [[!turtle]] či JSON-LD [[
         "e-mail": "mailto:info@mindop.sk"
     },
     "domovská_stránka": "https://www.mindop.sk",
-    "poskytovateľ": "https://data.gov.sk/legal-subject/30416094",
+    "poskytovateľ": "https://data.gov.sk/id/legal-subject/30416094",
     "dataset": [
          "https://data.gov.sk/set/zoznam-zástavok-2022-10",
          "https://data.gov.sk/set/líniové-vedenia-2022-10",
@@ -917,7 +917,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
     dct:title "Cestovné poriadky"@sk, "Public transport timetables"@en;
     dct:description "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte."@sk ;
     dct:description "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."@en ;
-    dct:publisher <https://data.gov.sk/legal-subject/30416094> ;
+    dct:publisher <https://data.gov.sk/id/legal-subject/30416094> ;
     dct:issued "2024-01-01T12:00:34"^^xsd:dateTime ;
     dct:modified "2024-01-01T14:23:16"^^xsd:dateTime ;
     dct:type <https://data.gov.sk/def/dataset-type/1> ;
@@ -994,7 +994,7 @@ Na URL špecifikovaných v súbore katalógu NKOD očakává súbory v RDF seria
         "sk": "Obsahom datasetu sú schválené a aktuálne platné cestovné poriadky verejné linkové dopravy poskytnuté do Centrálneho informačního systému Cestovné poriadky ve strojovo spracovateľnom formáte.",
         "en": "This dataset contains approved timetables and timetables in effect for public transport entered into the state-wide timetable information system."
     },
-    "poskytovateľ": "https://data.gov.sk/legal-subject/30416094",
+    "poskytovateľ": "https://data.gov.sk/id/legal-subject/30416094",
     "dátum_publikácie": "2024-01-01T12:00:34",
     "dátum_modifikácie": "2024-01-01T14:23:16",
     "typ_datasetu": "https://data.gov.sk/def/dataset-type/1",
